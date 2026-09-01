@@ -198,11 +198,27 @@ h1 {
   transition: transform .55s ease, opacity .55s ease;
   box-shadow: 0 10px 28px rgba(26,34,48,.22); pointer-events: none;
 }
-.album-photo[data-depth="0"] { z-index: 4; transform: translate(0, 0) rotate(0); opacity: 1; }
-.album-photo[data-depth="1"] { z-index: 3; transform: translate(8px, -7px) rotate(1.8deg); opacity: .92; }
-.album-photo[data-depth="2"] { z-index: 2; transform: translate(-7px, -12px) rotate(-2deg); opacity: .82; }
-.album-photo[data-depth="3"] { z-index: 1; transform: translate(3px, -16px) rotate(.8deg); opacity: .7; }
+.album-photo[data-depth="0"] { z-index: 5; transform: translate(0, 0) rotate(0); opacity: 1; }
+.album-photo[data-depth="1"] { z-index: 4; transform: translate(8px, -7px) rotate(1.8deg); opacity: .92; }
+.album-photo[data-depth="2"] { z-index: 3; transform: translate(-7px, -12px) rotate(-2deg); opacity: .82; }
+.album-photo[data-depth="3"] { z-index: 2; transform: translate(3px, -16px) rotate(.8deg); opacity: .7; }
+.album-photo[data-depth="4"] { z-index: 1; transform: translate(-2px, -20px) rotate(1.2deg); opacity: .6; }
 .album-stack:focus-visible { outline: 3px solid var(--accent); outline-offset: 6px; }
+.album-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 14px; }
+.album-nav {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 36px; height: 36px; padding: 0;
+  color: var(--ink-soft); background: var(--paper);
+  border: 1px solid var(--border-strong); border-radius: 50%;
+  font-size: 1.4rem; line-height: 1; cursor: pointer;
+  transition: color .18s ease, border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.album-nav:hover { color: var(--accent); border-color: var(--accent); background: var(--accent-soft); }
+.album-nav:active { transform: scale(.92); }
+.album-counter {
+  min-width: 44px; color: var(--faint); text-align: center;
+  font-family: var(--font-mono); font-size: .78rem; font-weight: 500; letter-spacing: .08em;
+}
 
 .zoomable-media { cursor: zoom-in; }
 .zoomable-media:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }

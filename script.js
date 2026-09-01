@@ -96,28 +96,55 @@ galleries.forEach((gallery) => {
 albums.forEach((album) => {
   const trigger = album.querySelector(".album-stack");
   const photos = [...album.querySelectorAll(".album-photo")];
+  const prevBtn = album.querySelector(".album-prev");
+  const nextBtn = album.querySelector(".album-next");
+  const counter = album.querySelector(".album-counter");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let front = 0;
   let timer;
+  let touchX = null;
 
-  const shuffle = () => {
-    front = (front + 1) % photos.length;
+  const render = () => {
     photos.forEach((photo, index) => {
       photo.dataset.depth = (index - front + photos.length) % photos.length;
     });
+    if (counter) counter.textContent = `${front + 1} / ${photos.length}`;
   };
+
+  const advance = (dir) => {
+    front = (front + dir + photos.length) % photos.length;
+    render();
+  };
+  const shuffle = () => advance(1);
   const stop = () => window.clearInterval(timer);
   const start = () => {
     stop();
-    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      timer = window.setInterval(shuffle, 4000);
-    }
+    if (!reduceMotion) timer = window.setInterval(shuffle, 4000);
   };
 
   trigger.addEventListener("click", () => openGallery(album));
+  if (prevBtn) prevBtn.addEventListener("click", (e) => { e.stopPropagation(); advance(-1); });
+  if (nextBtn) nextBtn.addEventListener("click", (e) => { e.stopPropagation(); advance(1); });
   trigger.addEventListener("mouseenter", stop);
   trigger.addEventListener("mouseleave", start);
   trigger.addEventListener("focus", stop);
   trigger.addEventListener("blur", start);
+
+  trigger.addEventListener("touchstart", (e) => { touchX = e.touches[0].clientX; stop(); }, { passive: true });
+  trigger.addEventListener("touchend", (e) => {
+    if (touchX === null) return;
+    const dx = e.changedTouches[0].clientX - touchX;
+    if (Math.abs(dx) > 40) advance(dx > 0 ? -1 : 1);
+    touchX = null;
+    start();
+  }, { passive: true });
+
+  album.addEventListener("keydown", (e) => {
+    if (e.key === "ArrowLeft") { e.preventDefault(); advance(-1); }
+    if (e.key === "ArrowRight") { e.preventDefault(); advance(1); }
+  });
+
+  render();
   start();
 });
 
