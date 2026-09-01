@@ -5,6 +5,33 @@ const zoomableMedia = document.querySelectorAll("#research .project-figure:not([
 const galleries = document.querySelectorAll("#research [data-gallery]");
 const albums = document.querySelectorAll("#research [data-album]");
 
+/* ---------- Color theme ---------- */
+
+const themeToggle = document.querySelector(".theme-toggle");
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
+}
+
+function initTheme() {
+  const saved = localStorage.getItem("theme");
+  applyTheme(saved === "dark" || saved === "light" ? saved : (prefersDark.matches ? "dark" : "light"));
+}
+
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  applyTheme(next);
+  localStorage.setItem("theme", next);
+});
+
+prefersDark.addEventListener("change", (event) => {
+  if (!localStorage.getItem("theme")) applyTheme(event.matches ? "dark" : "light");
+});
+
+initTheme();
+
 function openLightbox(media) {
   const image = document.createElement("img");
   image.src = media.dataset.fullSrc || media.currentSrc || media.src;
