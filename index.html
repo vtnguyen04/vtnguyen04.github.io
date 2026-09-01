@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Vo Thanh Nguyen — AI System & Research Engineer working on world models, autonomous driving, cognitive AI, and multi-agent systems.">
+  <title>Vo Thanh Nguyen | AI System & Research Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=39">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="name" href="#top"><span class="name-full">Vo Thanh Nguyen</span><span class="name-short">Thanh Nguyen</span></a>
+      <div class="nav-links">
+        <a href="#research">Research</a>
+        <a href="#projects">Engineering</a>
+        <a href="#experience">Experience</a>
+        <a href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">CV</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="label">AI System & Research Engineer</p>
+        <h1>Vo Thanh<br>Nguyen</h1>
+        <p class="intro">My research and engineering focus on building intelligent, autonomous systems and cognitive agents that perceive the physical world, reason over complex environments, and make robust real-time decisions. I work across world models, computer vision, multi-agent operating systems, and autonomous driving stacks.</p>
+        <p class="intro intro-mentor">I have been fortunate to pursue these works under the mentorship of Dr. Bui Ha Duc (HCMUTE, Ph.D. from NUS) and Dr. Nguyen Van Thai (HCMUTE).</p>
+        <div class="hero-links">
+          <a class="button" href="mailto:nguyenvothanh04@gmail.com">Email me</a>
+          <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/nguyen-vo-thanh/" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview ↗</a>
+        </div>
+      </div>
+      <aside class="hero-summary">
+        <img class="profile-photo" src="assets/profile-waterfront.webp" alt="Vo Thanh Nguyen">
+        <dl>
+          <div><dt>Based in</dt><dd>Ho Chi Minh City, Vietnam</dd></div>
+          <div><dt>Education</dt><dd>B.Eng. Robotics & AI<br>HCMUTE, 2026 (Expected)</dd></div>
+          <div><dt>Interests</dt><dd>Cognitive AI, world models, autonomous driving, multi-agent systems</dd></div>
+        </dl>
+      </aside>
+    </section>
+
+    <section class="section container" id="research">
+      <div class="section-title">
+        <p class="label">Research</p>
+        <h2>Recent work</h2>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <div class="project-number">01</div>
+          <div class="project-content project-with-image">
+            <figure class="project-figure forecast-comparison" data-gallery>
+              <div class="forecast-column">
+                <div class="forecast-label">Prediction</div>
+                <img class="forecast-gif" src="assets/forecast-overhead-prediction.gif" data-full-src="assets/forecast-overhead-prediction-zoom.gif" data-gallery-order="0" alt="Overhead-view generated traffic forecast after condition frames">
+                <img class="forecast-gif" src="assets/forecast-vehicle5124-prediction.gif" data-full-src="assets/forecast-vehicle5124-prediction-zoom.gif" data-gallery-order="2" alt="Vehicle-view generated traffic forecast after condition frames">
+              </div>
+              <div class="forecast-column">
+                <div class="forecast-label">Ground truth</div>
+                <img class="forecast-gif" src="assets/forecast-overhead-ground-truth.gif" data-full-src="assets/forecast-overhead-ground-truth-zoom.gif" data-gallery-order="1" alt="Overhead-view ground-truth traffic continuation after condition frames">
+                <img class="forecast-gif" src="assets/forecast-vehicle5124-ground-truth.gif" data-full-src="assets/forecast-vehicle5124-ground-truth-zoom.gif" data-gallery-order="3" alt="Vehicle-view ground-truth traffic continuation after condition frames">
+              </div>
+            </figure>
+            <div class="project-details">
+              <p class="project-meta">World Models · V-JEPA · Generative AI · 2026</p>
+              <h3>Generative Traffic Forecasting with World Models</h3>
+              <p>Introduced a decoupled forecasting framework that uses frozen V-JEPA representations to guide a frozen video diffusion model through a lightweight learned alignment module, separating traffic-world understanding from pixel-level generation.</p>
+              <ul>
+                <li>3rd place, AI City Challenge 2026 (Track 5)</li>
+                <li>Paper accepted at ECCV 2026 Workshop</li>
+              </ul>
+              <div class="project-links">
+                <a href="papers/Nguyen%20et%20al.%20-%20JEPA%20Guided%20Diffusion%20Predictive%20Vision-Language%20Conditioning%20for%20Generative%20Traffic%20Forecasting.pdf" target="_blank" rel="noopener">Read accepted manuscript ↗</a>
+                <a href="https://github.com/AlterraFa/JEPA-Guided-Diffusion" target="_blank" rel="noopener">View repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">02</div>
+          <div class="project-content project-with-image">
+            <figure class="project-figure">
+              <img class="project-result" src="assets/traffic-jepa-result.webp" alt="Side-by-side real WTS and simulated traffic scenes demonstrating sim-to-real traffic understanding" loading="lazy">
+            </figure>
+            <div class="project-details">
+              <p class="project-meta">Vision-Language · V-JEPA · 2026</p>
+              <h3>Traffic Scene Understanding with World Models</h3>
+              <p>Introduced a structured traffic-scene understanding framework that uses frozen V-JEPA representations to predict explicit semantic facts, then applies training-free relational and temporal refinement before grounding caption generation.</p>
+              <ul>
+                <li>1st place, AI City Challenge 2026 (Track 2)</li>
+                <li>87.09% question-answering accuracy</li>
+                <li>Paper accepted at ECCV 2026 Workshop (Oral)</li>
+              </ul>
+              <div class="project-links">
+                <a href="papers/Hoai%20et%20al.%20-%20Sim-to-Real%20Tra%20c%20Scene%20Understanding%20by%20Decoupling%20Semantics%20from%20Caption%20Generation%20with%20V-JEPA.pdf" target="_blank" rel="noopener">Read accepted manuscript ↗</a>
+                <a href="https://github.com/ThuongBuiRVC/Traffic-JEPA" target="_blank" rel="noopener">View repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">03</div>
+          <div class="project-content project-with-image">
+            <figure class="project-figure">
+              <img class="qualification-gif" src="assets/bfmc-2026-qualification.gif" data-full-src="assets/bfmc-2026-qualification-zoom.gif" alt="BFMC 2026 autonomous qualification run" loading="lazy">
+            </figure>
+            <div class="project-details">
+              <p class="project-meta">Autonomous Driving · Edge AI · 2026</p>
+              <h3>Bosch Future Mobility Challenge 2026</h3>
+              <p>Led the software stack development for our autonomous vehicle team (&ldquo;Drive Beyond&rdquo;), building an end-to-end framework (NeuroPilot) that converts camera images and navigation commands into Bézier trajectory waypoints and object detections on NVIDIA Jetson Orin Nano.</p>
+              <ul>
+                <li>Semi-finalist & Recipient of 150M VND Bosch Sponsorship</li>
+                <li>1st nationally in the 2026 qualification round</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://www.youtube.com/watch?v=zDUCDjWeLuw" target="_blank" rel="noopener">Qualification video ↗</a>
+                <a href="https://github.com/vtnguyen04/neuralPilot" target="_blank" rel="noopener">View NeuroPilot repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">04</div>
+          <div class="project-content project-with-image">
+            <figure class="project-figure project-album" data-album>
+              <button class="album-stack" type="button" aria-label="Open all four BFMC 2025 photos">
+                <img class="album-photo" data-depth="0" src="assets/bfmc-2025-event-1.webp" alt="BFMC 2025 team portrait with the autonomous vehicle" loading="lazy">
+                <img class="album-photo" data-depth="1" src="assets/bfmc-2025-event-2.webp" alt="Presenting the BFMC 2025 autonomous-driving system to the judges" loading="lazy">
+                <img class="album-photo" data-depth="2" src="assets/bfmc-2025-event-3.webp" alt="Running the autonomous vehicle on the BFMC 2025 competition track" loading="lazy">
+                <img class="album-photo" data-depth="3" src="assets/bfmc-2025-event-4.webp" alt="BFMC 2025 autonomous vehicle navigating the competition track" loading="lazy">
+              </button>
+            </figure>
+            <div class="project-details">
+              <p class="project-meta">Autonomous Driving · Robotics · 2025</p>
+              <h3>Bosch Future Mobility Challenge 2025</h3>
+              <p>Led software stack development for our autonomous vehicle, implementing real-time perception (anchor-free 2D detection, lane segmentation) with ZeroMQ IPC, PyCUDA/TensorRT acceleration, and an FSM decision control system with NetworkX Dijkstra routing on track maps.</p>
+              <ul>
+                <li>Global top 9 at the international finals</li>
+                <li>Best Team from Vietnam & Asia (2025)</li>
+                <li>Finals hosted by Bosch Romania</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" id="projects">
+      <div class="section-title">
+        <p class="label">Engineering</p>
+        <h2>Systems & projects</h2>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <div class="project-number">05</div>
+          <div class="project-content">
+            <div class="project-details">
+              <p class="project-meta">Multi-Agent Systems · LangGraph · Redis · 2025–2026</p>
+              <h3>KnowledgeForge (Agent Operating System — AOS)</h3>
+              <p>Architected an enterprise-grade Agent Operating System in Python and LangGraph that decomposes complex tasks into concurrent DAG execution via Kahn&rsquo;s Topological Sort. Integrates an MCTS decision engine, runtime AST-based safety validation &amp; skill hot-patching, and a reactive SSE streaming gateway over Redis PubSub.</p>
+              <ul>
+                <li>Sub-10ms Semantic Router &amp; MCTS Planning Engine</li>
+                <li>Continuous Empirical Learning (CEL) &amp; AST Hot-Patching</li>
+                <li>Multi-platform webhook delivery (Zalo, Discord, Telegram, Slack)</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/vtnguyen04/KnowledgeForge" target="_blank" rel="noopener">View repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">06</div>
+          <div class="project-content">
+            <div class="project-details">
+              <p class="project-meta">Computer Vision · Zero-Copy IPC · TensorRT · 2024</p>
+              <h3>Real-Time Driver Distraction Detection System</h3>
+              <p>Engineered a real-time driver state monitoring system on a multi-process zero-copy IPC architecture using Linux SharedMemory, fully bypassing Python&rsquo;s GIL across 3 worker processes. Combines 6 biometric signals with temporal hysteresis state machine, supporting TensorRT, OpenVINO, and a live PySide6 HUD.</p>
+              <ul>
+                <li>5 zero-copy SharedMemory blocks bypassing Python GIL</li>
+                <li>Signal Fusion: EAR, MAR, Head Pose, PERCLOS, Blink Rate, YOLO</li>
+                <li>PySide6 Qt HUD with 478-point MediaPipe face mesh</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/vtnguyen04/distracted-detection" target="_blank" rel="noopener">View repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">07</div>
+          <div class="project-content">
+            <div class="project-details">
+              <p class="project-meta">AI Automation · n8n · Qdrant · Contract</p>
+              <h3>Enterprise AI Workflow Automation</h3>
+              <p>Designed and deployed 10+ end-to-end n8n workflows for a media company: AI-assisted article writing, social media copy generation, scheduled auto-posting, document drafting, and news aggregation via vector search (Qdrant).</p>
+              <ul>
+                <li>99.8% workflow uptime with retry-backoff error handling</li>
+                <li>Cut manual content-production time by 70%</li>
+                <li>Reusable LLM API + custom Python nodes</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-gray" id="experience">
+      <div class="container">
+        <div class="section-title">
+          <p class="label">Experience</p>
+          <h2>Work & education</h2>
+        </div>
+        <div class="timeline">
+          <article>
+            <time>2024–Present</time>
+            <div><h3>AI System & Research Engineer</h3><p>University Research Lab, HCMUTE</p></div>
+            <p>Researching predictive world models, traffic scene understanding, and autonomous vehicle control. Co-authored 3 publications (ECCV 2026 Workshop Oral/Poster, GTSD 2026) and led autonomous driving software stacks in BFMC.</p>
+          </article>
+          <article>
+            <time>Mar 2024–Dec 2024</time>
+            <div><h3>AI Researcher</h3><p>3DVision Lab, HCMUTE</p></div>
+            <p>Designed deep-learning industrial vision pipelines for PCB defect detection (for BACKER, 98.2% accuracy) and engineered multi-process zero-copy IPC via Linux SharedMemory across TensorRT, OpenVINO, and ONNX (3.2x CPU throughput speedup).</p>
+          </article>
+          <article>
+            <time>2022–2026</time>
+            <div><h3>B.Eng. Robotics & Artificial Intelligence</h3><p>HCMUTE · Expected 2026</p></div>
+            <p>Winner (Top 1) Track 2 & Top 3 Track 5 in AI City Challenge 2026 (ECCV Workshop); Top 5 Finalist Datathon 2026; Third Prize ICPC National Contest (2024); Second Prize OLP (2023, 2022); Talent Scholarship Recipient.</p>
+          </article>
+          <article>
+            <time>2019–2022</time>
+            <div><h3>Le Quy Don High School for the Gifted</h3><p>Specialized in Informatics</p></div>
+            <p>Solid algorithmic foundation in competitive programming and computer science.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <p>Last update: September 2026</p>
+      <div>
+        <a href="mailto:nguyenvothanh04@gmail.com">Email</a>
+        <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/nguyen-vo-thanh/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview</a>
+      </div>
+    </div>
+  </footer>
+  <dialog class="media-lightbox" id="media-lightbox" aria-label="Expanded media">
+    <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
+    <div class="media-lightbox-content"></div>
+  </dialog>
+  <script src="script.js?v=7"></script>
+</body>
+</html>
