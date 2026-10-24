@@ -38,9 +38,9 @@
   content: "";
   position: absolute;
   top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--accent), #d97706);
-  opacity: .85;
+  height: 2px;
+  background: var(--border-strong);
+  opacity: .9;
 }
 
 .award-stat-card:hover {

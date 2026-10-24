@@ -78,12 +78,6 @@
   color: var(--ink);
 }
 
-[data-theme="dark"] .hero-copy h1 {
-  background: linear-gradient(180deg, #ffffff 35%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .intro {
   max-width: 640px;
   margin: 0;
@@ -124,25 +118,41 @@
   align-items: center;
   gap: 12px;
   padding: 10px 22px 10px 24px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: #0f172a;
+  color: #ffffff !important;
+  border: 1px solid #0f172a;
   border-radius: var(--radius-full);
   font-weight: 600;
   font-size: .92rem;
-  box-shadow: var(--shadow-soft), 0 0 24px -6px var(--accent-glow);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: all var(--transition-normal);
+  transition: all var(--transition-fast);
 }
 
 .btn-island-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lift), 0 0 32px -4px var(--accent-glow);
-  color: #fff;
+  transform: translateY(-1px);
+  background: #1e293b;
+  border-color: #1e293b;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  color: #ffffff !important;
 }
 
 .btn-island-primary:active {
   transform: translateY(0);
+}
+
+[data-theme="dark"] .btn-island-primary {
+  background: #f8fafc;
+  color: #0b0e14 !important;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .btn-island-primary:hover {
+  background: #ffffff;
+  color: #000000 !important;
+  border-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
 }
 
 .btn-icon-bubble {
@@ -152,8 +162,12 @@
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
   transition: transform var(--transition-fast);
+}
+
+[data-theme="dark"] .btn-icon-bubble {
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .btn-island-primary:hover .btn-icon-bubble {
@@ -338,20 +352,20 @@
   inset: -1px;
   border-radius: inherit;
   background: radial-gradient(
-    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(99, 102, 241, 0.18),
+    360px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(0, 0, 0, 0.03),
     transparent 70%
   );
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
   z-index: 1;
 }
 
 [data-theme="dark"] .spotlight-card::before {
   background: radial-gradient(
-    400px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-    rgba(96, 165, 250, 0.22),
+    360px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+    rgba(255, 255, 255, 0.06),
     transparent 70%
   );
 }
