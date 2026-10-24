@@ -1,0 +1,46 @@
+/* ============================================================
+   Design Tokens & CSS Variables
+   ============================================================ */
+
+:root {
+  --ink: #1a2230;            /* primary text, near-black navy */
+  --ink-soft: #34404f;       /* secondary headings */
+  --muted: #5c6773;          /* body-muted */
+  --faint: #8b94a1;          /* faint meta */
+  --accent: #2b4f8c;         /* deep academic blue */
+  --accent-deep: #1f3a68;
+  --accent-soft: #eef2f8;    /* accent tint */
+  --border: #e2e6ec;         /* hairlines */
+  --border-strong: #cfd6e0;
+  --paper: #ffffff;
+  --paper-soft: #f7f8fa;     /* alternate section */
+  --paper-sunken: #f0f2f5;   /* image wells */
+  --header-bg: rgba(255,255,255,.88);
+  --shadow-soft: 0 1px 2px rgba(26,34,48,.05), 0 8px 24px rgba(26,34,48,.06);
+  --shadow-lift: 0 2px 4px rgba(26,34,48,.06), 0 16px 40px rgba(26,34,48,.12);
+  --radius: 6px;
+  --max-width: 1080px;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --ink: #e8ebf0;
+  --ink-soft: #c3cad4;
+  --muted: #9aa4b1;
+  --faint: #6d7684;
+  --accent: #7fa3d8;
+  --accent-deep: #a5c2ea;
+  --accent-soft: rgba(127,163,216,.14);
+  --border: #2a3340;
+  --border-strong: #3b4656;
+  --paper: #14181f;
+  --paper-soft: #191e27;
+  --paper-sunken: #0f131a;
+  --header-bg: rgba(20,24,31,.88);
+  --shadow-soft: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  --shadow-lift: 0 2px 4px rgba(0,0,0,.35), 0 16px 40px rgba(0,0,0,.45);
+  color-scheme: dark;
+}

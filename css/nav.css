@@ -1,0 +1,73 @@
+/* ============================================================
+   Header & Navigation
+   ============================================================ */
+
+.site-header {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.nav {
+  display: flex; min-height: 68px; align-items: center;
+  justify-content: space-between; gap: 24px;
+}
+
+.name {
+  display: flex; align-items: baseline; gap: 10px;
+  font-weight: 600; font-size: 1.02rem; letter-spacing: .01em;
+}
+.name::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); align-self: center;
+}
+.name-short { display: none; }
+
+.nav-links {
+  display: flex; gap: 30px; color: var(--muted);
+  font-size: .82rem; font-weight: 600; letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.nav-links a {
+  position: relative; padding: 4px 0; transition: color .18s ease;
+}
+
+.nav-links a::after {
+  content: ""; position: absolute; left: 0; bottom: -2px;
+  width: 100%; height: 1.5px; background: var(--accent);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform .22s ease;
+}
+
+.nav-links a:hover { color: var(--ink); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.nav-links a.nav-active {
+  color: var(--accent);
+}
+.nav-links a.nav-active::after {
+  transform: scaleX(1);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; padding: 0;
+  color: var(--muted); background: transparent;
+  border: 1px solid var(--border-strong); border-radius: 50%;
+  font-size: 1rem; line-height: 1; cursor: pointer;
+  transition: color .18s ease, border-color .18s ease, background .18s ease, transform .18s ease;
+}
+.theme-toggle:hover {
+  color: var(--accent); border-color: var(--accent); background: var(--accent-soft);
+}
+.theme-toggle:active { transform: scale(.94); }
+
+.theme-toggle .icon-sun { display: none; }
+.theme-toggle .icon-moon { display: block; }
+
+[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+[data-theme="dark"] .theme-toggle .icon-moon { display: none; }

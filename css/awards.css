@@ -1,0 +1,244 @@
+/* ============================================================
+   Awards, Honors & Certifications Page Styles
+   ============================================================ */
+
+.awards-hero {
+  padding: 64px 0 36px;
+  border-bottom: 1px solid var(--border);
+}
+
+.awards-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 16px;
+}
+
+.awards-hero .intro {
+  max-width: 760px;
+}
+
+/* Key Metrics Summary Bar */
+.awards-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 36px 0 10px;
+}
+
+.award-stat-card {
+  padding: 18px 20px;
+  background: var(--paper-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.award-stat-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.award-stat-number {
+  font-family: var(--font-mono);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+.award-stat-label {
+  font-size: .84rem;
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
+.award-stat-sub {
+  font-size: .74rem;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+/* Category Groups */
+.awards-category {
+  padding: 48px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.awards-category:last-of-type {
+  border-bottom: none;
+}
+
+.category-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.category-header h2 {
+  font-size: 1.65rem;
+  margin: 0;
+}
+
+.category-header .category-count {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--faint);
+  font-weight: 500;
+}
+
+/* Awards Cards Grid */
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.award-card {
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 22px 24px;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+
+.award-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-1.5px);
+  box-shadow: var(--shadow-soft);
+}
+
+.award-year {
+  font-family: var(--font-mono);
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--faint);
+}
+
+.award-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.award-top {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.award-title {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.award-org {
+  font-family: var(--font-mono);
+  font-size: .78rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.award-desc {
+  margin: 0;
+  font-size: .92rem;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: 78ch;
+}
+
+.award-meta-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.award-tag {
+  display: inline-block;
+  padding: 2px 9px;
+  font-size: .74rem;
+  font-family: var(--font-mono);
+  color: var(--ink-soft);
+  background: var(--paper-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.award-link-cell {
+  white-space: nowrap;
+}
+
+.award-link-cell a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: .88rem;
+  font-weight: 600;
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color .18s ease;
+}
+
+.award-link-cell a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* Badge variants */
+.pill-badge-silver {
+  background: rgba(100, 116, 139, .12);
+  color: #475569;
+  border-color: rgba(100, 116, 139, .35);
+}
+
+[data-theme="dark"] .pill-badge-silver {
+  background: rgba(148, 163, 184, .16);
+  color: #cbd5e1;
+  border-color: rgba(148, 163, 184, .35);
+}
+
+.pill-badge-bronze {
+  background: rgba(180, 83, 9, .12);
+  color: #b45309;
+  border-color: rgba(180, 83, 9, .35);
+}
+
+[data-theme="dark"] .pill-badge-bronze {
+  background: rgba(217, 119, 6, .16);
+  color: #f59e0b;
+  border-color: rgba(217, 119, 6, .35);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .awards-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .award-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .award-year {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 640px) {
+  .awards-stats-grid {
+    grid-template-columns: 1fr;
+  }
+  .category-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

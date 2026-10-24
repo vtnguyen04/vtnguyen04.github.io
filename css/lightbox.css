@@ -1,0 +1,70 @@
+/* ============================================================
+   Lightbox Dialog & Fullscreen Viewer
+   ============================================================ */
+
+.zoomable-media { cursor: zoom-in; }
+.zoomable-media:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+.media-lightbox {
+  width: min(94vw, 1600px);
+  max-width: none;
+  max-height: 94vh;
+  padding: 48px 16px 16px;
+  overflow: auto;
+  background: #0f141c;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 32px 96px rgba(0,0,0,.5);
+}
+
+.media-lightbox::backdrop {
+  background: rgba(10,14,20,.88);
+  backdrop-filter: blur(4px);
+}
+
+.media-lightbox-content {
+  display: grid;
+  place-items: center;
+}
+
+.media-lightbox-content.is-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.media-lightbox-content img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: calc(94vh - 60px);
+  margin: auto;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.media-lightbox-content.is-gallery img {
+  width: 100%;
+  max-height: none;
+}
+
+.media-lightbox-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  padding: 6px 12px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: .75rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .18s ease;
+}
+
+.media-lightbox-close:hover { background: rgba(255,255,255,.14); }
+
+body.lightbox-open { overflow: hidden; }

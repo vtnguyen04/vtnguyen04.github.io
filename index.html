@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=49">
+  <link rel="stylesheet" href="style.css?v=50">
 </head>
 <body>
   <header class="site-header">
@@ -18,6 +18,7 @@
         <a href="#research">Research</a>
         <a href="#projects">Engineering</a>
         <a href="#experience">Experience</a>
+        <a href="awards.html">Awards &amp; Honors</a>
         <a href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">CV</a>
       </div>
       <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
@@ -591,22 +592,6 @@
             </div>
           </div>
         </article>
-
-        <article class="project">
-          <div class="project-number">09</div>
-          <div class="project-content">
-            <div class="project-details">
-              <p class="project-meta">AI Automation · n8n · Qdrant · Contract</p>
-              <h3>Enterprise AI Workflow Automation</h3>
-              <p>Designed and deployed 10+ end-to-end n8n workflows for a media company: AI-assisted article writing, social media copy generation, scheduled auto-posting, document drafting, and news aggregation via vector search (Qdrant).</p>
-              <ul>
-                <li>99.8% workflow uptime with retry-backoff error handling</li>
-                <li>Cut manual content-production time by 70%</li>
-                <li>Reusable LLM API + custom Python nodes</li>
-              </ul>
-            </div>
-          </div>
-        </article>
       </div>
     </section>
 
@@ -657,6 +642,7 @@
     <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
     <div class="media-lightbox-content"></div>
   </dialog>
-  <script src="script.js?v=14"></script>
+  <script type="module" src="js/main.js?v=15"></script>
+  <script nomodule src="script.js?v=15"></script>
 </body>
 </html>

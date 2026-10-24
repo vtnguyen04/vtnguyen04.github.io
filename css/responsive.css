@@ -1,0 +1,44 @@
+/* ============================================================
+   Responsive Breakpoints & Motion Settings
+   ============================================================ */
+
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; gap: 44px; padding: 64px 0 32px; }
+  .hero-summary { padding: 0; border: 0; }
+  .profile-photo { width: min(260px, 70vw); }
+  .project-with-image { grid-template-columns: 1fr; gap: 26px; }
+  .timeline article { grid-template-columns: 1fr; gap: 10px; padding-left: 24px; }
+  .timeline article::after { top: 30px; }
+  .showcase-thumbs { grid-template-columns: repeat(2, 1fr); }
+  .showcase-image-wrapper { min-height: 280px; }
+}
+
+@media (max-width: 640px) {
+  .name-full { display: none; }
+  .name-short { display: inline; }
+  .nav { min-height: 60px; }
+  .nav-links { gap: 14px; font-size: .75rem; }
+  .nav-links a:nth-child(2) { display: none; } /* collapse Engineering on tiny screens */
+  h1 { font-size: 3.2rem; }
+  .hero-links { flex-wrap: wrap; gap: 18px; }
+  .section { padding-block: 60px; }
+  #research { padding-top: 32px; }
+  .section-title { align-items: flex-start; flex-direction: column; gap: 8px; margin-bottom: 30px; }
+  .project { grid-template-columns: 1fr; gap: 14px; padding: 40px 0; }
+  .project-figure img { max-height: 340px; padding: 10px; }
+  .intro,
+  .project-content > p:not(.project-meta),
+  .project-details > p:not(.project-meta) {
+    text-align: left; hyphens: none;
+  }
+  .footer-content { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .media-lightbox-content.is-gallery { grid-template-columns: 1fr; }
+  .showcase-tabs { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+  .showcase-tab { white-space: nowrap; }
+  .showcase-image-wrapper { min-height: 220px; padding: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}

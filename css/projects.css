@@ -1,0 +1,156 @@
+/* ============================================================
+   Standard Projects & Research Entries
+   ============================================================ */
+
+.projects { border-top: 1px solid var(--border); }
+
+.project {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 24px;
+  padding: 52px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.project-number {
+  align-self: start;
+  padding-top: 6px;
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: .9rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.project-content { width: 100%; }
+
+.project-with-image {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(340px, 1.1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.project-meta {
+  margin: 0 0 14px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.project h3 {
+  margin: 0 0 16px;
+  font-size: 1.55rem;
+  letter-spacing: -.01em;
+  color: var(--ink);
+}
+
+.project-figure {
+  align-self: center;
+  margin: 0;
+}
+
+.project-figure img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  padding: 18px;
+  object-fit: contain;
+  background: var(--paper-sunken);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.project-figure:hover img {
+  box-shadow: var(--shadow-lift);
+  border-color: var(--border-strong);
+}
+
+.project-figure img.project-photo { aspect-ratio: 4 / 3; padding: 0; object-fit: cover; }
+.project-figure img.project-result { padding: 0; }
+.project-figure img.forecast-gif { max-height: none; aspect-ratio: 16 / 9; padding: 0; object-fit: cover; background: #10161f; }
+.project-figure img.qualification-gif { max-height: none; aspect-ratio: 16 / 9; padding: 0; object-fit: cover; background: #10161f; }
+
+.forecast-comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+}
+
+.forecast-column { display: grid; gap: 12px; }
+
+.forecast-label {
+  color: var(--ink-soft);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Prose + Chips */
+.project-content > p:not(.project-meta),
+.project-details > p:not(.project-meta) {
+  max-width: 62ch;
+  margin: 0;
+  color: var(--muted);
+  text-align: justify;
+  hyphens: auto;
+}
+
+.project ul {
+  display: flex;
+  margin: 20px 0;
+  padding: 0;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.project li {
+  padding: 5px 12px;
+  color: var(--ink-soft);
+  background: var(--paper);
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  font-size: .8rem;
+  font-weight: 500;
+  transition: border-color .18s ease, color .18s ease, background .18s ease;
+}
+
+.project li:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.project-content > a,
+.project-details > a {
+  color: var(--accent);
+  font-size: .87rem;
+  font-weight: 600;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+}
+
+.project-links a {
+  color: var(--accent);
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color .18s ease;
+}
+
+.project-links a:hover {
+  border-bottom-color: var(--accent);
+}

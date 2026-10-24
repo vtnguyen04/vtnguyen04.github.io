@@ -1,0 +1,86 @@
+/* ============================================================
+   Hero Section
+   ============================================================ */
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr .6fr;
+  gap: 64px;
+  padding: 88px 0 40px;
+  align-items: center;
+}
+
+.intro {
+  max-width: 640px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.12rem;
+  line-height: 1.75;
+}
+
+.intro-mentor {
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+.hero-links {
+  display: flex;
+  margin-top: 34px;
+  align-items: center;
+  gap: 26px;
+  font-size: .9rem;
+  font-weight: 600;
+}
+
+.hero-links a:not(.button) {
+  color: var(--accent);
+  border-bottom: 1px solid transparent;
+  transition: border-color .18s ease, color .18s ease;
+}
+
+.hero-links a:not(.button):hover {
+  border-bottom-color: var(--accent);
+}
+
+.hero-summary {
+  padding-left: 30px;
+  border-left: 1px solid var(--border);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  margin-bottom: 22px;
+  object-fit: cover;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-summary dl { margin: 0; }
+.hero-summary dl div {
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+.hero-summary dl div:first-child { padding-top: 0; }
+.hero-summary dl div:last-child { border-bottom: 0; }
+
+.hero-summary dt {
+  margin-bottom: 5px;
+  color: var(--faint);
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+
+.hero-summary dd {
+  margin: 0;
+  font-size: .92rem;
+  color: var(--ink-soft);
+}
