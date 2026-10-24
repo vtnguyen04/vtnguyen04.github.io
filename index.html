@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=45">
+  <link rel="stylesheet" href="style.css?v=46">
 </head>
 <body>
   <header class="site-header">
@@ -62,27 +62,26 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">Computer Vision · Foundation Models · Cross-Domain PAR · 2026–2027</span>
-                <span class="pill-badge pill-badge-gold">★ WACV 2027 Workshop Paper</span>
-                <span class="pill-badge">0.8001 Challenge_Avg</span>
+                <span class="project-meta">WACV 2027 Workshop · Track 1</span>
+                <span class="pill-badge pill-badge-gold">★ 0.8001 Challenge_Avg (Top 1)</span>
               </div>
-              <h3>UniQuery: Joint Query Head for Cross-Domain Pedestrian Attribute Recognition</h3>
-              <p class="showcase-desc">Proposes UniQuery, a unified framework that co-adapts self-supervised DINOv3 (ViT-H+/16) and vision-language CLIP (ViT-L/14) through a joint attribute query head. Attribute queries dynamically attend across multimodal token spaces, resolving cross-camera distribution shifts and outperforming static independent ensembles across surveillance benchmarks.</p>
+              <h3>UniQuery: Cross-Domain Pedestrian Attribute Recognition</h3>
+              <p class="showcase-desc">Co-adapts self-supervised DINOv3 (ViT-H+/16) and vision-language CLIP (ViT-L/14) with an attribute-specific joint query head. Cross-attention queries dynamically route between visual and text-visual token spaces, outperforming static ensembles across surveillance cameras.</p>
             </div>
 
             <div class="showcase-media-hub" data-showcase="uniquery">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
-                  <span class="tab-icon">❖</span> Architecture Pipeline
+                  <span class="tab-icon">❖</span> Architecture
                 </button>
                 <button class="showcase-tab" type="button">
-                  <span class="tab-icon">✦</span> Dynamic Attention Routing
+                  <span class="tab-icon">✦</span> Attention Routing
                 </button>
                 <button class="showcase-tab" type="button">
-                  <span class="tab-icon">📊</span> Per-Attribute Gains
+                  <span class="tab-icon">📊</span> Attribute Gains
                 </button>
                 <button class="showcase-tab" type="button">
-                  <span class="tab-icon">🔬</span> Query Head Fusion
+                  <span class="tab-icon">🔬</span> Query Head
                 </button>
               </div>
 
@@ -96,7 +95,7 @@
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (System Architecture):</strong> DINOv3 (ViT-H+/16) and CLIP (ViT-L/14) co-adapted with three query heads: two single-encoder heads and a joint query head attending to 228 multimodal tokens.
+                  <strong>Figure 1 (Architecture):</strong> Joint fine-tuning of DINOv3 and CLIP with three query heads: two single-encoder heads and a joint query head over 228 tokens.
                 </figcaption>
               </figure>
 
@@ -104,69 +103,46 @@
                 <button class="showcase-thumb is-active" type="button"
                         data-src="assets/uniquery-architecture.webp"
                         data-alt="UniQuery dual foundation encoder architecture with joint and single-encoder query heads"
-                        data-caption="&lt;strong&gt;Figure 1 (System Architecture):&lt;/strong&gt; DINOv3 (ViT-H+/16) and CLIP (ViT-L/14) co-adapted with three query heads: two single-encoder heads and a joint query head attending to 228 multimodal tokens."
-                        title="System Architecture">
+                        data-caption="&lt;strong&gt;Figure 1 (Architecture):&lt;/strong&gt; Joint fine-tuning of DINOv3 and CLIP with three query heads: two single-encoder heads and a joint query head over 228 tokens."
+                        title="Architecture">
                   <img src="assets/uniquery-architecture.webp" alt="Architecture thumbnail">
                   <span class="thumb-label">Architecture</span>
                 </button>
                 <button class="showcase-thumb" type="button"
                         data-src="assets/uniquery-routing.webp"
                         data-alt="Cross-attention dynamic routing between DINOv3 and CLIP tokens across attributes"
-                        data-caption="&lt;strong&gt;Figure 2 (Attention Routing Analysis):&lt;/strong&gt; Cross-attention heads dynamically route between encoders: color attributes (red, blue, green) route heavily to CLIP text-visual tokens, while spatial/clothing attributes (backpack, upper/lower body) specialize on DINOv3 tokens."
+                        data-caption="&lt;strong&gt;Figure 2 (Attention Routing):&lt;/strong&gt; Attention heads dynamically specialize: color attributes route to CLIP; spatial/clothing features specialize to DINOv3."
                         title="Attention Routing">
                   <img src="assets/uniquery-routing.webp" alt="Routing thumbnail">
-                  <span class="thumb-label">Attention Routing</span>
+                  <span class="thumb-label">Routing</span>
                 </button>
                 <button class="showcase-thumb" type="button"
                         data-src="assets/uniquery-pick.webp"
                         data-alt="Per-attribute balanced accuracy comparison against independent ensembles"
-                        data-caption="&lt;strong&gt;Figure 3 (Attribute Performance Breakdown):&lt;/strong&gt; Comparison of balanced accuracy across all 40 attributes against independent ensembles. UniQuery shows consistent improvements across both PETA and Market-1501 held-out domains."
-                        title="Per-Attribute Gains">
+                        data-caption="&lt;strong&gt;Figure 3 (Attribute Gains):&lt;/strong&gt; Balanced accuracy comparison across all 40 attributes against independent ensembles on held-out domains."
+                        title="Attribute Gains">
                   <img src="assets/uniquery-pick.webp" alt="Gains thumbnail">
                   <span class="thumb-label">Attribute Gains</span>
                 </button>
                 <button class="showcase-thumb" type="button"
                         data-src="assets/uniquery-queryhead.webp"
                         data-alt="Detailed token interaction mechanism inside the cross-attention query head"
-                        data-caption="&lt;strong&gt;Figure 4 (Cross-Attention Query Head):&lt;/strong&gt; Detailed token interaction mechanism showing how attribute queries attend to patch tokens through Pre-LN multi-head attention followed by per-attribute linear classifiers."
-                        title="Query Head Fusion">
+                        data-caption="&lt;strong&gt;Figure 4 (Query Head):&lt;/strong&gt; Pre-LN cross-attention token interaction mechanism fusing multimodal patch tokens into attribute predictions."
+                        title="Query Head">
                   <img src="assets/uniquery-queryhead.webp" alt="Query Head thumbnail">
                   <span class="thumb-label">Query Head</span>
                 </button>
               </div>
             </div>
 
-            <div class="showcase-stats">
-              <div class="stat-card">
-                <div class="stat-value">0.8001</div>
-                <div class="stat-label">Challenge_Avg</div>
-                <div class="stat-sub">Official hidden test score</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">3 Heads</div>
-                <div class="stat-label">Query Architecture</div>
-                <div class="stat-sub">DINOv3 + CLIP + Joint Head</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">228</div>
-                <div class="stat-label">Multimodal Tokens</div>
-                <div class="stat-sub">Cross-attention fusion space</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">+0.60 mA</div>
-                <div class="stat-label">Domain Generalization</div>
-                <div class="stat-sub">Beats independent ensemble</div>
-              </div>
-            </div>
-
             <div class="showcase-footer">
               <ul>
-                <li><strong>UPAR Challenge 2027</strong> (Track 1: Pedestrian Attribute Recognition) @ WACV 2027 Real-World Surveillance Workshop.</li>
-                <li><strong>Spontaneous attention routing:</strong> Color attributes route heavily to CLIP text-visual tokens; structural and clothing attributes route to DINOv3.</li>
-                <li><strong>Background-subtracted zero-shot text scoring:</strong> Subtracting background prompt similarity raises zero-shot AUC from 0.68 to 0.76 (PETA) and 0.67 to 0.71 (Market-1501).</li>
+                <li>UPAR Challenge 2027 (Track 1) @ WACV 2027 Workshop — <strong>0.8001 Challenge_Avg</strong> (Rank 1).</li>
+                <li>Dynamic cross-attention routing: color attributes specialize to CLIP; spatial/clothing features to DINOv3.</li>
+                <li>Paper accepted at IEEE/CVF WACV 2027 RWS Workshop.</li>
               </ul>
               <div class="project-links">
-                <a class="button-link" href="papers/UniQuery%20-%20Unifying%20Vision%20Models%20with%20a%20Joint%20Query%20Head%20for%20Cross-Domain%20Pedestrian%20Attribute%20Recognition.pdf" target="_blank" rel="noopener">Read accepted manuscript (PDF) ↗</a>
+                <a class="button-link" href="papers/UniQuery%20-%20Unifying%20Vision%20Models%20with%20a%20Joint%20Query%20Head%20for%20Cross-Domain%20Pedestrian%20Attribute%20Recognition.pdf" target="_blank" rel="noopener">Read paper (PDF) ↗</a>
               </div>
             </div>
           </div>
@@ -177,12 +153,11 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">Surveillance Retrieval · Metric Learning · Calibration · 2026–2027</span>
-                <span class="pill-badge pill-badge-gold">★ WACV 2027 Workshop Paper</span>
-                <span class="pill-badge">68.17 mADM</span>
+                <span class="project-meta">WACV 2027 Workshop · Track 2</span>
+                <span class="pill-badge pill-badge-gold">★ 68.17 mADM</span>
               </div>
-              <h3>LENS: Likelihood Evaluation and Neighbor Smoothing for Person Retrieval</h3>
-              <p class="showcase-desc">Addresses cross-camera distribution shifts in attribute-based person retrieval by replacing traditional L1 distance with exact-query log-likelihood scoring, regularizing mutually exclusive attribute groups via group cross-entropy, and performing zero-cost transductive kNN logit smoothing using DINOv3 patch tokens from the same forward pass.</p>
+              <h3>LENS: Attribute-Based Person Retrieval on Unseen Cameras</h3>
+              <p class="showcase-desc">Replaces L1 distance ranking with exact-query log-likelihood scoring and performs zero-cost test-time transductive kNN logit smoothing using forward-pass DINOv3 patch tokens.</p>
             </div>
 
             <div class="showcase-media-hub" data-showcase="lens">
@@ -191,13 +166,13 @@
                   <span class="tab-icon">❖</span> Retrieval Pipeline
                 </button>
                 <button class="showcase-tab" type="button">
-                  <span class="tab-icon">🎯</span> L1 vs Likelihood Ranking
+                  <span class="tab-icon">🎯</span> L1 vs Likelihood
                 </button>
                 <button class="showcase-tab" type="button">
-                  <span class="tab-icon">✦</span> kNN Gallery Smoothing
+                  <span class="tab-icon">✦</span> kNN Smoothing
                 </button>
                 <button class="showcase-tab" type="button">
-                  <span class="tab-icon">📈</span> Bias Shift & Calibration
+                  <span class="tab-icon">📈</span> Calibration Shift
                 </button>
               </div>
 
@@ -211,7 +186,7 @@
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Retrieval Pipeline):</strong> (a) Three attribute models process gallery images with group CE. (b) Transductive kNN smoothing reuses DINOv3 patch tokens from the same pass, improving retrieval ranking without extra feature extraction.
+                  <strong>Figure 1 (Retrieval Pipeline):</strong> (a) Multi-teacher attribute models with group CE. (b) Transductive kNN smoothing reuses DINOv3 patch tokens from the same pass.
                 </figcaption>
               </figure>
 
@@ -219,7 +194,7 @@
                 <button class="showcase-thumb is-active" type="button"
                         data-src="assets/lens-architecture.webp"
                         data-alt="LENS retrieval pipeline showing likelihood evaluation, group cross-entropy, and test-time gallery neighbor smoothing"
-                        data-caption="&lt;strong&gt;Figure 1 (Retrieval Pipeline):&lt;/strong&gt; (a) Three attribute models process gallery images with group CE. (b) Transductive kNN smoothing reuses DINOv3 patch tokens from the same pass, improving retrieval ranking without extra feature extraction."
+                        data-caption="&lt;strong&gt;Figure 1 (Retrieval Pipeline):&lt;/strong&gt; (a) Multi-teacher attribute models with group CE. (b) Transductive kNN smoothing reuses DINOv3 patch tokens from the same pass."
                         title="Retrieval Pipeline">
                   <img src="assets/lens-architecture.webp" alt="Pipeline thumbnail">
                   <span class="thumb-label">Pipeline</span>
@@ -227,62 +202,38 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/lens-ranking.webp"
                         data-alt="Qualitative retrieval ranking comparison: L1 distance vs Exact-Query Log-Likelihood on surveillance query"
-                        data-caption="&lt;strong&gt;Figure 2 (Qualitative Retrieval Ranking):&lt;/strong&gt; Top-5 retrieved surveillance crops for query 'adult female'. L1 distance ranks mispredicted male candidates at the top, whereas Exact-Query Log-Likelihood heavily penalizes near-zero female probability, putting four exact matches in the top five."
-                        title="L1 vs Likelihood Ranking">
+                        data-caption="&lt;strong&gt;Figure 2 (L1 vs Likelihood):&lt;/strong&gt; Top-5 crops for 'adult female'. L1 ranks mispredicted male crops at the top; exact-query log-likelihood puts four exact matches in the top five."
+                        title="L1 vs Likelihood">
                   <img src="assets/lens-ranking.webp" alt="Ranking comparison thumbnail">
                   <span class="thumb-label">L1 vs Likelihood</span>
                 </button>
                 <button class="showcase-thumb" type="button"
                         data-src="assets/lens-knn.webp"
                         data-alt="Transductive kNN smoothing gain correlation across evaluated model configurations"
-                        data-caption="&lt;strong&gt;Figure 3 (Transductive kNN Smoothing):&lt;/strong&gt; Correlation between gallery redundancy and mADM gain across all 46 evaluated models. Neighbor smoothing consistently lifts retrieval accuracy across camera viewpoints without retraining."
-                        title="kNN Gallery Smoothing">
+                        data-caption="&lt;strong&gt;Figure 3 (kNN Smoothing):&lt;/strong&gt; Correlation between gallery redundancy and mADM gain. Neighbor smoothing consistently lifts retrieval accuracy across camera viewpoints."
+                        title="kNN Smoothing">
                   <img src="assets/lens-knn.webp" alt="kNN thumbnail">
                   <span class="thumb-label">kNN Smoothing</span>
                 </button>
                 <button class="showcase-thumb" type="button"
                         data-src="assets/lens-calibration.webp"
                         data-alt="Cross-domain calibration curves and logit bias shift across camera distributions"
-                        data-caption="&lt;strong&gt;Figure 4 (Cross-Domain Calibration Analysis):&lt;/strong&gt; Demonstrates that source-fitted Platt scaling degrades mADM on unseen cameras because attribute logit biases shift independently, proving raw logits with group CE are optimal."
-                        title="Bias Shift & Calibration">
+                        data-caption="&lt;strong&gt;Figure 4 (Calibration Shift):&lt;/strong&gt; Shows source-fitted Platt scaling degrades mADM on unseen cameras because attribute biases shift independently."
+                        title="Calibration Shift">
                   <img src="assets/lens-calibration.webp" alt="Calibration thumbnail">
                   <span class="thumb-label">Calibration</span>
                 </button>
               </div>
             </div>
 
-            <div class="showcase-stats">
-              <div class="stat-card">
-                <div class="stat-value">68.17</div>
-                <div class="stat-label">mADM Score</div>
-                <div class="stat-sub">Official hidden test score</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">48 / 48</div>
-                <div class="stat-label">Scoring Win-Rate</div>
-                <div class="stat-sub">Likelihood beats L1 across all models</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">46 / 46</div>
-                <div class="stat-label">Smoothing Gain</div>
-                <div class="stat-sub">kNN improves all tested setups</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-value">0 Extra Flops</div>
-                <div class="stat-label">Feature Reuse</div>
-                <div class="stat-sub">Reuses forward-pass DINOv3 tokens</div>
-              </div>
-            </div>
-
             <div class="showcase-footer">
               <ul>
-                <li><strong>UPAR Challenge 2027</strong> (Track 2: Attribute-Based Person Retrieval) @ WACV 2027 Real-World Surveillance Workshop.</li>
-                <li><strong>Exact-Query Log-Likelihood:</strong> Eliminates L1 flaw where confident single-attribute errors are penalized no more than small diffuse errors; lifts mADM by +5.23 points on average.</li>
-                <li><strong>Calibration Shift Discovery:</strong> Shows source-fitted Platt scaling fails on unseen cameras due to uncorrelated logit biases; keeps uncalibrated raw logits with group CE.</li>
-                <li><strong>100% Forensic Integrity Audit Pass:</strong> 37/37 peer-reviewed and verified genuine citations without hallucinations.</li>
+                <li>UPAR Challenge 2027 (Track 2) @ WACV 2027 Workshop — <strong>68.17 mADM</strong> on hidden test set.</li>
+                <li>Exact-query log-likelihood beats L1 across all 48 models; transductive kNN smoothing improves all 46 setups.</li>
+                <li>Paper accepted at IEEE/CVF WACV 2027 RWS Workshop.</li>
               </ul>
               <div class="project-links">
-                <a class="button-link" href="papers/LENS%20-%20Likelihood%20Evaluation%20and%20Neighbor%20Smoothing%20for%20Attribute-Based%20Person%20Retrieval%20on%20Unseen%20Cameras.pdf" target="_blank" rel="noopener">Read accepted manuscript (PDF) ↗</a>
+                <a class="button-link" href="papers/LENS%20-%20Likelihood%20Evaluation%20and%20Neighbor%20Smoothing%20for%20Attribute-Based%20Person%20Retrieval%20on%20Unseen%20Cameras.pdf" target="_blank" rel="noopener">Read paper (PDF) ↗</a>
               </div>
             </div>
           </div>
@@ -508,6 +459,6 @@
     <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
     <div class="media-lightbox-content"></div>
   </dialog>
-  <script src="script.js?v=10"></script>
+  <script src="script.js?v=11"></script>
 </body>
 </html>

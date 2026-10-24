@@ -444,9 +444,9 @@ a:focus-visible, button:focus-visible, .button:focus-visible { outline: 3px soli
   align-items: center;
   justify-content: center;
   width: 100%;
-  min-height: 380px;
-  max-height: 580px;
-  padding: 16px;
+  min-height: 460px;
+  max-height: 680px;
+  padding: 8px;
   background: #ffffff;
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -456,14 +456,14 @@ a:focus-visible, button:focus-visible, .button:focus-visible { outline: 3px soli
 
 .showcase-image-wrapper:hover {
   border-color: var(--accent);
-  box-shadow: 0 8px 24px rgba(43, 79, 140, .08);
+  box-shadow: 0 8px 30px rgba(43, 79, 140, .12);
 }
 
 .showcase-main-img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 540px;
+  max-height: 640px;
   object-fit: contain;
   transition: transform .35s ease, opacity .22s ease;
 }
