@@ -15,11 +15,10 @@
     <nav class="nav container" aria-label="Main navigation">
       <a class="name" href="#top"><span class="name-full">Vo Thanh Nguyen</span><span class="name-short">Thanh Nguyen</span></a>
       <div class="nav-links">
-        <a href="#publications">Publications</a>
-        <a href="#research">Deep Dives</a>
+        <a href="#research">Research</a>
         <a href="#projects">Engineering</a>
         <a href="#experience">Experience</a>
-        <a href="awards.html">Awards</a>
+        <a href="awards.html">Awards &amp; Honors</a>
         <a class="nav-cv-btn" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
       </div>
       <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
@@ -101,7 +100,7 @@
           <span class="metric-val">Top 9</span>
           <span class="metric-desc">Bosch Future Mobility Finals (Romania, Best in Asia)</span>
         </a>
-        <a class="hero-metric-card" href="#publications">
+        <a class="hero-metric-card" href="#research">
           <span class="metric-tag">📄 Peer-Reviewed</span>
           <span class="metric-val">3+ Papers</span>
           <span class="metric-desc">ECCV 2026 Workshop (Oral &amp; Poster) &amp; IEEE GTSD</span>
@@ -114,199 +113,11 @@
       </div>
     </section>
 
-    <!-- Dedicated Academic Publications Section -->
-    <section class="section container publications-section" id="publications">
-      <div class="section-title">
-        <p class="label">Research</p>
-        <h2>Selected Publications</h2>
-      </div>
-
-      <div class="publications-grid">
-
-        <!-- Paper 1: Traffic-JEPA -->
-        <article class="pub-card pub-card-oral" id="pub-traffic-jepa">
-          <div class="pub-badges">
-            <span class="pub-venue-badge pub-venue-oral">★ ECCV 2026 Workshop · Oral Presentation</span>
-            <span class="pub-award-pill">🏆 1st Worldwide Benchmark</span>
-          </div>
-          <h3 class="pub-title">
-            <a href="https://arxiv.org/abs/2609.18562" target="_blank" rel="noopener">Sim-to-Real Traffic Scene Understanding by Decoupling Semantics from Caption Generation with V-JEPA</a>
-          </h3>
-          <p class="pub-authors">
-            Nguyen Hoai Thuong Bui*, <span class="pub-author-me">Thanh Nguyen Vo</span>*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
-          </p>
-          <p class="pub-venue">Proceedings of the European Conference on Computer Vision Workshops (ECCVW), 2026</p>
-          <p class="pub-abstract">
-            Decouples visual semantic reasoning from natural language generation under synthetic-to-real domain shift. Encodes surveillance clips with frozen V-JEPA 2.1 representations for answer scoring, then applies training-free relational and temporal refinement to guide LoRA-fine-tuned Qwen3-VL-8B captioning, achieving <strong>1st Worldwide</strong> on the official WTS benchmark.
-          </p>
-          <div class="pub-actions">
-            <a class="pub-btn pub-btn-accent" href="https://arxiv.org/abs/2609.18562" target="_blank" rel="noopener">arXiv ↗</a>
-            <a class="pub-btn" href="papers/Hoai%20et%20al.%20-%20Sim-to-Real%20Tra%20c%20Scene%20Understanding%20by%20Decoupling%20Semantics%20from%20Caption%20Generation%20with%20V-JEPA.pdf" target="_blank" rel="noopener">Accepted PDF</a>
-            <a class="pub-btn" href="https://github.com/ThuongBuiRVC/Traffic-JEPA" target="_blank" rel="noopener">Code</a>
-            <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-traffic-jepa" aria-expanded="false">BibTeX</button>
-            <a class="pub-btn pub-btn-showcase" href="#project-traffic-jepa">Interactive Figures &amp; Pipeline ↓</a>
-          </div>
-          <div class="pub-bibtex-box" id="bib-traffic-jepa" hidden>
-            <div class="pub-bibtex-header">
-              <span>BibTeX Citation</span>
-              <button class="pub-bibtex-copy-btn" type="button" data-code="bib-traffic-jepa-code">Copy BibTeX</button>
-            </div>
-            <pre id="bib-traffic-jepa-code"><code>@inproceedings{bui2026simtoreal,
-  title={Sim-to-Real Traffic Scene Understanding by Decoupling Semantics from Caption Generation with V-JEPA},
-  author={Bui, Nguyen Hoai Thuong and Vo, Thanh Nguyen and Nguyen, Trinh Tra Giang and Bui, Ha Duc},
-  booktitle={Proceedings of the European Conference on Computer Vision Workshops (ECCVW)},
-  year={2026},
-  url={https://arxiv.org/abs/2609.18562}
-}</code></pre>
-          </div>
-        </article>
-
-        <!-- Paper 2: JEPA Guided Diffusion -->
-        <article class="pub-card" id="pub-traffic-forecast">
-          <div class="pub-badges">
-            <span class="pub-venue-badge">★ ECCV 2026 Workshop · Poster</span>
-            <span class="pub-award-pill">🥉 Rank 3 Worldwide (Score: 75.13)</span>
-          </div>
-          <h3 class="pub-title">
-            <a href="https://arxiv.org/abs/2609.21379" target="_blank" rel="noopener">JEPA Guided Diffusion: Predictive Vision-Language Conditioning for Generative Traffic Forecasting</a>
-          </h3>
-          <p class="pub-authors">
-            Trinh Tra Giang Nguyen*, <span class="pub-author-me">Thanh Nguyen Vo</span>*, Nguyen Hoai Thuong Bui*, Ha Duc Bui&dagger;
-          </p>
-          <p class="pub-venue">Proceedings of the European Conference on Computer Vision Workshops (ECCVW), 2026</p>
-          <p class="pub-abstract">
-            Bridges frozen V-JEPA 2.1 latent dynamics into a frozen Cosmos-Predict2.5 DiT video generator. Trains a lightweight adapter via Hungarian set-matching loss to align predictive visual tokens with Cosmos cross-attention conditioning, paired with 5-level Laplacian pyramid filtering and WCT color transfer to eliminate trajectory drift.
-          </p>
-          <div class="pub-actions">
-            <a class="pub-btn pub-btn-accent" href="https://arxiv.org/abs/2609.21379" target="_blank" rel="noopener">arXiv ↗</a>
-            <a class="pub-btn" href="papers/Nguyen%20et%20al.%20-%20JEPA%20Guided%20Diffusion%20Predictive%20Vision-Language%20Conditioning%20for%20Generative%20Traffic%20Forecasting.pdf" target="_blank" rel="noopener">Accepted PDF</a>
-            <a class="pub-btn" href="https://github.com/AlterraFa/JEPA-Guided-Diffusion" target="_blank" rel="noopener">Code</a>
-            <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-traffic-forecast" aria-expanded="false">BibTeX</button>
-            <a class="pub-btn pub-btn-showcase" href="#project-traffic-forecast">Interactive Figures &amp; Demo ↓</a>
-          </div>
-          <div class="pub-bibtex-box" id="bib-traffic-forecast" hidden>
-            <div class="pub-bibtex-header">
-              <span>BibTeX Citation</span>
-              <button class="pub-bibtex-copy-btn" type="button" data-code="bib-traffic-forecast-code">Copy BibTeX</button>
-            </div>
-            <pre id="bib-traffic-forecast-code"><code>@inproceedings{nguyen2026jepa,
-  title={JEPA Guided Diffusion: Predictive Vision-Language Conditioning for Generative Traffic Forecasting},
-  author={Nguyen, Trinh Tra Giang and Vo, Thanh Nguyen and Bui, Nguyen Hoai Thuong and Bui, Ha Duc},
-  booktitle={Proceedings of the European Conference on Computer Vision Workshops (ECCVW)},
-  year={2026},
-  url={https://arxiv.org/abs/2609.21379}
-}</code></pre>
-          </div>
-        </article>
-
-        <!-- Paper 3: GTSD 2026 -->
-        <article class="pub-card" id="pub-gtsd-2026">
-          <div class="pub-badges">
-            <span class="pub-venue-badge">★ IEEE GTSD 2026 Proceedings</span>
-            <span class="pub-venue-badge">IEEE Xplore</span>
-          </div>
-          <h3 class="pub-title">
-            <a href="https://ieeexplore.ieee.org/document/11722364" target="_blank" rel="noopener">An Integrated Perception-to-Planning Framework for Autonomous Driving using YOLOv11 and Frenet</a>
-          </h3>
-          <p class="pub-authors">
-            <span class="pub-author-me">Thanh Nguyen Vo</span>, Trinh Tra Giang Nguyen, Lu Anh Khoi Le, Ha Duc Bui&dagger;
-          </p>
-          <p class="pub-venue">8th International Conference on Green Technology and Sustainable Development (GTSD), IEEE, 2026</p>
-          <p class="pub-abstract">
-            Proposes an integrated perception-to-planning architecture featuring a shared YOLOv11 stem branching into 2D object detection and command-gated trajectory planning. Resolves gradient conflict using custom Frenet trajectory loss and deploys on NVIDIA Jetson Orin Nano with TensorRT INT8 optimization (&gt;100 FPS, &lt;25ms latency).
-          </p>
-          <div class="pub-actions">
-            <a class="pub-btn pub-btn-accent" href="https://ieeexplore.ieee.org/document/11722364" target="_blank" rel="noopener">IEEE Xplore ↗</a>
-            <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-gtsd-2026" aria-expanded="false">BibTeX</button>
-            <a class="pub-btn pub-btn-showcase" href="#project-gtsd-2026">Network Architecture &amp; Trajectory ↓</a>
-          </div>
-          <div class="pub-bibtex-box" id="bib-gtsd-2026" hidden>
-            <div class="pub-bibtex-header">
-              <span>BibTeX Citation</span>
-              <button class="pub-bibtex-copy-btn" type="button" data-code="bib-gtsd-2026-code">Copy BibTeX</button>
-            </div>
-            <pre id="bib-gtsd-2026-code"><code>@inproceedings{vo2026integrated,
-  title={An Integrated Perception-to-Planning Framework for Autonomous Driving using YOLOv11 and Frenet},
-  author={Vo, Thanh Nguyen and Nguyen, Trinh Tra Giang and Le, Lu Anh Khoi and Bui, Ha Duc},
-  booktitle={2026 8th International Conference on Green Technology and Sustainable Development (GTSD)},
-  year={2026},
-  publisher={IEEE},
-  doi={10.1109/GTSD.2026.11722364}
-}</code></pre>
-          </div>
-        </article>
-
-        <!-- Paper 4 & 5: Preprints In Review -->
-        <article class="pub-card" id="pub-uniquery">
-          <div class="pub-badges">
-            <span class="pub-venue-badge">WACV 2027 Workshop (In Review)</span>
-            <span class="pub-venue-badge">Foundation Encoders</span>
-          </div>
-          <h3 class="pub-title">UniQuery: Cross-Domain Pedestrian Attribute Recognition via Dynamic Multi-Encoder Routing</h3>
-          <p class="pub-authors">
-            <span class="pub-author-me">Thanh Nguyen Vo</span>*, Nguyen Hoai Thuong Bui*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
-          </p>
-          <p class="pub-venue">Under Review at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2027</p>
-          <p class="pub-abstract">
-            Co-adapts self-supervised DINOv3 (ViT-H+/16) and vision-language CLIP (ViT-L/14) with an attribute-specific joint query head. Cross-attention queries dynamically route between visual and text-visual token spaces, outperforming static ensembles across surveillance cameras.
-          </p>
-          <div class="pub-actions">
-            <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-uniquery" aria-expanded="false">BibTeX</button>
-            <a class="pub-btn pub-btn-showcase" href="#project-uniquery">Routing &amp; Architecture ↓</a>
-          </div>
-          <div class="pub-bibtex-box" id="bib-uniquery" hidden>
-            <div class="pub-bibtex-header">
-              <span>BibTeX Citation</span>
-              <button class="pub-bibtex-copy-btn" type="button" data-code="bib-uniquery-code">Copy BibTeX</button>
-            </div>
-            <pre id="bib-uniquery-code"><code>@article{vo2027uniquery,
-  title={UniQuery: Cross-Domain Pedestrian Attribute Recognition via Dynamic Multi-Encoder Routing},
-  author={Vo, Thanh Nguyen and Bui, Nguyen Hoai Thuong and Nguyen, Trinh Tra Giang and Bui, Ha Duc},
-  journal={arXiv preprint (Under Review at WACV 2027 Workshop)},
-  year={2027}
-}</code></pre>
-          </div>
-        </article>
-
-        <article class="pub-card" id="pub-lens">
-          <div class="pub-badges">
-            <span class="pub-venue-badge">WACV 2027 Workshop (In Review)</span>
-            <span class="pub-venue-badge">Zero-Shot Retrieval</span>
-          </div>
-          <h3 class="pub-title">LENS: Attribute-Based Person Retrieval on Unseen Cameras</h3>
-          <p class="pub-authors">
-            <span class="pub-author-me">Thanh Nguyen Vo</span>*, Nguyen Hoai Thuong Bui*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
-          </p>
-          <p class="pub-venue">Under Review at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2027</p>
-          <p class="pub-abstract">
-            Calibrates vision-language alignment for zero-shot text-to-person retrieval in open surveillance networks with significant viewpoint, illumination, and camera distortion variations.
-          </p>
-          <div class="pub-actions">
-            <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-lens" aria-expanded="false">BibTeX</button>
-            <a class="pub-btn pub-btn-showcase" href="#project-lens">Architecture &amp; Retrieval Demo ↓</a>
-          </div>
-          <div class="pub-bibtex-box" id="bib-lens" hidden>
-            <div class="pub-bibtex-header">
-              <span>BibTeX Citation</span>
-              <button class="pub-bibtex-copy-btn" type="button" data-code="bib-lens-code">Copy BibTeX</button>
-            </div>
-            <pre id="bib-lens-code"><code>@article{vo2027lens,
-  title={LENS: Attribute-Based Person Retrieval on Unseen Cameras},
-  author={Vo, Thanh Nguyen and Bui, Nguyen Hoai Thuong and Nguyen, Trinh Tra Giang and Bui, Ha Duc},
-  journal={arXiv preprint (Under Review at WACV 2027 Workshop)},
-  year={2027}
-}</code></pre>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Deep Technical Showcases Section -->
+    <!-- Unified Research & Publications Section -->
     <section class="section container" id="research">
       <div class="section-title">
-        <p class="label">Deep Dives</p>
-        <h2>Interactive Technical Showcases</h2>
+        <p class="label">Research</p>
+        <h2>Recent Work &amp; Publications</h2>
       </div>
 
       <div class="projects">
@@ -319,6 +130,10 @@
                 <span class="pill-badge">WACV 2027 Workshop (In Review)</span>
               </div>
               <h3>UniQuery: Cross-Domain Pedestrian Attribute Recognition</h3>
+              <p class="project-authors">
+                <strong class="author-self">Thanh Nguyen Vo</strong>*, Nguyen Hoai Thuong Bui*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
+              </p>
+              <p class="project-venue">Under Review at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2027</p>
               <p class="showcase-desc">Co-adapts self-supervised DINOv3 (ViT-H+/16) and vision-language CLIP (ViT-L/14) with an attribute-specific joint query head. Cross-attention queries dynamically route between visual and text-visual token spaces, outperforming static ensembles across surveillance cameras.</p>
             </div>
 
@@ -395,7 +210,20 @@
                 <li>Paper under review at IEEE/CVF WACV 2027 Workshop</li>
               </ul>
               <div class="project-links">
-                <a href="papers/UniQuery%20-%20Unifying%20Vision%20Models%20with%20a%20Joint%20Query%20Head%20for%20Cross-Domain%20Pedestrian%20Attribute%20Recognition.pdf" target="_blank" rel="noopener">Read manuscript ↗</a>
+                <a class="pub-btn pub-btn-accent" href="papers/UniQuery%20-%20Unifying%20Vision%20Models%20with%20a%20Joint%20Query%20Head%20for%20Cross-Domain%20Pedestrian%20Attribute%20Recognition.pdf" target="_blank" rel="noopener">Read manuscript ↗</a>
+                <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-uniquery" aria-expanded="false">BibTeX</button>
+              </div>
+              <div class="pub-bibtex-box" id="bib-uniquery" hidden>
+                <div class="pub-bibtex-header">
+                  <span>BibTeX Citation</span>
+                  <button class="pub-bibtex-copy-btn" type="button" data-code="bib-uniquery-code">Copy BibTeX</button>
+                </div>
+                <pre id="bib-uniquery-code"><code>@article{vo2027uniquery,
+  title={UniQuery: Cross-Domain Pedestrian Attribute Recognition via Dynamic Multi-Encoder Routing},
+  author={Vo, Thanh Nguyen and Bui, Nguyen Hoai Thuong and Nguyen, Trinh Tra Giang and Bui, Ha Duc},
+  journal={arXiv preprint (Under Review at WACV 2027 Workshop)},
+  year={2027}
+}</code></pre>
               </div>
             </div>
           </div>
@@ -410,6 +238,10 @@
                 <span class="pill-badge">WACV 2027 Workshop (In Review)</span>
               </div>
               <h3>LENS: Attribute-Based Person Retrieval on Unseen Cameras</h3>
+              <p class="project-authors">
+                <strong class="author-self">Thanh Nguyen Vo</strong>*, Nguyen Hoai Thuong Bui*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
+              </p>
+              <p class="project-venue">Under Review at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2027</p>
               <p class="showcase-desc">Replaces L1 distance ranking with exact-query log-likelihood scoring and performs zero-cost test-time transductive kNN logit smoothing using forward-pass DINOv3 patch tokens.</p>
             </div>
 
@@ -486,7 +318,20 @@
                 <li>Paper under review at IEEE/CVF WACV 2027 Workshop</li>
               </ul>
               <div class="project-links">
-                <a href="papers/LENS%20-%20Likelihood%20Evaluation%20and%20Neighbor%20Smoothing%20for%20Attribute-Based%20Person%20Retrieval%20on%20Unseen%20Cameras.pdf" target="_blank" rel="noopener">Read manuscript ↗</a>
+                <a class="pub-btn pub-btn-accent" href="papers/LENS%20-%20Likelihood%20Evaluation%20and%20Neighbor%20Smoothing%20for%20Attribute-Based%20Person%20Retrieval%20on%20Unseen%20Cameras.pdf" target="_blank" rel="noopener">Read manuscript ↗</a>
+                <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-lens" aria-expanded="false">BibTeX</button>
+              </div>
+              <div class="pub-bibtex-box" id="bib-lens" hidden>
+                <div class="pub-bibtex-header">
+                  <span>BibTeX Citation</span>
+                  <button class="pub-bibtex-copy-btn" type="button" data-code="bib-lens-code">Copy BibTeX</button>
+                </div>
+                <pre id="bib-lens-code"><code>@article{vo2027lens,
+  title={LENS: Attribute-Based Person Retrieval on Unseen Cameras},
+  author={Vo, Thanh Nguyen and Bui, Nguyen Hoai Thuong and Nguyen, Trinh Tra Giang and Bui, Ha Duc},
+  journal={arXiv preprint (Under Review at WACV 2027 Workshop)},
+  year={2027}
+}</code></pre>
               </div>
             </div>
           </div>
@@ -498,9 +343,14 @@
             <div class="showcase-header">
               <div class="showcase-badges">
                 <span class="project-meta">World Models · Video Diffusion · Generative AI · 2026</span>
-                <span class="pill-badge pill-badge-gold">★ ECCV 2026 Workshop</span>
+                <span class="pill-badge pill-badge-gold">★ ECCV 2026 Workshop · Poster</span>
+                <span class="pub-award-pill">🥉 Rank 3 Worldwide (Score: 75.13)</span>
               </div>
-              <h3>Generative Traffic Forecasting with World Models</h3>
+              <h3>JEPA Guided Diffusion: Predictive Vision-Language Conditioning for Generative Traffic Forecasting</h3>
+              <p class="project-authors">
+                Trinh Tra Giang Nguyen*, <strong class="author-self">Thanh Nguyen Vo</strong>*, Nguyen Hoai Thuong Bui*, Ha Duc Bui&dagger;
+              </p>
+              <p class="project-venue">Proceedings of the European Conference on Computer Vision Workshops (ECCVW), 2026</p>
               <p class="showcase-desc">Introduced a decoupled forecasting framework that uses frozen V-JEPA representations to guide a frozen video diffusion model through a lightweight learned alignment module, separating traffic-world understanding from pixel-level generation.</p>
             </div>
 
@@ -577,9 +427,23 @@
                 <li>Paper accepted at ECCV 2026 Workshop</li>
               </ul>
               <div class="project-links">
-                <a href="https://arxiv.org/abs/2609.21379" target="_blank" rel="noopener">arXiv ↗</a>
-                <a href="papers/Nguyen%20et%20al.%20-%20JEPA%20Guided%20Diffusion%20Predictive%20Vision-Language%20Conditioning%20for%20Generative%20Traffic%20Forecasting.pdf" target="_blank" rel="noopener">Read accepted manuscript ↗</a>
-                <a href="https://github.com/AlterraFa/JEPA-Guided-Diffusion" target="_blank" rel="noopener">View repository ↗</a>
+                <a class="pub-btn pub-btn-accent" href="https://arxiv.org/abs/2609.21379" target="_blank" rel="noopener">arXiv ↗</a>
+                <a class="pub-btn" href="papers/Nguyen%20et%20al.%20-%20JEPA%20Guided%20Diffusion%20Predictive%20Vision-Language%20Conditioning%20for%20Generative%20Traffic%20Forecasting.pdf" target="_blank" rel="noopener">Accepted PDF</a>
+                <a class="pub-btn" href="https://github.com/AlterraFa/JEPA-Guided-Diffusion" target="_blank" rel="noopener">Code</a>
+                <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-traffic-forecast" aria-expanded="false">BibTeX</button>
+              </div>
+              <div class="pub-bibtex-box" id="bib-traffic-forecast" hidden>
+                <div class="pub-bibtex-header">
+                  <span>BibTeX Citation</span>
+                  <button class="pub-bibtex-copy-btn" type="button" data-code="bib-traffic-forecast-code">Copy BibTeX</button>
+                </div>
+                <pre id="bib-traffic-forecast-code"><code>@inproceedings{nguyen2026jepa,
+  title={JEPA Guided Diffusion: Predictive Vision-Language Conditioning for Generative Traffic Forecasting},
+  author={Nguyen, Trinh Tra Giang and Vo, Thanh Nguyen and Bui, Nguyen Hoai Thuong and Bui, Ha Duc},
+  booktitle={Proceedings of the European Conference on Computer Vision Workshops (ECCVW)},
+  year={2026},
+  url={https://arxiv.org/abs/2609.21379}
+}</code></pre>
               </div>
             </div>
           </div>
@@ -591,9 +455,14 @@
             <div class="showcase-header">
               <div class="showcase-badges">
                 <span class="project-meta">World Models · Video-LLM · Scene Understanding · 2026</span>
-                <span class="pill-badge pill-badge-gold">★ ECCV 2026 Workshop (Oral)</span>
+                <span class="pill-badge pill-badge-gold">★ ECCV 2026 Workshop · Oral Presentation</span>
+                <span class="pub-award-pill">🏆 1st Worldwide Benchmark</span>
               </div>
-              <h3>Traffic Scene Understanding with World Models</h3>
+              <h3>Sim-to-Real Traffic Scene Understanding by Decoupling Semantics from Caption Generation with V-JEPA</h3>
+              <p class="project-authors">
+                Nguyen Hoai Thuong Bui*, <strong class="author-self">Thanh Nguyen Vo</strong>*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
+              </p>
+              <p class="project-venue">Proceedings of the European Conference on Computer Vision Workshops (ECCVW), 2026</p>
               <p class="showcase-desc">Introduced a structured traffic-scene understanding framework that uses frozen V-JEPA representations to predict explicit semantic facts, then applies training-free relational and temporal refinement before grounding caption generation.</p>
             </div>
 
@@ -670,9 +539,23 @@
                 <li>Paper accepted at ECCV 2026 Workshop (Oral Presentation)</li>
               </ul>
               <div class="project-links">
-                <a href="https://arxiv.org/abs/2609.18562" target="_blank" rel="noopener">arXiv ↗</a>
-                <a href="papers/Hoai%20et%20al.%20-%20Sim-to-Real%20Tra%20c%20Scene%20Understanding%20by%20Decoupling%20Semantics%20from%20Caption%20Generation%20with%20V-JEPA.pdf" target="_blank" rel="noopener">Read accepted manuscript ↗</a>
-                <a href="https://github.com/ThuongBuiRVC/Traffic-JEPA" target="_blank" rel="noopener">View repository ↗</a>
+                <a class="pub-btn pub-btn-accent" href="https://arxiv.org/abs/2609.18562" target="_blank" rel="noopener">arXiv ↗</a>
+                <a class="pub-btn" href="papers/Hoai%20et%20al.%20-%20Sim-to-Real%20Tra%20c%20Scene%20Understanding%20by%20Decoupling%20Semantics%20from%20Caption%20Generation%20with%20V-JEPA.pdf" target="_blank" rel="noopener">Accepted PDF</a>
+                <a class="pub-btn" href="https://github.com/ThuongBuiRVC/Traffic-JEPA" target="_blank" rel="noopener">Code</a>
+                <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-traffic-jepa" aria-expanded="false">BibTeX</button>
+              </div>
+              <div class="pub-bibtex-box" id="bib-traffic-jepa" hidden>
+                <div class="pub-bibtex-header">
+                  <span>BibTeX Citation</span>
+                  <button class="pub-bibtex-copy-btn" type="button" data-code="bib-traffic-jepa-code">Copy BibTeX</button>
+                </div>
+                <pre id="bib-traffic-jepa-code"><code>@inproceedings{bui2026simtoreal,
+  title={Sim-to-Real Traffic Scene Understanding by Decoupling Semantics from Caption Generation with V-JEPA},
+  author={Bui, Nguyen Hoai Thuong and Vo, Thanh Nguyen and Nguyen, Trinh Tra Giang and Bui, Ha Duc},
+  booktitle={Proceedings of the European Conference on Computer Vision Workshops (ECCVW)},
+  year={2026},
+  url={https://arxiv.org/abs/2609.18562}
+}</code></pre>
               </div>
             </div>
           </div>
@@ -686,7 +569,11 @@
                 <span class="project-meta">Autonomous Driving · Trajectory Planning · Real-Time Systems · 2026</span>
                 <span class="pill-badge pill-badge-gold">★ IEEE GTSD 2026</span>
               </div>
-              <h3>Integrated Perception-to-Planning Framework for Autonomous Driving</h3>
+              <h3>An Integrated Perception-to-Planning Framework for Autonomous Driving using YOLOv11 and Frenet</h3>
+              <p class="project-authors">
+                <strong class="author-self">Thanh Nguyen Vo</strong>, Trinh Tra Giang Nguyen, Lu Anh Khoi Le, Ha Duc Bui&dagger;
+              </p>
+              <p class="project-venue">2026 8th International Conference on Green Technology and Sustainable Development (GTSD), IEEE, 2026</p>
               <p class="showcase-desc">Introduced an end-to-end perception-to-planning framework featuring a shared YOLOv11 stem that branches into multi-scale object detection and an independent command-gated driving branch predicting trajectory heatmaps and generating smooth Frenet/Bézier paths in real time.</p>
             </div>
 
@@ -752,8 +639,23 @@
                 <li>Deployed on NVIDIA Jetson Orin Nano with 35+ FPS multi-task execution</li>
               </ul>
               <div class="project-links">
-                <a href="https://ieeexplore.ieee.org/document/11722364" target="_blank" rel="noopener">IEEE Xplore ↗</a>
-                <a href="papers/Vo%20et%20al.%20-%20An%20Integrated%20Perception-to-Planning%20Framework%20for%20Autonomous%20Driving%20using%20YOLOv11%20and%20Frenet.pdf" target="_blank" rel="noopener">Read publication ↗</a>
+                <a class="pub-btn pub-btn-accent" href="https://ieeexplore.ieee.org/document/11722364" target="_blank" rel="noopener">IEEE Xplore ↗</a>
+                <a class="pub-btn" href="papers/Vo%20et%20al.%20-%20An%20Integrated%20Perception-to-Planning%20Framework%20for%20Autonomous%20Driving%20using%20YOLOv11%20and%20Frenet.pdf" target="_blank" rel="noopener">Accepted PDF</a>
+                <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-gtsd-2026" aria-expanded="false">BibTeX</button>
+              </div>
+              <div class="pub-bibtex-box" id="bib-gtsd-2026" hidden>
+                <div class="pub-bibtex-header">
+                  <span>BibTeX Citation</span>
+                  <button class="pub-bibtex-copy-btn" type="button" data-code="bib-gtsd-2026-code">Copy BibTeX</button>
+                </div>
+                <pre id="bib-gtsd-2026-code"><code>@inproceedings{vo2026integrated,
+  title={An Integrated Perception-to-Planning Framework for Autonomous Driving using YOLOv11 and Frenet},
+  author={Vo, Thanh Nguyen and Nguyen, Trinh Tra Giang and Le, Lu Anh Khoi and Bui, Ha Duc},
+  booktitle={2026 8th International Conference on Green Technology and Sustainable Development (GTSD)},
+  year={2026},
+  publisher={IEEE},
+  doi={10.1109/GTSD.2026.11722364}
+}</code></pre>
               </div>
             </div>
           </div>
