@@ -56,6 +56,9 @@ html, body {
     max-width: 320px;
     height: 190px;
   }
+  .showcase-image-wrapper {
+    height: 380px;
+  }
 }
 
 /* ============================================================
@@ -155,12 +158,16 @@ html, body {
   }
 
   .showcase-image-wrapper {
-    min-height: 200px;
+    height: 260px;
     padding: 6px;
   }
   .showcase-main-img {
-    padding: 8px;
-    max-height: 380px;
+    padding: 6px;
+    max-height: 100%;
+    max-width: 100%;
+  }
+  .showcase-caption {
+    min-height: 56px;
   }
 
   /* Interactive media tabs - smooth horizontal scroll on touch */
@@ -281,6 +288,9 @@ html, body {
 @media (max-width: 380px) {
   .hero-aside {
     width: 100%;
+  }
+  .showcase-image-wrapper {
+    height: 220px;
   }
   .profile-card {
     padding: 16px;
