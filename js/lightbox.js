@@ -56,6 +56,15 @@ export function initLightbox() {
     });
   });
 
+  document.querySelectorAll(".award-cert-thumb").forEach((thumb) => {
+    thumb.addEventListener("click", (event) => {
+      const img = thumb.querySelector("img");
+      if (img && event.target !== img) {
+        openLightbox(img);
+      }
+    });
+  });
+
   galleries.forEach((gallery) => {
     gallery.querySelectorAll("img").forEach((media) => {
       media.classList.add("zoomable-media");
