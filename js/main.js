@@ -1,5 +1,5 @@
 /* ============================================================
-   Main Application Entry Point
+   Main Application Entry Point — 2026 Interactive Engine
    ============================================================ */
 
 import { initTheme } from "./theme.js";
@@ -7,6 +7,10 @@ import { initLightbox } from "./lightbox.js";
 import { initShowcases } from "./showcase.js";
 import { initAlbums } from "./album.js";
 import { initBibtex } from "./bibtex.js";
+import { initSpotlight } from "./spotlight.js";
+import { initCommandPalette } from "./command-palette.js";
+import { initFilter } from "./filter.js";
+import { initScrollTelemetry } from "./scroll-progress.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
@@ -14,4 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initShowcases();
   initAlbums();
   initBibtex();
+  initSpotlight();
+  initCommandPalette();
+  initFilter();
+  initScrollTelemetry();
 });

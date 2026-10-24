@@ -7,24 +7,36 @@
   <title>Vo Thanh Nguyen | AI Engineer and Researcher</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=50">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=60">
 </head>
 <body>
+  <div id="scroll-progress"></div>
+
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="name" href="#top"><span class="name-full">Vo Thanh Nguyen</span><span class="name-short">Thanh Nguyen</span></a>
+      <a class="name" href="#top">
+        <span class="name-avatar-dot"></span>
+        <span class="name-full">Vo Thanh Nguyen</span>
+        <span class="name-short">Thanh Nguyen</span>
+      </a>
       <div class="nav-links">
-        <a href="#research">Research</a>
-        <a href="#projects">Engineering</a>
-        <a href="#experience">Experience</a>
-        <a href="awards.html">Awards &amp; Honors</a>
-        <a class="nav-cv-btn" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
+        <a class="nav-link-item" href="#research">Research</a>
+        <a class="nav-link-item" href="#projects">Engineering</a>
+        <a class="nav-link-item" href="#experience">Experience</a>
+        <a class="nav-link-item" href="awards.html">Awards &amp; Honors</a>
       </div>
-      <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
-        <span class="icon-sun" aria-hidden="true">&#9728;</span>
-        <span class="icon-moon" aria-hidden="true">&#9790;</span>
-      </button>
+      <div class="nav-controls">
+        <button class="nav-cmd-btn" type="button" aria-label="Open Command Palette (Cmd+K)">
+          <span>Search</span>
+          <kbd class="nav-cmd-kbd">⌘K</kbd>
+        </button>
+        <a class="nav-cv-btn" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+          <span class="icon-sun" aria-hidden="true">&#9728;</span>
+          <span class="icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -33,7 +45,7 @@
       <div class="hero-copy">
         <div class="hero-status-pill">
           <span class="status-dot"></span>
-          <span>Open to Ph.D. / Research Scientist &amp; AI Engineering Roles (2026)</span>
+          <span>OPEN TO PH.D. / AI RESEARCH ROLES (2026)</span>
         </div>
         <p class="hero-subtitle">AI Researcher &amp; Systems Engineer</p>
         <h1>Vo Thanh<br>Nguyen</h1>
@@ -42,73 +54,90 @@
 
         <div class="hero-actions-group">
           <div class="hero-primary-btns">
-            <a class="button-primary" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">
-              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-              Download CV (PDF)
+            <a class="btn-island-primary" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">
+              <span>Download CV (PDF)</span>
+              <span class="btn-icon-bubble">↗</span>
             </a>
-            <a class="button-secondary" href="mailto:nguyenvothanh04@gmail.com">
-              <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              Contact Me
+            <a class="btn-island-secondary" href="mailto:nguyenvothanh04@gmail.com">
+              <span>Contact Me</span>
             </a>
           </div>
 
           <div class="hero-chips">
-            <a class="chip-link" href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">
-              <svg class="chip-icon" width="14" height="14" viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.8 3.8v6.8L12 24l7.2-3.9v-6.8l4.8-3.8L12 0zm0 3.7 8.3 6.6-8.3 6.6-8.3-6.6L12 3.7z"/></svg>
-              Google Scholar
+            <a class="hero-chip" href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.8 3.8v6.8L12 24l7.2-3.9v-6.8l4.8-3.8L12 0zm0 3.7 8.3 6.6-8.3 6.6-8.3-6.6L12 3.7z"/></svg>
+              Google Scholar ↗
             </a>
-            <a class="chip-link" href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">
-              <svg class="chip-icon" width="14" height="14" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-              OpenReview
+            <a class="hero-chip" href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+              OpenReview ↗
             </a>
-            <a class="chip-link" href="https://github.com/vtnguyen04" target="_blank" rel="noopener">
-              <svg class="chip-icon" width="14" height="14" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-              GitHub
+            <a class="hero-chip" href="https://github.com/vtnguyen04" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub ↗
             </a>
-            <a class="chip-link" href="https://www.linkedin.com/in/nguy%E1%BB%85n-v%C3%B5-th%C3%A0nh-044517246/" target="_blank" rel="noopener">
-              <svg class="chip-icon" width="14" height="14" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-              LinkedIn
+            <a class="hero-chip" href="https://www.linkedin.com/in/nguy%E1%BB%85n-v%C3%B5-th%C3%A0nh-044517246/" target="_blank" rel="noopener">
+              <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn ↗
             </a>
           </div>
         </div>
       </div>
 
-      <aside class="hero-summary">
+      <aside class="hero-aside">
         <div class="profile-card">
-          <img class="profile-photo" src="assets/profile-waterfront.webp" alt="Vo Thanh Nguyen">
-          <div class="profile-card-badge">HCMUTE Research Lab</div>
+          <figure>
+            <img class="profile-photo" src="assets/profile-waterfront.webp" alt="Vo Thanh Nguyen" loading="eager">
+            <div class="profile-badge-overlay">HCMUTE Research Lab · Dr. Ha Duc Bui</div>
+          </figure>
+          <ul class="profile-meta-list">
+            <li class="profile-meta-item">
+              <span class="profile-meta-label">Based in</span>
+              <span class="profile-meta-val">Ho Chi Minh City, Vietnam</span>
+            </li>
+            <li class="profile-meta-item">
+              <span class="profile-meta-label">Education</span>
+              <span class="profile-meta-val">B.Eng. Robotics &amp; AI · HCMUTE, 2026 (Expected)</span>
+            </li>
+            <li class="profile-meta-item">
+              <span class="profile-meta-label">Key Focus</span>
+              <span class="profile-meta-val">Generative World Models, Video Forecasting, Edge Autonomous Systems</span>
+            </li>
+          </ul>
         </div>
-        <dl>
-          <div><dt>Based in</dt><dd>Ho Chi Minh City, Vietnam</dd></div>
-          <div><dt>Education</dt><dd>B.Eng. Robotics &amp; AI<br>HCMUTE, 2026 (Expected)</dd></div>
-          <div><dt>Advisor</dt><dd>Dr. Ha Duc Bui (NUS Ph.D.)</dd></div>
-          <div><dt>Key Focus</dt><dd>Generative World Models, Video Forecasting, Edge Autonomous Systems</dd></div>
-        </dl>
       </aside>
     </section>
 
-    <!-- 4 High-Impact Credentials Banner -->
+    <!-- 4 High-Impact Credentials Banner with Mouse Spotlight -->
     <section class="hero-metrics-section container">
       <div class="hero-metrics-grid">
-        <a class="hero-metric-card" href="awards.html">
-          <span class="metric-tag">🥇 1st Worldwide</span>
-          <span class="metric-val">1st Place</span>
-          <span class="metric-desc">NVIDIA AI City Challenge (Track 2: Scene Understanding)</span>
+        <a class="spotlight-card" href="awards.html">
+          <div class="spotlight-inner">
+            <span class="metric-tag">🥇 1st Worldwide</span>
+            <span class="metric-val">1st Place</span>
+            <span class="metric-desc">NVIDIA AI City Challenge (Track 2: Scene Understanding)</span>
+          </div>
         </a>
-        <a class="hero-metric-card" href="awards.html">
-          <span class="metric-tag">🚗 Global Finalist</span>
-          <span class="metric-val">Top 9</span>
-          <span class="metric-desc">Bosch Future Mobility Finals (Romania, Best in Asia)</span>
+        <a class="spotlight-card" href="awards.html">
+          <div class="spotlight-inner">
+            <span class="metric-tag">🏎️ Global Finalist</span>
+            <span class="metric-val">Top 9</span>
+            <span class="metric-desc">Bosch Future Mobility Finals (Romania, Best in Asia)</span>
+          </div>
         </a>
-        <a class="hero-metric-card" href="#research">
-          <span class="metric-tag">📄 Peer-Reviewed</span>
-          <span class="metric-val">3+ Papers</span>
-          <span class="metric-desc">ECCV 2026 Workshop (Oral &amp; Poster) &amp; IEEE GTSD</span>
+        <a class="spotlight-card" href="#research">
+          <div class="spotlight-inner">
+            <span class="metric-tag">📄 Peer-Reviewed</span>
+            <span class="metric-val">3+ Papers</span>
+            <span class="metric-desc">ECCV 2026 Workshop (Oral &amp; Poster) &amp; IEEE GTSD</span>
+          </div>
         </a>
-        <a class="hero-metric-card" href="awards.html">
-          <span class="metric-tag">💡 Software Lead</span>
-          <span class="metric-val">150M VND</span>
-          <span class="metric-desc">Bosch Team Sponsorship &amp; Talent Scholarships</span>
+        <a class="spotlight-card" href="awards.html">
+          <div class="spotlight-inner">
+            <span class="metric-tag">💡 Software Lead</span>
+            <span class="metric-val">150M VND</span>
+            <span class="metric-desc">Bosch Team Sponsorship &amp; Talent Scholarships</span>
+          </div>
         </a>
       </div>
     </section>
@@ -120,8 +149,28 @@
         <h2>Recent Work &amp; Publications</h2>
       </div>
 
+      <!-- 2026 Interactive Category Filter -->
+      <div class="research-filter-bar">
+        <button class="filter-btn is-active" type="button" data-filter="all">
+          <span>All Research</span>
+          <span class="filter-count">5</span>
+        </button>
+        <button class="filter-btn" type="button" data-filter="world-models">
+          <span>World Models &amp; Diffusion</span>
+          <span class="filter-count">2</span>
+        </button>
+        <button class="filter-btn" type="button" data-filter="autonomous-driving">
+          <span>Autonomous Systems</span>
+          <span class="filter-count">2</span>
+        </button>
+        <button class="filter-btn" type="button" data-filter="foundation-encoders">
+          <span>Foundation Encoders</span>
+          <span class="filter-count">2</span>
+        </button>
+      </div>
+
       <div class="projects">
-        <article class="project" id="project-uniquery">
+        <article class="project" id="project-uniquery" data-category="foundation-encoders">
           <div class="project-number">01</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
@@ -215,7 +264,12 @@
               </div>
               <div class="pub-bibtex-box" id="bib-uniquery" hidden>
                 <div class="pub-bibtex-header">
-                  <span>BibTeX Citation</span>
+                  <div class="pub-bibtex-window-controls">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="pub-bibtex-header-title">uniquery-wacv2027.bib</span>
+                  </div>
                   <button class="pub-bibtex-copy-btn" type="button" data-code="bib-uniquery-code">Copy BibTeX</button>
                 </div>
                 <pre id="bib-uniquery-code"><code>@article{vo2027uniquery,
@@ -229,7 +283,7 @@
           </div>
         </article>
 
-        <article class="project" id="project-lens">
+        <article class="project" id="project-lens" data-category="foundation-encoders">
           <div class="project-number">02</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
@@ -323,7 +377,12 @@
               </div>
               <div class="pub-bibtex-box" id="bib-lens" hidden>
                 <div class="pub-bibtex-header">
-                  <span>BibTeX Citation</span>
+                  <div class="pub-bibtex-window-controls">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="pub-bibtex-header-title">lens-wacv2027.bib</span>
+                  </div>
                   <button class="pub-bibtex-copy-btn" type="button" data-code="bib-lens-code">Copy BibTeX</button>
                 </div>
                 <pre id="bib-lens-code"><code>@article{vo2027lens,
@@ -337,7 +396,7 @@
           </div>
         </article>
 
-        <article class="project" id="project-traffic-forecast">
+        <article class="project" id="project-traffic-forecast" data-category="world-models">
           <div class="project-number">03</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
@@ -434,7 +493,12 @@
               </div>
               <div class="pub-bibtex-box" id="bib-traffic-forecast" hidden>
                 <div class="pub-bibtex-header">
-                  <span>BibTeX Citation</span>
+                  <div class="pub-bibtex-window-controls">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="pub-bibtex-header-title">jepa-diffusion-eccv2026.bib</span>
+                  </div>
                   <button class="pub-bibtex-copy-btn" type="button" data-code="bib-traffic-forecast-code">Copy BibTeX</button>
                 </div>
                 <pre id="bib-traffic-forecast-code"><code>@inproceedings{nguyen2026jepa,
@@ -449,7 +513,7 @@
           </div>
         </article>
 
-        <article class="project" id="project-traffic-jepa">
+        <article class="project" id="project-traffic-jepa" data-category="world-models autonomous-driving">
           <div class="project-number">04</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
@@ -546,7 +610,12 @@
               </div>
               <div class="pub-bibtex-box" id="bib-traffic-jepa" hidden>
                 <div class="pub-bibtex-header">
-                  <span>BibTeX Citation</span>
+                  <div class="pub-bibtex-window-controls">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="pub-bibtex-header-title">traffic-jepa-eccv2026.bib</span>
+                  </div>
                   <button class="pub-bibtex-copy-btn" type="button" data-code="bib-traffic-jepa-code">Copy BibTeX</button>
                 </div>
                 <pre id="bib-traffic-jepa-code"><code>@inproceedings{bui2026simtoreal,
@@ -561,7 +630,7 @@
           </div>
         </article>
 
-        <article class="project" id="project-gtsd-2026">
+        <article class="project" id="project-gtsd-2026" data-category="autonomous-driving">
           <div class="project-number">05</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
@@ -645,7 +714,12 @@
               </div>
               <div class="pub-bibtex-box" id="bib-gtsd-2026" hidden>
                 <div class="pub-bibtex-header">
-                  <span>BibTeX Citation</span>
+                  <div class="pub-bibtex-window-controls">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="pub-bibtex-header-title">gtsd-planning-ieee2026.bib</span>
+                  </div>
                   <button class="pub-bibtex-copy-btn" type="button" data-code="bib-gtsd-2026-code">Copy BibTeX</button>
                 </div>
                 <pre id="bib-gtsd-2026-code"><code>@inproceedings{vo2026integrated,
@@ -873,11 +947,31 @@
       </div>
     </div>
   </footer>
+  <!-- Command Palette Modal (⌘K / Ctrl+K) -->
+  <div class="cmd-palette-backdrop" id="cmd-palette" role="dialog" aria-modal="true" aria-label="Quick Command Palette">
+    <div class="cmd-palette-window">
+      <div class="cmd-palette-search">
+        <span class="cmd-search-icon">🔍</span>
+        <input class="cmd-search-input" id="cmd-input" type="text" placeholder="Type a command or search papers, code, awards..." autocomplete="off" spellcheck="false">
+        <kbd class="cmd-search-esc">ESC</kbd>
+      </div>
+      <ul class="cmd-palette-list" id="cmd-list"></ul>
+      <div class="cmd-palette-footer">
+        <div class="cmd-footer-keys">
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">↑</kbd><kbd class="cmd-key">↓</kbd> Navigate</span>
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">↵</kbd> Select</span>
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">esc</kbd> Close</span>
+        </div>
+        <span>Linear-Grade Quick Navigation</span>
+      </div>
+    </div>
+  </div>
+
   <dialog class="media-lightbox" id="media-lightbox" aria-label="Expanded media">
     <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
     <div class="media-lightbox-content"></div>
   </dialog>
-  <script type="module" src="js/main.js?v=15"></script>
-  <script nomodule src="script.js?v=15"></script>
+  <script type="module" src="js/main.js?v=20"></script>
+  <script nomodule src="script.js?v=20"></script>
 </body>
 </html>

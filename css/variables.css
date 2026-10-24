@@ -1,58 +1,117 @@
 /* ============================================================
-   Design Tokens & CSS Variables
+   Design Tokens & CSS Variables — 2026 Linear/Awwwards Standard
    ============================================================ */
 
 :root {
-  --ink: #1a2230;            /* primary text, near-black navy */
-  --ink-soft: #34404f;       /* secondary headings */
-  --muted: #5c6773;          /* body-muted */
-  --faint: #8b94a1;          /* faint meta */
-  --accent: #2b4f8c;         /* deep academic blue */
-  --accent-deep: #1f3a68;
-  --accent-soft: #eef2f8;    /* accent tint */
-  --border: #e2e6ec;         /* hairlines */
-  --border-strong: #cfd6e0;
+  /* Surface & Base - Refined Alabaster Light */
+  --bg-canvas: #f8fafc;
   --paper: #ffffff;
-  --paper-soft: #f7f8fa;     /* alternate section */
-  --paper-sunken: #f0f2f5;   /* image wells */
-  --header-bg: rgba(255,255,255,.88);
-  --shadow-soft: 0 1px 2px rgba(26,34,48,.05), 0 8px 24px rgba(26,34,48,.06);
-  --shadow-lift: 0 2px 4px rgba(26,34,48,.06), 0 16px 40px rgba(26,34,48,.12);
-  --radius: 6px;
-  --max-width: 1080px;
-  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
-  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  --font-mono: "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
-  --success: #059669;
-  --success-soft: rgba(5, 150, 105, 0.1);
-  --badge-gold-bg: rgba(217, 119, 6, 0.1);
+  --paper-soft: #f1f5f9;
+  --paper-sunken: #e2e8f0;
+  --header-bg: rgba(248, 250, 252, 0.82);
+
+  /* Typography */
+  --ink: #0f172a;               /* deep obsidian slate */
+  --ink-soft: #334155;          /* slate 700 */
+  --muted: #64748b;             /* slate 500 */
+  --faint: #94a3b8;             /* slate 400 */
+
+  /* Modern 2026 High-Tech Accent System */
+  --accent: #3b82f6;            /* vibrant cobalt blue */
+  --accent-deep: #1d4ed8;
+  --accent-soft: rgba(59, 130, 246, 0.08);
+  --accent-glow: rgba(59, 130, 246, 0.22);
+  --electric-indigo: #6366f1;
+  --cyber-cyan: #06b6d4;
+  --radiant-violet: #8b5cf6;
+
+  /* Borders & Hairlines */
+  --border: rgba(15, 23, 42, 0.08);
+  --border-strong: rgba(15, 23, 42, 0.16);
+  --border-hover: rgba(59, 130, 246, 0.35);
+  --glass-border: rgba(255, 255, 255, 0.6);
+  --inner-highlight: inset 0 1px 1px 0 rgba(255, 255, 255, 0.8);
+
+  /* Elevation & Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+  --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -1px rgba(15, 23, 42, 0.03);
+  --shadow-lift: 0 20px 40px -8px rgba(15, 23, 42, 0.1), 0 8px 16px -4px rgba(15, 23, 42, 0.06);
+  --shadow-glow: 0 0 40px -10px rgba(59, 130, 246, 0.25);
+
+  /* Status Tokens */
+  --success: #10b981;
+  --success-soft: rgba(16, 185, 129, 0.1);
+  --badge-gold-bg: rgba(245, 158, 11, 0.1);
   --badge-gold-text: #b45309;
-  --badge-blue-bg: rgba(37, 99, 235, 0.08);
-  --badge-blue-text: #1d4ed8;
+  --badge-blue-bg: rgba(59, 130, 246, 0.08);
+  --badge-blue-text: #2563eb;
+
+  /* Geometry & Rhythm */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --radius-full: 9999px;
+  --max-width: 1140px;
+
+  /* Typography Stack */
+  --font-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+
+  /* Motion & Spring Physics */
+  --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 160ms var(--ease-smooth);
+  --transition-normal: 280ms var(--ease-spring);
+  --transition-slow: 500ms var(--ease-spring);
+
   color-scheme: light;
 }
 
 [data-theme="dark"] {
-  --ink: #e8ebf0;
-  --ink-soft: #c3cad4;
-  --muted: #9aa4b1;
-  --faint: #6d7684;
-  --accent: #7fa3d8;
-  --accent-deep: #a5c2ea;
-  --accent-soft: rgba(127,163,216,.14);
-  --border: #2a3340;
-  --border-strong: #3b4656;
-  --paper: #14181f;
-  --paper-soft: #191e27;
-  --paper-sunken: #0f131a;
-  --header-bg: rgba(20,24,31,.88);
-  --shadow-soft: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
-  --shadow-lift: 0 2px 4px rgba(0,0,0,.35), 0 16px 40px rgba(0,0,0,.45);
+  /* OLED Obsidian Dark Canvas */
+  --bg-canvas: #07090e;
+  --paper: #0e121b;
+  --paper-soft: #141926;
+  --paper-sunken: #090c13;
+  --header-bg: rgba(7, 9, 14, 0.78);
+
+  /* Typography */
+  --ink: #f1f5f9;               /* crisp slate 100 */
+  --ink-soft: #cbd5e1;          /* slate 300 */
+  --muted: #94a3b8;             /* slate 400 */
+  --faint: #64748b;             /* slate 500 */
+
+  /* High-Tech Glow Accents */
+  --accent: #60a5fa;            /* luminous sky blue */
+  --accent-deep: #93c5fd;
+  --accent-soft: rgba(96, 165, 250, 0.12);
+  --accent-glow: rgba(96, 165, 250, 0.28);
+  --electric-indigo: #818cf8;
+  --cyber-cyan: #22d3ee;
+  --radiant-violet: #a78bfa;
+
+  /* Specular Hairline Borders */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --border-hover: rgba(96, 165, 250, 0.45);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --inner-highlight: inset 0 1px 1px 0 rgba(255, 255, 255, 0.12);
+
+  /* Elevation & Ambient Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+  --shadow-soft: 0 4px 24px -2px rgba(0, 0, 0, 0.6), 0 2px 8px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lift: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 10px 20px -5px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 50px -10px rgba(96, 165, 250, 0.22);
+
+  /* Status Tokens */
   --success: #34d399;
   --success-soft: rgba(52, 211, 153, 0.15);
   --badge-gold-bg: rgba(245, 158, 11, 0.15);
   --badge-gold-text: #fbbf24;
   --badge-blue-bg: rgba(96, 165, 250, 0.15);
   --badge-blue-text: #93c5fd;
+
   color-scheme: dark;
 }

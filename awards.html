@@ -7,25 +7,37 @@
   <title>Awards &amp; Honors | Vo Thanh Nguyen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=51">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=60">
 </head>
 <body>
+  <div id="scroll-progress"></div>
+
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="name" href="index.html#top"><span class="name-full">Vo Thanh Nguyen</span><span class="name-short">Thanh Nguyen</span></a>
+      <a class="name" href="index.html#top">
+        <span class="name-avatar-dot"></span>
+        <span class="name-full">Vo Thanh Nguyen</span>
+        <span class="name-short">Thanh Nguyen</span>
+      </a>
       <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="index.html#research">Research</a>
-        <a href="index.html#projects">Engineering</a>
-        <a href="index.html#experience">Experience</a>
-        <a href="awards.html" class="nav-active">Awards &amp; Honors</a>
-        <a class="nav-cv-btn" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
+        <a class="nav-link-item" href="index.html">Home</a>
+        <a class="nav-link-item" href="index.html#research">Research</a>
+        <a class="nav-link-item" href="index.html#projects">Engineering</a>
+        <a class="nav-link-item" href="index.html#experience">Experience</a>
+        <a class="nav-link-item nav-active" href="awards.html">Awards &amp; Honors</a>
       </div>
-      <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
-        <span class="icon-sun" aria-hidden="true">&#9728;</span>
-        <span class="icon-moon" aria-hidden="true">&#9790;</span>
-      </button>
+      <div class="nav-controls">
+        <button class="nav-cmd-btn" type="button" aria-label="Open Command Palette (Cmd+K)">
+          <span>Search</span>
+          <kbd class="nav-cmd-kbd">⌘K</kbd>
+        </button>
+        <a class="nav-cv-btn" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+          <span class="icon-sun" aria-hidden="true">&#9728;</span>
+          <span class="icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+      </div>
     </nav>
   </header>
 
@@ -565,12 +577,32 @@
     </div>
   </footer>
 
+  <!-- Command Palette Modal (⌘K / Ctrl+K) -->
+  <div class="cmd-palette-backdrop" id="cmd-palette" role="dialog" aria-modal="true" aria-label="Quick Command Palette">
+    <div class="cmd-palette-window">
+      <div class="cmd-palette-search">
+        <span class="cmd-search-icon">🔍</span>
+        <input class="cmd-search-input" id="cmd-input" type="text" placeholder="Type a command or search papers, code, awards..." autocomplete="off" spellcheck="false">
+        <kbd class="cmd-search-esc">ESC</kbd>
+      </div>
+      <ul class="cmd-palette-list" id="cmd-list"></ul>
+      <div class="cmd-palette-footer">
+        <div class="cmd-footer-keys">
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">↑</kbd><kbd class="cmd-key">↓</kbd> Navigate</span>
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">↵</kbd> Select</span>
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">esc</kbd> Close</span>
+        </div>
+        <span>Linear-Grade Quick Navigation</span>
+      </div>
+    </div>
+  </div>
+
   <dialog class="media-lightbox" id="media-lightbox" aria-label="Expanded media">
     <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
     <div class="media-lightbox-content"></div>
   </dialog>
 
-  <script type="module" src="js/main.js?v=16"></script>
-  <script nomodule src="script.js?v=16"></script>
+  <script type="module" src="js/main.js?v=20"></script>
+  <script nomodule src="script.js?v=20"></script>
 </body>
 </html>

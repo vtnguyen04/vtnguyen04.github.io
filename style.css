@@ -1,9 +1,10 @@
 /* ============================================================
-   Vo Thanh Nguyen — Portfolio Stylesheet (Modular Architecture)
+   Vo Thanh Nguyen — Portfolio Stylesheet (Modular 2026 Engine)
    ============================================================ */
 
 @import url("css/variables.css");
 @import url("css/base.css");
+@import url("css/command-palette.css");
 @import url("css/nav.css");
 @import url("css/hero.css");
 @import url("css/publications.css");

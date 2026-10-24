@@ -1,11 +1,11 @@
 /* ============================================================
-   Featured Project Showcase & Media Hub
+   Featured Project Showcase, Media Hub & Terminal BibTeX — 2026
    ============================================================ */
 
 .project-showcase {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 22px;
   width: 100%;
 }
 
@@ -19,18 +19,18 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
+  gap: 8px 12px;
 }
 
 .pill-badge {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  padding: 4px 11px;
+  gap: 6px;
+  padding: 4px 12px;
   font-family: var(--font-mono);
-  font-size: .72rem;
+  font-size: .74rem;
   font-weight: 600;
-  border-radius: 999px;
+  border-radius: var(--radius-full);
   background: var(--accent-soft);
   color: var(--accent);
   border: 1px solid var(--border);
@@ -38,40 +38,58 @@
 }
 
 .pill-badge-gold {
-  background: rgba(217, 119, 6, .12);
+  background: rgba(245, 158, 11, 0.12);
   color: #d97706;
-  border-color: rgba(217, 119, 6, .35);
+  border-color: rgba(245, 158, 11, 0.3);
 }
 
 [data-theme="dark"] .pill-badge-gold {
-  background: rgba(245, 158, 11, .16);
+  background: rgba(245, 158, 11, 0.18);
   color: #fbbf24;
-  border-color: rgba(245, 158, 11, .38);
+  border-color: rgba(245, 158, 11, 0.35);
+}
+
+.pub-award-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--success-soft);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  box-shadow: 0 0 14px -4px rgba(16, 185, 129, 0.2);
 }
 
 .showcase-desc {
   margin: 0;
-  color: var(--ink-soft);
-  font-size: 1.02rem;
-  line-height: 1.62;
-  max-width: 960px;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.68;
+  max-width: 940px;
 }
 
-/* Media Hub */
+/* ============================================================
+   Double-Bezel Hardware Media Hub
+   ============================================================ */
+
 .showcase-media-hub {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 18px;
+  gap: 16px;
+  padding: 16px;
   background: var(--paper-soft);
-  border: 1px solid var(--border);
-  border-radius: calc(var(--radius) * 1.5);
-  box-shadow: var(--shadow-soft);
-  transition: border-color .3s ease, box-shadow .3s ease;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft), var(--inner-highlight);
+  transition: all var(--transition-normal);
 }
 
 .showcase-media-hub:hover {
-  border-color: var(--border-strong);
+  border-color: var(--border-hover);
   box-shadow: var(--shadow-lift);
 }
 
@@ -84,105 +102,92 @@
 .showcase-tab {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 8px 15px;
+  gap: 8px;
+  padding: 8px 16px;
   font-family: var(--font-mono);
-  font-size: .76rem;
-  font-weight: 500;
-  color: var(--ink-soft);
+  font-size: .78rem;
+  font-weight: 600;
+  color: var(--muted);
   background: var(--paper);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-full);
   cursor: pointer;
-  transition: all .2s ease;
+  transition: all var(--transition-fast);
 }
 
 .showcase-tab:hover {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: var(--accent-soft);
+  color: var(--ink);
+  border-color: var(--border-hover);
+  background: var(--paper-soft);
   transform: translateY(-1px);
 }
 
 .showcase-tab.is-active {
-  color: #ffffff;
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 2px 10px rgba(43, 79, 140, .28);
-}
-
-[data-theme="dark"] .showcase-tab.is-active {
-  color: #0f141c;
-  background: var(--accent);
-  border-color: var(--accent);
-  box-shadow: 0 2px 10px rgba(127, 163, 216, .35);
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  border-color: transparent;
+  box-shadow: 0 2px 10px var(--accent-glow);
 }
 
 .tab-icon {
-  font-size: .85em;
-  opacity: .85;
+  font-size: .85rem;
+  opacity: .9;
 }
 
+/* Figures & Image Canvas */
 .showcase-main-figure {
   margin: 0;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .showcase-image-wrapper {
   position: relative;
   overflow: hidden;
+  border-radius: calc(var(--radius-lg) - 6px);
+  background: var(--paper-sunken);
+  border: 1px solid var(--border);
+  min-height: 280px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  min-height: 460px;
-  max-height: 680px;
-  padding: 8px;
-  background: #ffffff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  cursor: zoom-in;
-  transition: border-color .3s ease, box-shadow .3s ease;
-}
-
-.showcase-image-wrapper:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 30px rgba(43, 79, 140, .12);
 }
 
 .showcase-main-img {
-  display: block;
   width: 100%;
-  height: auto;
-  max-height: 640px;
+  max-height: 520px;
   object-fit: contain;
-  transition: transform .35s ease, opacity .22s ease;
+  padding: 16px;
+  transition: transform var(--transition-normal);
+  cursor: zoom-in;
 }
 
 .showcase-image-wrapper:hover .showcase-main-img {
-  transform: scale(1.018);
+  transform: scale(1.015);
 }
 
 .showcase-zoom-hint {
   position: absolute;
-  bottom: 14px;
-  right: 14px;
+  bottom: 12px;
+  right: 12px;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 6px 12px;
+  background: rgba(14, 18, 27, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #fff;
   font-family: var(--font-mono);
   font-size: .72rem;
   font-weight: 500;
-  color: #ffffff;
-  background: rgba(16, 22, 31, .84);
-  backdrop-filter: blur(8px);
-  border-radius: 999px;
   pointer-events: none;
   opacity: 0;
-  transform: translateY(6px);
-  transition: all .24s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,.25);
+  transform: translateY(4px);
+  transition: all var(--transition-fast);
 }
 
 .showcase-image-wrapper:hover .showcase-zoom-hint {
@@ -191,80 +196,232 @@
 }
 
 .showcase-caption {
-  margin-top: 10px;
-  padding: 0 4px;
-  font-size: .86rem;
-  line-height: 1.55;
+  font-size: .88rem;
+  line-height: 1.6;
   color: var(--muted);
-  min-height: 42px;
+  padding: 0 4px;
 }
 
 .showcase-caption strong {
   color: var(--ink-soft);
-  font-weight: 600;
 }
 
-/* Thumbnails */
+/* Thumbnails Carousel Row */
 .showcase-thumbs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 4px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 4px 2px 10px;
+  scrollbar-width: thin;
 }
 
 .showcase-thumb {
+  flex: 0 0 110px;
   display: flex;
   flex-direction: column;
   gap: 6px;
-  padding: 7px;
+  padding: 6px;
   background: var(--paper);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
   cursor: pointer;
-  text-align: left;
-  transition: all .2s ease;
+  transition: all var(--transition-fast);
+}
+
+.showcase-thumb img {
+  width: 100%;
+  aspect-ratio: 16/10;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.showcase-thumb .thumb-label {
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  font-weight: 600;
+  color: var(--muted);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .showcase-thumb:hover {
-  border-color: var(--accent);
+  border-color: var(--border-hover);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-soft);
 }
 
 .showcase-thumb.is-active {
   border-color: var(--accent);
-  box-shadow: 0 0 0 2px var(--accent-soft), 0 4px 14px rgba(43, 79, 140, .16);
-}
-
-.showcase-thumb img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
-  background: #ffffff;
-  border-radius: 4px;
-  padding: 4px;
-  border: 1px solid var(--border);
-}
-
-.thumb-label {
-  display: block;
-  font-family: var(--font-mono);
-  font-size: .72rem;
-  font-weight: 500;
-  color: var(--ink-soft);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  transition: color .2s ease;
+  box-shadow: 0 0 0 1.5px var(--accent), 0 4px 12px var(--accent-glow);
 }
 
 .showcase-thumb.is-active .thumb-label {
   color: var(--accent);
-  font-weight: 600;
 }
+
+/* ============================================================
+   Showcase Footer & Action Buttons
+   ============================================================ */
 
 .showcase-footer {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  margin-top: 6px;
+}
+
+.showcase-footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.showcase-footer li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 14px;
+  font-size: .84rem;
+  font-weight: 500;
+  color: var(--ink-soft);
+  background: var(--paper-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.pub-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  background: var(--paper);
+  color: var(--ink-soft);
+  border: 1px solid var(--border-strong);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.pub-btn:hover {
+  background: var(--paper-soft);
+  color: var(--ink);
+  border-color: var(--border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.pub-btn-accent {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.pub-btn-accent:hover {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-deep) 100%);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 16px var(--accent-glow);
+}
+
+/* ============================================================
+   macOS Terminal Styled BibTeX Code Box
+   ============================================================ */
+
+.pub-bibtex-box {
+  margin-top: 14px;
+  background: #090c12;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.5);
+  animation: slideDownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideDownFade {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.pub-bibtex-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #0f141f;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pub-bibtex-window-controls {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.window-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot-red { background: #ff5f56; }
+.dot-yellow { background: #ffbd2e; }
+.dot-green { background: #27c93f; }
+
+.pub-bibtex-header-title {
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.pub-bibtex-copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  font-family: var(--font-mono);
+  font-size: .74rem;
+  font-weight: 600;
+  background: #19202f;
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.pub-bibtex-copy-btn:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.pub-bibtex-box pre {
+  margin: 0;
+  padding: 18px 20px;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: .84rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  background: transparent;
 }
