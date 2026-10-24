@@ -60,6 +60,53 @@
         <article class="project">
           <div class="project-number">01</div>
           <div class="project-content project-with-image">
+            <figure class="project-figure">
+              <img class="project-result" src="assets/uniquery-architecture.webp" alt="UniQuery dual foundation encoder architecture with joint and single-encoder query heads" loading="lazy">
+            </figure>
+            <div class="project-details">
+              <p class="project-meta">Computer Vision · Foundation Models · Cross-Domain PAR · 2026–2027</p>
+              <h3>UniQuery: Joint Query Head for Cross-Domain Attribute Recognition</h3>
+              <p>Proposes UniQuery, a unified framework that co-adapts self-supervised DINOv3 (ViT-H+/16) and vision-language CLIP (ViT-L/14) through a joint attribute query head. Attribute queries dynamically attend across multimodal token spaces, outperforming static independent ensembles under severe surveillance domain shifts.</p>
+              <ul>
+                <li>UPAR Challenge 2027 (Track 1: Pedestrian Attribute Recognition) @ WACV 2027 RWS Workshop</li>
+                <li>0.8001 Challenge_Avg on official hidden test set (beats independent ensemble baselines)</li>
+                <li>Spontaneous attention routing: color attributes route to CLIP; structural attributes route to DINOv3</li>
+                <li>Workshop paper under review / accepted at WACV 2027</li>
+              </ul>
+              <div class="project-links">
+                <a href="papers/UniQuery%20-%20Unifying%20Vision%20Models%20with%20a%20Joint%20Query%20Head%20for%20Cross-Domain%20Pedestrian%20Attribute%20Recognition.pdf" target="_blank" rel="noopener">Read manuscript ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">02</div>
+          <div class="project-content project-with-image">
+            <figure class="project-figure">
+              <img class="project-result" src="assets/lens-architecture.webp" alt="LENS retrieval pipeline with exact-query log-likelihood scoring and test-time gallery logit smoothing" loading="lazy">
+            </figure>
+            <div class="project-details">
+              <p class="project-meta">Surveillance Retrieval · Metric Learning · Calibration · 2026–2027</p>
+              <h3>LENS: Likelihood Evaluation and Neighbor Smoothing for Person Retrieval</h3>
+              <p>Addresses cross-camera distribution shifts in attribute-based person retrieval by replacing L1 distance with exact-query log-likelihood scoring, enforcing mutually exclusive attribute groups via group cross-entropy, and performing zero-cost transductive kNN logit smoothing using DINOv3 patch tokens from the same forward pass.</p>
+              <ul>
+                <li>UPAR Challenge 2027 (Track 2: Attribute-Based Person Retrieval) @ WACV 2027 RWS Workshop</li>
+                <li>Log-likelihood scoring outperformed L1 across all 48 development configurations</li>
+                <li>Transductive kNN smoothing improved retrieval accuracy across all 46 evaluated setups</li>
+                <li>68.17 mADM on official hidden test set</li>
+                <li>Workshop paper under review / accepted at WACV 2027</li>
+              </ul>
+              <div class="project-links">
+                <a href="papers/LENS%20-%20Likelihood%20Evaluation%20and%20Neighbor%20Smoothing%20for%20Attribute-Based%20Person%20Retrieval%20on%20Unseen%20Cameras.pdf" target="_blank" rel="noopener">Read manuscript ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="project-number">03</div>
+          <div class="project-content project-with-image">
             <figure class="project-figure forecast-comparison" data-gallery>
               <div class="forecast-column">
                 <div class="forecast-label">Prediction</div>
@@ -89,7 +136,7 @@
         </article>
 
         <article class="project">
-          <div class="project-number">02</div>
+          <div class="project-number">04</div>
           <div class="project-content project-with-image">
             <figure class="project-figure">
               <img class="project-result" src="assets/traffic-jepa-result.webp" alt="Side-by-side real WTS and simulated traffic scenes demonstrating sim-to-real traffic understanding" loading="lazy">
@@ -112,7 +159,7 @@
         </article>
 
         <article class="project">
-          <div class="project-number">03</div>
+          <div class="project-number">05</div>
           <div class="project-content project-with-image">
             <figure class="project-figure">
               <img class="qualification-gif" src="assets/bfmc-2026-qualification.gif" data-full-src="assets/bfmc-2026-qualification-zoom.gif" alt="BFMC 2026 autonomous qualification run" loading="lazy">
@@ -133,7 +180,7 @@
         </article>
 
         <article class="project">
-          <div class="project-number">04</div>
+          <div class="project-number">06</div>
           <div class="project-content project-with-image">
             <figure class="project-figure project-album" data-album>
               <button class="album-stack" type="button" aria-label="Open all five BFMC 2025 photos">
@@ -172,7 +219,7 @@
 
       <div class="projects">
         <article class="project">
-          <div class="project-number">05</div>
+          <div class="project-number">07</div>
           <div class="project-content">
             <div class="project-details">
               <p class="project-meta">Multi-Agent Systems · LangGraph · RAG · 2025–2026</p>
@@ -191,7 +238,7 @@
         </article>
 
         <article class="project">
-          <div class="project-number">06</div>
+          <div class="project-number">08</div>
           <div class="project-content">
             <div class="project-details">
               <p class="project-meta">Computer Vision · Real-Time Systems · 2024</p>
@@ -210,7 +257,7 @@
         </article>
 
         <article class="project">
-          <div class="project-number">07</div>
+          <div class="project-number">09</div>
           <div class="project-content">
             <div class="project-details">
               <p class="project-meta">AI Automation · n8n · Qdrant · Contract</p>
@@ -237,7 +284,7 @@
           <article>
             <time>2024–Present</time>
             <div><h3>AI Engineer and Researcher</h3><p>University Research Lab, HCMUTE</p></div>
-            <p>Engineered and deployed real-time perception and control pipelines directly onto physical 1/10-scale autonomous vehicles, validating behaviors across CARLA and Gazebo simulations. Researched Reinforcement Learning (RL), End-to-End (E2E) driving models, and trajectory prediction; co-authored 3 publications and led BFMC 2025 (Top 9 Worldwide) &amp; BFMC 2026 (150M VND Bosch Sponsorship).</p>
+            <p>Researched world models, foundation vision models, cross-domain surveillance perception, and autonomous driving. Authored/co-authored 5 publications across ECCV Workshop, WACV Workshop, and IEEE GTSD; software lead for BFMC 2025 (Top 9 Worldwide) &amp; BFMC 2026 (150M VND Bosch Sponsorship).</p>
           </article>
           <article>
             <time>Mar 2024–Dec 2024</time>
@@ -247,7 +294,7 @@
           <article>
             <time>2022–2026</time>
             <div><h3>B.Eng. Robotics & Artificial Intelligence</h3><p>HCMUTE · Expected 2026</p></div>
-            <p>Winner (Top 1) Track 2 & Top 3 Track 5 in AI City Challenge 2026 (ECCV Workshop); Top 5 Finalist Datathon 2026; Third Prize ICPC National Contest (2024); Second Prize OLP (2023, 2022); Talent Scholarship Recipient.</p>
+            <p>Winner (Top 1) Track 2 & Top 3 Track 5 in AI City Challenge 2026 (ECCV Workshop); Competitive entries across Track 1 & Track 2 in UPAR Challenge 2027 (WACV Workshop); Top 5 Finalist Datathon 2026; Third Prize ICPC National Contest (2024); Second Prize OLP (2023, 2022); Talent Scholarship Recipient.</p>
           </article>
           <article>
             <time>2019–2022</time>
@@ -262,7 +309,7 @@
 
   <footer>
     <div class="container footer-content">
-      <p>Last update: September 2026</p>
+      <p>Last update: October 2026</p>
       <div>
         <a href="mailto:nguyenvothanh04@gmail.com">Email</a>
         <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub</a>
