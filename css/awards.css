@@ -25,39 +25,50 @@
 }
 
 .award-stat-card {
-  padding: 18px 20px;
+  position: relative;
+  overflow: hidden;
+  padding: 20px 22px;
   background: var(--paper-soft);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  transition: transform .22s cubic-bezier(0.16, 1, 0.3, 1), border-color .2s ease, box-shadow .22s ease;
+}
+
+.award-stat-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #d97706);
+  opacity: .85;
 }
 
 .award-stat-card:hover {
   border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-soft);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
 }
 
 .award-stat-number {
   font-family: var(--font-mono);
-  font-size: 1.85rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--accent);
   line-height: 1.1;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .award-stat-label {
-  font-size: .84rem;
+  font-size: .88rem;
   font-weight: 600;
   color: var(--ink);
   line-height: 1.35;
 }
 
 .award-stat-sub {
-  font-size: .74rem;
+  font-size: .75rem;
   color: var(--muted);
-  margin-top: 3px;
+  margin-top: 4px;
 }
 
 /* Category Groups */
@@ -85,8 +96,12 @@
 .category-header .category-count {
   font-family: var(--font-mono);
   font-size: .78rem;
-  color: var(--faint);
-  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 3px 12px;
+  font-weight: 600;
 }
 
 /* Awards Cards Grid */
@@ -98,24 +113,65 @@
 
 .award-card {
   display: grid;
-  grid-template-columns: 75px 1fr auto;
+  grid-template-columns: 80px 1fr auto;
   gap: 22px;
   align-items: center;
   padding: 20px 24px;
   background: var(--paper);
   border: 1px solid var(--border);
+  border-left: 3.5px solid var(--border-strong);
   border-radius: var(--radius);
-  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+  transition: border-color .2s ease, transform .22s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .22s ease;
 }
 
 .award-card.has-cert {
-  grid-template-columns: 75px 120px 1fr auto;
+  grid-template-columns: 80px 124px 1fr auto;
+}
+
+.award-card:has(.pill-badge-gold) {
+  border-left-color: #d97706;
+}
+
+.award-card:has(.pill-badge-silver) {
+  border-left-color: #64748b;
+}
+
+.award-card:has(.pill-badge-bronze) {
+  border-left-color: #b45309;
 }
 
 .award-card:hover {
   border-color: var(--accent);
-  transform: translateY(-1.5px);
-  box-shadow: var(--shadow-soft);
+  border-left-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lift);
+}
+
+.award-year {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px 10px;
+  text-align: center;
+  letter-spacing: .02em;
+  box-shadow: 0 1px 2px rgba(0,0,0,.03);
+  transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.award-card:hover .award-year {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(43, 79, 140, .25);
+  transform: scale(1.05);
 }
 
 .award-cert-thumb {

@@ -30,7 +30,8 @@
   display: flex;
   margin-top: 34px;
   align-items: center;
-  gap: 26px;
+  flex-wrap: wrap;
+  gap: 14px 22px;
   font-size: .9rem;
   font-weight: 600;
 }
