@@ -195,8 +195,10 @@
 
 .skills-matrix-header h3 {
   margin: 0 0 6px;
-  font-family: var(--font-serif);
+  font-family: var(--font-display);
+  font-weight: 700;
   font-size: 1.35rem;
+  letter-spacing: -.02em;
   color: var(--ink);
 }
 

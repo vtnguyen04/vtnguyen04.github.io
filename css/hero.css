@@ -70,10 +70,18 @@
 
 .hero-copy h1 {
   margin-bottom: 22px;
-  font-size: clamp(3.2rem, 5.8vw, 5rem);
-  letter-spacing: -.035em;
-  line-height: 1.05;
+  font-family: var(--font-display);
+  font-size: clamp(3.4rem, 6.2vw, 5.4rem);
+  font-weight: 800;
+  letter-spacing: -.045em;
+  line-height: 0.98;
   color: var(--ink);
+}
+
+[data-theme="dark"] .hero-copy h1 {
+  background: linear-gradient(180deg, #ffffff 35%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .intro {
