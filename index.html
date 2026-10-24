@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=48">
+  <link rel="stylesheet" href="style.css?v=49">
 </head>
 <body>
   <header class="site-header">
@@ -241,23 +241,83 @@
 
         <article class="project">
           <div class="project-number">03</div>
-          <div class="project-content project-with-image">
-            <figure class="project-figure forecast-comparison" data-gallery>
-              <div class="forecast-column">
-                <div class="forecast-label">Prediction</div>
-                <img class="forecast-gif" src="assets/forecast-overhead-prediction.gif" data-full-src="assets/forecast-overhead-prediction-zoom.gif" data-gallery-order="0" alt="Overhead-view generated traffic forecast after condition frames">
-                <img class="forecast-gif" src="assets/forecast-vehicle5124-prediction.gif" data-full-src="assets/forecast-vehicle5124-prediction-zoom.gif" data-gallery-order="2" alt="Vehicle-view generated traffic forecast after condition frames">
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">ECCV 2026 Workshop · Track 5</span>
+                <span class="pill-badge pill-badge-gold">★ 3rd Place</span>
               </div>
-              <div class="forecast-column">
-                <div class="forecast-label">Ground truth</div>
-                <img class="forecast-gif" src="assets/forecast-overhead-ground-truth.gif" data-full-src="assets/forecast-overhead-ground-truth-zoom.gif" data-gallery-order="1" alt="Overhead-view ground-truth traffic continuation after condition frames">
-                <img class="forecast-gif" src="assets/forecast-vehicle5124-ground-truth.gif" data-full-src="assets/forecast-vehicle5124-ground-truth-zoom.gif" data-gallery-order="3" alt="Vehicle-view ground-truth traffic continuation after condition frames">
-              </div>
-            </figure>
-            <div class="project-details">
-              <p class="project-meta">World Models · V-JEPA · Generative AI · 2026</p>
               <h3>Generative Traffic Forecasting with World Models</h3>
-              <p>Introduced a decoupled forecasting framework that uses frozen V-JEPA representations to guide a frozen video diffusion model through a lightweight learned alignment module, separating traffic-world understanding from pixel-level generation.</p>
+              <p class="showcase-desc">Introduced a decoupled forecasting framework that uses frozen V-JEPA representations to guide a frozen video diffusion model through a lightweight learned alignment module, separating traffic-world understanding from pixel-level generation.</p>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="traffic-forecast">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> Inference Pipeline
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">⚙</span> Training &amp; Alignment
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📝</span> Scene Descriptions
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🎬</span> Forecast Results
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/traffic-forecast-pipeline.webp"
+                       data-full-src="assets/traffic-forecast-pipeline.webp"
+                       alt="Inference overview of the JEPA-guided diffusion model for generative traffic forecasting"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Inference Pipeline):</strong> The trained predictor bridge replaces Cosmos-Reason1, directly supplying predicted cross-attention context tokens from frozen V-JEPA 2.1 to the frozen Cosmos-Predict2.5 video diffusion generator.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/traffic-forecast-pipeline.webp"
+                        data-alt="Inference overview of the JEPA-guided diffusion model for generative traffic forecasting"
+                        data-caption="&lt;strong&gt;Figure 1 (Inference Pipeline):&lt;/strong&gt; The trained predictor bridge replaces Cosmos-Reason1, directly supplying predicted cross-attention context tokens from frozen V-JEPA 2.1 to the frozen Cosmos-Predict2.5 video diffusion generator."
+                        title="Inference Pipeline">
+                  <img src="assets/traffic-forecast-pipeline.webp" alt="Inference pipeline thumbnail">
+                  <span class="thumb-label">Inference</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/traffic-forecast-training.webp"
+                        data-alt="Training pipeline for learning the JEPA-guided conditioning context"
+                        data-caption="&lt;strong&gt;Figure 2 (Training &amp; Alignment):&lt;/strong&gt; Predictor bridge training objective using QFormer, Llama-3.2-1B, and Hungarian set-matching loss against Cosmos-Reason1 7B target context."
+                        title="Training &amp; Alignment">
+                  <img src="assets/traffic-forecast-training.webp" alt="Training pipeline thumbnail">
+                  <span class="thumb-label">Training</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/traffic-forecast-descriptions.webp"
+                        data-alt="Structured future traffic descriptions decomposed into Inventory, Motion, and Outcome"
+                        data-caption="&lt;strong&gt;Figure 3 (Scene Descriptions):&lt;/strong&gt; Structured description refinement decomposing traffic scenes into complementary Inventory, Motion, and Outcome representations."
+                        title="Scene Descriptions">
+                  <img src="assets/traffic-forecast-descriptions.webp" alt="Descriptions thumbnail">
+                  <span class="thumb-label">Descriptions</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/forecast-overhead-prediction.gif"
+                        data-alt="Generated future traffic forecast continuation under multi-agent conditions"
+                        data-caption="&lt;strong&gt;Figure 4 (Forecasting Demonstration):&lt;/strong&gt; Generated future continuation frames under dynamic multi-agent traffic conditions."
+                        title="Forecast Results">
+                  <img src="assets/forecast-overhead-prediction.gif" alt="Forecast GIF thumbnail">
+                  <span class="thumb-label">Forecast GIF</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
               <ul>
                 <li>3rd place, AI City Challenge 2026 (Track 5)</li>
                 <li>Paper accepted at ECCV 2026 Workshop</li>
@@ -272,14 +332,83 @@
 
         <article class="project">
           <div class="project-number">04</div>
-          <div class="project-content project-with-image">
-            <figure class="project-figure">
-              <img class="project-result" src="assets/traffic-jepa-result.webp" alt="Side-by-side real WTS and simulated traffic scenes demonstrating sim-to-real traffic understanding" loading="lazy">
-            </figure>
-            <div class="project-details">
-              <p class="project-meta">Vision-Language · V-JEPA · 2026</p>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">ECCV 2026 Workshop · Track 2</span>
+                <span class="pill-badge pill-badge-gold">★ 1st Place (Oral)</span>
+              </div>
               <h3>Traffic Scene Understanding with World Models</h3>
-              <p>Introduced a structured traffic-scene understanding framework that uses frozen V-JEPA representations to predict explicit semantic facts, then applies training-free relational and temporal refinement before grounding caption generation.</p>
+              <p class="showcase-desc">Introduced a structured traffic-scene understanding framework that uses frozen V-JEPA representations to predict explicit semantic facts, then applies training-free relational and temporal refinement before grounding caption generation.</p>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="traffic-jepa">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> VQA Pipeline
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">✦</span> Semantic Refinement
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📋</span> LoRA Prompt
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📊</span> Sim-to-Real Benchmark
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/traffic-jepa-vqa-pipeline.webp"
+                       data-full-src="assets/traffic-jepa-vqa-pipeline.webp"
+                       alt="V-JEPA 2.1 video representation and question token embedding for answer prediction"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Answer Prediction):</strong> Selected camera event clips are encoded by frozen V-JEPA 2.1 and mapped into latent visual tokens, fused with Llama-3.2 question embeddings for InfoNCE answer scoring.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/traffic-jepa-vqa-pipeline.webp"
+                        data-alt="V-JEPA 2.1 video representation and question token embedding for answer prediction"
+                        data-caption="&lt;strong&gt;Figure 1 (Answer Prediction):&lt;/strong&gt; Selected camera event clips are encoded by frozen V-JEPA 2.1 and mapped into latent visual tokens, fused with Llama-3.2 question embeddings for InfoNCE answer scoring."
+                        title="VQA Pipeline">
+                  <img src="assets/traffic-jepa-vqa-pipeline.webp" alt="VQA pipeline thumbnail">
+                  <span class="thumb-label">VQA Pipeline</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/traffic-jepa-refinement.webp"
+                        data-alt="Training-free refinement and caption generation pipeline with Qwen3-VL-8B"
+                        data-caption="&lt;strong&gt;Figure 2 (Semantic Refinement):&lt;/strong&gt; Independent VQA answers pass through training-free refinement (Answer Prior, Question Relation, Phase Transition) to guide Qwen3-VL-8B caption generation."
+                        title="Semantic Refinement">
+                  <img src="assets/traffic-jepa-refinement.webp" alt="Refinement thumbnail">
+                  <span class="thumb-label">Refinement</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/traffic-jepa-prompt.webp"
+                        data-alt="Fact-guided prompt layout for LoRA-adapted Qwen3-VL-8B"
+                        data-caption="&lt;strong&gt;Figure 3 (Prompt Structure):&lt;/strong&gt; Fact-guided prompt layout feeding refined VQA facts and sampled video frames to LoRA-adapted Qwen3-VL-8B."
+                        title="LoRA Prompt">
+                  <img src="assets/traffic-jepa-prompt.webp" alt="Prompt structure thumbnail">
+                  <span class="thumb-label">Prompt</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/traffic-jepa-result.webp"
+                        data-alt="Side-by-side real WTS and simulated traffic scenes demonstrating sim-to-real traffic understanding"
+                        data-caption="&lt;strong&gt;Figure 4 (Sim-to-Real Benchmark):&lt;/strong&gt; Side-by-side real WTS surveillance and simulated traffic scenes validating cross-domain generalization."
+                        title="Sim-to-Real Benchmark">
+                  <img src="assets/traffic-jepa-result.webp" alt="Sim-to-real thumbnail">
+                  <span class="thumb-label">Sim-to-Real</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
               <ul>
                 <li>1st place, AI City Challenge 2026 (Track 2)</li>
                 <li>87.09% question-answering accuracy</li>
@@ -295,16 +424,85 @@
 
         <article class="project">
           <div class="project-number">05</div>
-          <div class="project-content project-with-image">
-            <figure class="project-figure">
-              <img class="qualification-gif" src="assets/bfmc-2026-qualification.gif" data-full-src="assets/bfmc-2026-qualification-zoom.gif" alt="BFMC 2026 autonomous qualification run" loading="lazy">
-            </figure>
-            <div class="project-details">
-              <p class="project-meta">Autonomous Driving · Edge AI · 2026</p>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">IEEE GTSD 2026 · Autonomous Driving</span>
+                <span class="pill-badge pill-badge-gold">★ 1st Nationally</span>
+              </div>
               <h3>Bosch Future Mobility Challenge 2026</h3>
-              <p>Led the software stack development for our autonomous vehicle team (&ldquo;Drive Beyond&rdquo;), building an end-to-end model that converts camera images and navigation commands into drivable trajectories and object detections, with lane following and decision making for robust on-track navigation, deployed on NVIDIA Jetson Orin Nano.</p>
+              <p class="showcase-desc">Led software development for our autonomous vehicle team (&ldquo;Drive Beyond&rdquo;), building an end-to-end perception-to-planning model converting camera inputs and navigation commands into drivable Bézier trajectories and YOLOv11 detections, deployed on NVIDIA Jetson Orin Nano.</p>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="bfmc-2026">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> Dual-Branch Network
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🎯</span> Trajectory Heatmap
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🚗</span> Vehicle HUD
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">⚡</span> Autonomous Run
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/bfmc-dual-branch-architecture.webp"
+                       data-full-src="assets/bfmc-dual-branch-architecture.webp"
+                       alt="Overview of the proposed dual-branch architecture with shared YOLOv11 backbone, driving branch, and perception branch"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Network Architecture):</strong> Shared YOLOv11 stem branching into an independent Driving branch (CSM command gating, heatmap prediction, Bézier trajectory head) and Perception branch (multi-scale YOLO detection).
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/bfmc-dual-branch-architecture.webp"
+                        data-alt="Overview of the proposed dual-branch architecture with shared YOLOv11 backbone, driving branch, and perception branch"
+                        data-caption="&lt;strong&gt;Figure 1 (Network Architecture):&lt;/strong&gt; Shared YOLOv11 stem branching into an independent Driving branch (CSM command gating, heatmap prediction, Bézier trajectory head) and Perception branch (multi-scale YOLO detection)."
+                        title="Architecture">
+                  <img src="assets/bfmc-dual-branch-architecture.webp" alt="Dual-branch architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-trajectory-heatmap.webp"
+                        data-alt="Ground-truth heatmap vs predicted output with Dice Loss gating"
+                        data-caption="&lt;strong&gt;Figure 2 (Heatmap Prior):&lt;/strong&gt; Ground-truth heatmap vs predicted output. Sharper boundaries from Dice Loss serve as an attention prior for trajectory planning."
+                        title="Heatmap Attention">
+                  <img src="assets/bfmc-trajectory-heatmap.webp" alt="Heatmap thumbnail">
+                  <span class="thumb-label">Heatmap</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-hud-results.webp"
+                        data-alt="Real-time HUD overlay on unseen video showing intersection traversal, traffic light response, and curve lane-keeping"
+                        data-caption="&lt;strong&gt;Figure 3 (Qualitative Results):&lt;/strong&gt; Real-time HUD overlay on unseen video showing intersection traversal, traffic light response, and curve lane-keeping."
+                        title="Vehicle HUD">
+                  <img src="assets/bfmc-hud-results.webp" alt="HUD results thumbnail">
+                  <span class="thumb-label">Vehicle HUD</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-2026-qualification.gif"
+                        data-alt="Physical closed-loop autonomous driving run on competition test track"
+                        data-caption="&lt;strong&gt;Figure 4 (Qualification Run):&lt;/strong&gt; Physical closed-loop autonomous driving on 10x10m test track with high-curvature turns and traffic infrastructure."
+                        title="Autonomous Run">
+                  <img src="assets/bfmc-2026-qualification.gif" alt="Qualification run GIF thumbnail">
+                  <span class="thumb-label">Run GIF</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
               <ul>
-                <li>Semi-finalist & Recipient of 150M VND Bosch Sponsorship</li>
+                <li>Semi-finalist &amp; Recipient of 150M VND Bosch Sponsorship</li>
                 <li>1st nationally in the 2026 qualification round</li>
                 <li>Published in <a href="https://ieeexplore.ieee.org/document/11722364" target="_blank" rel="noopener">IEEE GTSD 2026 Proceedings</a></li>
               </ul>
@@ -459,6 +657,6 @@
     <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
     <div class="media-lightbox-content"></div>
   </dialog>
-  <script src="script.js?v=13"></script>
+  <script src="script.js?v=14"></script>
 </body>
 </html>
