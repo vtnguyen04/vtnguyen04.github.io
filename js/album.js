@@ -3,7 +3,7 @@
    ============================================================ */
 
 export function initAlbums() {
-  const albums = document.querySelectorAll("#research [data-album]");
+  const albums = document.querySelectorAll("[data-album]");
 
   albums.forEach((album) => {
     const trigger = album.querySelector(".album-stack");
@@ -44,11 +44,28 @@ export function initAlbums() {
     }
 
     if (prevBtn) {
-      prevBtn.addEventListener("click", (e) => { e.stopPropagation(); advance(-1); start(); });
+      prevBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        advance(-1);
+        start();
+      });
     }
     if (nextBtn) {
-      nextBtn.addEventListener("click", (e) => { e.stopPropagation(); advance(1); start(); });
+      nextBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        advance(1);
+        start();
+      });
     }
+
+    // Clicking anywhere on the album stack advances to the next photo
+    trigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      advance(1);
+      start();
+    });
 
     trigger.addEventListener("mouseenter", stop);
     trigger.addEventListener("mouseleave", start);
