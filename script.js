@@ -1,7 +1,7 @@
 const lightbox = document.querySelector("#media-lightbox");
 const lightboxContent = lightbox.querySelector(".media-lightbox-content");
 const lightboxClose = lightbox.querySelector(".media-lightbox-close");
-const zoomableMedia = document.querySelectorAll("#research .project-figure:not([data-gallery]):not([data-album]) img");
+const zoomableMedia = document.querySelectorAll("#research .project-figure:not([data-gallery]):not([data-album]) img, .showcase-main-figure img, .award-cert-thumb img");
 const galleries = document.querySelectorAll("#research [data-gallery]");
 const albums = document.querySelectorAll("#research [data-album]");
 
