@@ -193,29 +193,34 @@ h3 {
 }
 
 /* Footer */
-footer {
-  padding: 56px 0 40px;
+footer, .site-footer {
+  width: 100%;
+  padding: 56px 0 44px;
   border-top: 1px solid var(--border);
-  background: var(--paper);
+  background: var(--bg-canvas);
 }
 
 .footer-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 20px;
   color: var(--muted);
   font-size: .88rem;
 }
 
-.footer-content div {
+.footer-content div,
+.footer-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  align-items: center;
+  gap: 16px 24px;
 }
 
 .footer-content a {
   color: var(--muted);
+  text-decoration: none;
   transition: color var(--transition-fast);
 }
 

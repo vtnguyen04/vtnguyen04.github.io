@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=65">
+  <link rel="stylesheet" href="style.css?v=70">
 </head>
 <body>
   <div id="scroll-progress"></div>
@@ -36,8 +36,27 @@
           <span class="icon-sun" aria-hidden="true">&#9728;</span>
           <span class="icon-moon" aria-hidden="true">&#9790;</span>
         </button>
+        <button class="nav-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-icon">☰</span>
+        </button>
       </div>
     </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-label="Mobile Navigation Menu">
+      <a href="#research" class="drawer-link">🔬 Research &amp; Papers</a>
+      <a href="#projects" class="drawer-link">⚙️ Engineering Systems</a>
+      <a href="#experience" class="drawer-link">💼 Experience &amp; Background</a>
+      <a href="awards.html" class="drawer-link">🏆 Awards &amp; Honors</a>
+      <div class="drawer-divider"></div>
+      <a href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener" class="drawer-link drawer-cv-link">📄 Full CV (PDF) ↗</a>
+      <div class="drawer-secondary-links">
+        <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview</a>
+        <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:nguyenvothanh04@gmail.com">Email</a>
+      </div>
+    </div>
   </header>
 
   <main id="top">
@@ -935,15 +954,15 @@
 
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="container footer-content">
-      <p>Last update: October 2026</p>
-      <div>
+      <p>Last update: October 2026 · Hosted on GitHub Pages</p>
+      <div class="footer-links">
         <a href="mailto:nguyenvothanh04@gmail.com">Email</a>
-        <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Scholar</a>
-        <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview</a>
-        <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-v%C3%B5-th%C3%A0nh-044517246/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview ↗</a>
+        <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="https://www.linkedin.com/in/nguy%E1%BB%85n-v%C3%B5-th%C3%A0nh-044517246/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </div>
   </footer>
@@ -971,7 +990,7 @@
     <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
     <div class="media-lightbox-content"></div>
   </dialog>
-  <script type="module" src="js/main.js?v=20"></script>
-  <script nomodule src="script.js?v=20"></script>
+  <script type="module" src="js/main.js?v=25"></script>
+  <script nomodule src="script.js?v=25"></script>
 </body>
 </html>

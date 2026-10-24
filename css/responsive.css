@@ -1,44 +1,309 @@
 /* ============================================================
-   Responsive Breakpoints & Motion Settings
+   Responsive Breakpoints & Motion Settings — 2026 Bulletproof Layout
    ============================================================ */
 
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; gap: 44px; padding: 64px 0 32px; }
-  .hero-summary { padding: 0; border: 0; }
-  .profile-photo { width: min(260px, 70vw); }
-  .project-with-image { grid-template-columns: 1fr; gap: 26px; }
-  .timeline article { grid-template-columns: 1fr; gap: 10px; padding-left: 24px; }
-  .timeline article::after { top: 30px; }
-  .showcase-thumbs { grid-template-columns: repeat(2, 1fr); }
-  .showcase-image-wrapper { min-height: 280px; }
+/* Global container hygiene */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
+/* ============================================================
+   Tablet Breakpoint (<= 960px)
+   ============================================================ */
+@media (max-width: 960px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 48px 0 28px;
+  }
+  .hero-aside {
+    position: static;
+    max-width: 420px;
+  }
+  .profile-photo {
+    width: min(260px, 70vw);
+  }
+  .hero-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .project-with-image {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .timeline article {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding-left: 24px;
+    min-width: 0;
+  }
+  .timeline article::after {
+    top: 30px;
+  }
+  .awards-stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+  .award-card,
+  .award-card.has-cert {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .award-cert-thumb {
+    width: 100%;
+    max-width: 320px;
+    height: 190px;
+  }
+}
+
+/* ============================================================
+   Mobile Breakpoint (<= 640px)
+   ============================================================ */
 @media (max-width: 640px) {
-  .name-full { display: none; }
-  .name-short { display: inline; }
-  .nav { min-height: 60px; }
-  .nav-links { gap: 14px; font-size: .75rem; }
-  .nav-links a:nth-child(2) { display: none; } /* collapse Engineering on tiny screens */
-  h1 { font-size: 3.2rem; }
-  .hero-links { flex-wrap: wrap; gap: 18px; }
-  .section { padding-block: 60px; }
-  #research { padding-top: 32px; }
-  .section-title { align-items: flex-start; flex-direction: column; gap: 8px; margin-bottom: 30px; }
-  .project { grid-template-columns: 1fr; gap: 14px; padding: 40px 0; }
-  .project-figure img { max-height: 340px; padding: 10px; }
+  .section {
+    padding-block: 44px;
+  }
+  #research {
+    padding-top: 24px;
+  }
+  .section-title {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  /* Typography on Mobile */
+  h1 {
+    font-size: clamp(2.3rem, 7.5vw, 3.4rem);
+    line-height: 1.05;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+  .hero-copy h1 {
+    font-size: clamp(2.4rem, 7.5vw, 3.6rem);
+    letter-spacing: -.035em;
+  }
+  h2 {
+    font-size: clamp(1.65rem, 5.5vw, 2.2rem);
+    letter-spacing: -.025em;
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.3;
+  }
+
   .intro,
   .project-content > p:not(.project-meta),
   .project-details > p:not(.project-meta) {
-    text-align: left; hyphens: none;
+    text-align: left;
+    hyphens: none;
+    font-size: .95rem;
   }
-  .footer-content { align-items: flex-start; flex-direction: column; gap: 12px; }
-  .media-lightbox-content.is-gallery { grid-template-columns: 1fr; }
-  .showcase-tabs { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
-  .showcase-tab { white-space: nowrap; }
-  .showcase-image-wrapper { min-height: 220px; padding: 8px; }
+
+  .hero-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  /* Metric grids single column */
+  .hero-metrics-grid,
+  .awards-stats-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  /* Research filter bar */
+  .research-filter-bar {
+    width: 100%;
+    border-radius: var(--radius);
+    padding: 6px;
+    gap: 6px;
+    justify-content: flex-start;
+  }
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: .78rem;
+    gap: 5px;
+  }
+
+  /* Projects & Showcases — Strict min-width: 0 */
+  .project {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 32px 0;
+  }
+  .project-number {
+    font-size: .8rem;
+    padding-top: 0;
+  }
+  .project-content,
+  .project-showcase,
+  .showcase-header,
+  .showcase-media-hub,
+  .showcase-main-figure,
+  .showcase-image-wrapper,
+  .showcase-caption,
+  .showcase-thumbs,
+  .showcase-footer,
+  .pub-bibtex-box,
+  .pub-bibtex-box pre {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .showcase-image-wrapper {
+    min-height: 200px;
+    padding: 6px;
+  }
+  .showcase-main-img {
+    padding: 8px;
+    max-height: 380px;
+  }
+
+  /* Interactive media tabs - smooth horizontal scroll on touch */
+  .showcase-tabs {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    max-width: 100%;
+  }
+  .showcase-tab {
+    flex-shrink: 0;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: .74rem;
+  }
+
+  /* Thumbnails row - smooth horizontal scroll */
+  .showcase-thumbs {
+    display: flex;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    gap: 8px;
+    padding-bottom: 6px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    max-width: 100%;
+  }
+  .showcase-thumb {
+    flex: 0 0 100px;
+    min-width: 0;
+  }
+
+  .showcase-footer ul {
+    gap: 6px;
+  }
+  .showcase-footer li {
+    font-size: .78rem;
+    padding: 4px 10px;
+  }
+
+  /* Side-by-side forecast on mobile */
+  .forecast-comparison {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  /* Awards list on mobile */
+  .award-card,
+  .award-card.has-cert {
+    padding: 16px;
+    gap: 12px;
+  }
+  .award-cert-thumb {
+    width: 100%;
+    max-width: 100%;
+    height: 180px;
+  }
+  .award-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .category-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  /* Skills Matrix */
+  .skills-matrix-section {
+    padding: 22px 16px;
+    margin-top: 36px;
+  }
+  .skills-matrix-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  /* Footer on mobile */
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .footer-content div,
+  .footer-links {
+    gap: 10px 16px;
+  }
+
+  /* Command Palette on mobile */
+  .cmd-palette-backdrop {
+    padding: 6vh 12px 12px;
+  }
+  .cmd-palette-search {
+    padding: 12px 14px;
+    gap: 8px;
+  }
+  .cmd-search-input {
+    font-size: .95rem;
+    min-width: 0;
+  }
+  .cmd-palette-footer {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+    padding: 10px 14px;
+    font-size: .72rem;
+  }
 }
 
+/* ============================================================
+   Tiny Screen Breakpoint (<= 380px)
+   ============================================================ */
+@media (max-width: 380px) {
+  .hero-aside {
+    width: 100%;
+  }
+  .profile-card {
+    padding: 16px;
+  }
+  .award-stat-card {
+    padding: 14px 16px;
+  }
+  .award-stat-number {
+    font-size: 1.6rem;
+  }
+  .filter-btn {
+    padding: 5px 9px;
+    font-size: .74rem;
+  }
+}
+
+/* ============================================================
+   Reduced Motion
+   ============================================================ */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  *, *::before, *::after { transition: none !important; animation: none !important; }
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }

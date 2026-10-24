@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=65">
+  <link rel="stylesheet" href="style.css?v=70">
 </head>
 <body>
   <div id="scroll-progress"></div>
@@ -37,8 +37,28 @@
           <span class="icon-sun" aria-hidden="true">&#9728;</span>
           <span class="icon-moon" aria-hidden="true">&#9790;</span>
         </button>
+        <button class="nav-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-icon">☰</span>
+        </button>
       </div>
     </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-label="Mobile Navigation Menu">
+      <a href="index.html" class="drawer-link">🏠 Home</a>
+      <a href="index.html#research" class="drawer-link">🔬 Research &amp; Papers</a>
+      <a href="index.html#projects" class="drawer-link">⚙️ Engineering Systems</a>
+      <a href="index.html#experience" class="drawer-link">💼 Experience</a>
+      <a href="awards.html" class="drawer-link nav-active">🏆 Awards &amp; Honors</a>
+      <div class="drawer-divider"></div>
+      <a href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener" class="drawer-link drawer-cv-link">📄 Full CV (PDF) ↗</a>
+      <div class="drawer-secondary-links">
+        <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview</a>
+        <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:nguyenvothanh04@gmail.com">Email</a>
+      </div>
+    </div>
   </header>
 
   <main class="container">
@@ -562,10 +582,10 @@
     </section>
   </main>
 
-  <footer class="container">
-    <div class="footer-content">
+  <footer class="site-footer">
+    <div class="container footer-content">
       <p>&copy; 2026 Vo Thanh Nguyen. Hosted on GitHub Pages.</p>
-      <div>
+      <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="index.html#research">Research</a>
         <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Google Scholar ↗</a>
@@ -602,7 +622,7 @@
     <div class="media-lightbox-content"></div>
   </dialog>
 
-  <script type="module" src="js/main.js?v=20"></script>
-  <script nomodule src="script.js?v=20"></script>
+  <script type="module" src="js/main.js?v=25"></script>
+  <script nomodule src="script.js?v=25"></script>
 </body>
 </html>

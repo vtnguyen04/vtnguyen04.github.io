@@ -3,6 +3,7 @@
    ============================================================ */
 
 import { initTheme } from "./theme.js";
+import { initMobileNav } from "./nav.js";
 import { initLightbox } from "./lightbox.js";
 import { initShowcases } from "./showcase.js";
 import { initAlbums } from "./album.js";
@@ -14,6 +15,7 @@ import { initScrollTelemetry } from "./scroll-progress.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   initTheme();
+  initMobileNav();
   initLightbox();
   initShowcases();
   initAlbums();

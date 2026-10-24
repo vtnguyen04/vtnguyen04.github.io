@@ -202,3 +202,33 @@ showcases.forEach((hub) => {
   });
 });
 
+/* ---------- Mobile Navigation Drawer ---------- */
+const mobileMenuBtn = document.querySelector(".nav-menu-btn");
+const mobileDrawer = document.querySelector("#mobile-nav-drawer");
+if (mobileMenuBtn && mobileDrawer) {
+  const menuIcon = mobileMenuBtn.querySelector(".menu-icon");
+  function toggleDrawer() {
+    const isOpen = mobileDrawer.classList.toggle("is-open");
+    mobileMenuBtn.setAttribute("aria-expanded", String(isOpen));
+    if (menuIcon) menuIcon.textContent = isOpen ? "✕" : "☰";
+  }
+  mobileMenuBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    toggleDrawer();
+  });
+  mobileDrawer.querySelectorAll("a").forEach(a => {
+    a.addEventListener("click", () => {
+      mobileDrawer.classList.remove("is-open");
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      if (menuIcon) menuIcon.textContent = "☰";
+    });
+  });
+  document.addEventListener("click", (e) => {
+    if (mobileDrawer.classList.contains("is-open") && !mobileDrawer.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+      mobileDrawer.classList.remove("is-open");
+      mobileMenuBtn.setAttribute("aria-expanded", "false");
+      if (menuIcon) menuIcon.textContent = "☰";
+    }
+  });
+}
+
