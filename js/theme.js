@@ -11,9 +11,9 @@ export function initTheme() {
     themeToggle.setAttribute("aria-pressed", String(theme === "dark"));
   }
 
-  // Default to 2026 Obsidian Dark unless user explicitly saved 'light'
+  // Default to clean, bright Light theme unless user explicitly saved 'dark'
   const saved = localStorage.getItem("theme");
-  applyTheme(saved === "light" ? "light" : "dark");
+  applyTheme(saved === "dark" ? "dark" : "light");
 
   themeToggle.addEventListener("click", () => {
     const current = document.documentElement.getAttribute("data-theme");

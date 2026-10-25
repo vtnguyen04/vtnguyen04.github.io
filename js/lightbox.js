@@ -8,7 +8,7 @@ export function initLightbox() {
 
   const lightboxContent = lightbox.querySelector(".media-lightbox-content");
   const lightboxClose = lightbox.querySelector(".media-lightbox-close");
-  const zoomableMedia = document.querySelectorAll("#research .project-figure:not([data-gallery]):not([data-album]) img, .showcase-main-figure img, .award-cert-thumb img");
+  const zoomableMedia = document.querySelectorAll("#research .project-figure:not([data-gallery]):not([data-album]) img, #projects .project-figure:not([data-gallery]):not([data-album]) img, .showcase-main-figure img, .award-cert-thumb img, .zoomable-media");
   const galleries = document.querySelectorAll("#research [data-gallery]");
 
   function openLightbox(media) {

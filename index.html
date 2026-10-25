@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=80">
+  <link rel="stylesheet" href="style.css?v=102">
 </head>
 <body>
   <div id="scroll-progress"></div>
@@ -22,7 +22,7 @@
       </a>
       <div class="nav-links">
         <a class="nav-link-item" href="#research">Research</a>
-        <a class="nav-link-item" href="#projects">Engineering</a>
+        <a class="nav-link-item" href="projects.html">Engineering</a>
         <a class="nav-link-item" href="#experience">Experience</a>
         <a class="nav-link-item" href="awards.html">Awards &amp; Honors</a>
       </div>
@@ -45,7 +45,7 @@
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-label="Mobile Navigation Menu">
       <a href="#research" class="drawer-link">🔬 Research &amp; Papers</a>
-      <a href="#projects" class="drawer-link">⚙️ Engineering Systems</a>
+      <a href="projects.html" class="drawer-link">⚙️ Engineering Systems</a>
       <a href="#experience" class="drawer-link">💼 Experience &amp; Background</a>
       <a href="awards.html" class="drawer-link">🏆 Awards &amp; Honors</a>
       <div class="drawer-divider"></div>
@@ -202,7 +202,12 @@
                 <strong class="author-self">Thanh Nguyen Vo</strong>*, Nguyen Hoai Thuong Bui*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
               </p>
               <p class="project-venue">Under Review at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2027</p>
-              <p class="showcase-desc">Co-adapts self-supervised DINOv3 (ViT-H+/16) and vision-language CLIP (ViT-L/14) with an attribute-specific joint query head. Cross-attention queries dynamically route between visual and text-visual token spaces, outperforming static ensembles across surveillance cameras.</p>
+              <p class="showcase-desc">Co-adapts self-supervised DINOv3 (ViT-H+/16) and vision-language CLIP (ViT-L/14) with an attribute-specific joint query head for cross-domain pedestrian attribute recognition:</p>
+              <ul class="eng-card-list">
+                <li><strong>Dual Foundation Encoders:</strong> Unites spatial patch representations from DINOv3 (ViT-H+/16) with semantic vision-language tokens from CLIP (ViT-L/14).</li>
+                <li><strong>Dynamic Token Routing:</strong> Pre-LN cross-attention query head over 228 multimodal tokens routes color attributes to CLIP and structural/clothing attributes to DINOv3.</li>
+                <li><strong>Cross-Domain Generalization:</strong> Outperforms static single-encoder and late-fusion ensembles across 40 pedestrian attributes on unseen surveillance camera domains.</li>
+              </ul>
             </div>
 
             <div class="showcase-media-hub" data-showcase="uniquery">
@@ -315,7 +320,12 @@
                 <strong class="author-self">Thanh Nguyen Vo</strong>*, Nguyen Hoai Thuong Bui*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
               </p>
               <p class="project-venue">Under Review at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2027</p>
-              <p class="showcase-desc">Replaces L1 distance ranking with exact-query log-likelihood scoring and performs zero-cost test-time transductive kNN logit smoothing using forward-pass DINOv3 patch tokens.</p>
+              <p class="showcase-desc">Formulates attribute-based person retrieval on unseen surveillance cameras through likelihood scoring and zero-cost transductive neighbor smoothing:</p>
+              <ul class="eng-card-list">
+                <li><strong>Exact-Query Log-Likelihood Scoring:</strong> Replaces heuristic L1 distance ranking with calibrated probabilistic log-likelihood evaluation over multi-teacher attribute predictions.</li>
+                <li><strong>Group Cross-Entropy Training:</strong> Models mutually exclusive semantic attribute groups to suppress conflicting predictions under cross-domain camera shifts.</li>
+                <li><strong>Zero-Cost Transductive kNN Smoothing:</strong> Reuses forward-pass DINOv3 patch tokens to smooth gallery logits across nearest neighbors without extra backbone inference.</li>
+              </ul>
             </div>
 
             <div class="showcase-media-hub" data-showcase="lens">
@@ -429,7 +439,12 @@
                 Trinh Tra Giang Nguyen*, <strong class="author-self">Thanh Nguyen Vo</strong>*, Nguyen Hoai Thuong Bui*, Ha Duc Bui&dagger;
               </p>
               <p class="project-venue">Proceedings of the European Conference on Computer Vision Workshops (ECCVW), 2026</p>
-              <p class="showcase-desc">Introduced a decoupled forecasting framework that uses frozen V-JEPA representations to guide a frozen video diffusion model through a lightweight learned alignment module, separating traffic-world understanding from pixel-level generation.</p>
+              <p class="showcase-desc">Decouples traffic-world dynamics understanding from pixel-level video synthesis by bridging frozen V-JEPA 2.1 with frozen Cosmos-Predict2.5:</p>
+              <ul class="eng-card-list">
+                <li><strong>Latent World Representation:</strong> Extracts spatiotemporal traffic dynamics from observed video clips using frozen self-supervised V-JEPA 2.1 encoders.</li>
+                <li><strong>Lightweight Predictor Bridge:</strong> Trains a QFormer and Llama-3.2-1B alignment module with Hungarian set-matching loss to predict future cross-attention conditioning tokens.</li>
+                <li><strong>Generative Video Continuation:</strong> Guides frozen Cosmos-Predict2.5 diffusion synthesis without running heavy 7B VLM reasoning at inference (Rank 3 Worldwide, ECCV 2026 Workshop).</li>
+              </ul>
             </div>
 
             <div class="showcase-media-hub" data-showcase="traffic-forecast">
@@ -546,7 +561,12 @@
                 Nguyen Hoai Thuong Bui*, <strong class="author-self">Thanh Nguyen Vo</strong>*, Trinh Tra Giang Nguyen*, Ha Duc Bui&dagger;
               </p>
               <p class="project-venue">Proceedings of the European Conference on Computer Vision Workshops (ECCVW), 2026</p>
-              <p class="showcase-desc">Introduced a structured traffic-scene understanding framework that uses frozen V-JEPA representations to predict explicit semantic facts, then applies training-free relational and temporal refinement before grounding caption generation.</p>
+              <p class="showcase-desc">Bridges sim-to-real traffic scene understanding by decoupling semantic fact extraction from vision-language caption generation:</p>
+              <ul class="eng-card-list">
+                <li><strong>V-JEPA 2.1 Fact Extraction:</strong> Encodes multi-view traffic event clips with frozen V-JEPA 2.1 and scores structured VQA candidates via InfoNCE alignment.</li>
+                <li><strong>Training-Free Relational Refinement:</strong> Enforces domain-consistent Answer Priors, Question Relations, and Temporal Phase Transitions across predicted attributes.</li>
+                <li><strong>Grounded Caption Generation:</strong> Feeds verified semantic facts and keyframe sequences into LoRA-adapted Qwen3-VL-8B (1st Place Worldwide, ECCV 2026 Workshop Oral).</li>
+              </ul>
             </div>
 
             <div class="showcase-media-hub" data-showcase="traffic-jepa">
@@ -662,7 +682,12 @@
                 <strong class="author-self">Thanh Nguyen Vo</strong>, Trinh Tra Giang Nguyen, Lu Anh Khoi Le, Ha Duc Bui&dagger;
               </p>
               <p class="project-venue">2026 8th International Conference on Green Technology and Sustainable Development (GTSD), IEEE, 2026</p>
-              <p class="showcase-desc">Introduced an end-to-end perception-to-planning framework featuring a shared YOLOv11 stem that branches into multi-scale object detection and an independent command-gated driving branch predicting trajectory heatmaps and generating smooth Frenet/Bézier paths in real time.</p>
+              <p class="showcase-desc">Real-time multi-task perception-to-planning architecture deployed on NVIDIA Jetson Orin Nano for autonomous urban driving:</p>
+              <ul class="eng-card-list">
+                <li><strong>Shared YOLOv11 Backbone:</strong> Jointly executes multi-scale traffic object detection and drivable corridor feature extraction in a single forward pass (35+ FPS).</li>
+                <li><strong>Attention Heatmap Prior:</strong> Trains a full-resolution spatial attention branch with Dice and Focal loss to anchor trajectory prediction along sharp road curvature.</li>
+                <li><strong>Command-Gated Frenet/Bézier Planning:</strong> Modulates waypoint regression with high-level navigation commands to synthesize smooth, kinematically feasible trajectories.</li>
+              </ul>
             </div>
 
             <div class="showcase-media-hub" data-showcase="gtsd-2026">
@@ -675,6 +700,12 @@
                 </button>
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">🚗</span> Vehicle HUD
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📊</span> FDAT Loss Ablation
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🛣️</span> CARLA SIL Eval
                 </button>
               </div>
 
@@ -717,6 +748,22 @@
                   <img src="assets/bfmc-hud-results.webp" alt="HUD results thumbnail">
                   <span class="thumb-label">Vehicle HUD</span>
                 </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-fdat-ablation.webp"
+                        data-alt="FDAT trajectory loss ablation and multi-task convergence"
+                        data-caption="&lt;strong&gt;Figure 4 (FDAT Loss Ablation):&lt;/strong&gt; Frenet-Decomposed Anisotropic Temporal (FDAT) loss with bathtub temporal weighting reduces ADE by 11.1% (0.0769) and FDE by 17.3% (0.0897) while achieving 0.858 mAP@0.5."
+                        title="FDAT Loss Ablation">
+                  <img src="assets/bfmc-thesis-fdat-ablation.webp" alt="FDAT Loss Ablation thumbnail">
+                  <span class="thumb-label">FDAT Ablation</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-control-eval.webp"
+                        data-alt="Closed-loop CARLA Town01 and Town02 route trajectories comparing PilotNet and Proposed Model"
+                        data-caption="&lt;strong&gt;Figure 5 (Closed-Loop CARLA SIL):&lt;/strong&gt; Unseen CARLA Town01 and Town02 generalization showing 99.9% route completion (0.39 m mean lateral error) compared to PilotNet (7.6% and 18.6% completion)."
+                        title="CARLA SIL Eval">
+                  <img src="assets/bfmc-thesis-control-eval.webp" alt="CARLA SIL Eval thumbnail">
+                  <span class="thumb-label">CARLA SIL Eval</span>
+                </button>
               </div>
             </div>
 
@@ -756,168 +803,172 @@
       </div>
     </section>
 
-    <section class="section container" id="projects">
+    <section class="section container" id="engineering-preview">
       <div class="section-title">
-        <p class="label">Engineering</p>
-        <h2>Autonomous Systems &amp; Software</h2>
+        <p class="label">Production Systems</p>
+        <h2>Engineering Systems &amp; Applied AI</h2>
+        <p class="section-subtitle" style="max-width: 840px; font-size: 1.02rem; line-height: 1.68; color: var(--ink-soft); margin-top: 8px;">
+          Beyond academic publications, I architect production-grade machine learning platforms, real-time embedded autonomous vehicle stacks, and enterprise recommendation pipelines.
+        </p>
       </div>
 
-      <div class="projects">
-        <article class="project">
-          <div class="project-number">06</div>
-          <div class="project-content project-with-image">
-            <figure class="project-figure">
-              <img src="assets/bfmc-2026-qualification.gif"
-                   alt="BFMC 2026 Drive Beyond physical autonomous driving run on competition track"
-                   class="zoomable-media"
-                   data-full-src="assets/bfmc-2026-qualification.gif"
-                   loading="lazy">
-            </figure>
-            <div class="project-details">
-              <div class="showcase-badges">
-                <span class="project-meta">Autonomous Vehicles · Robotics · Jetson Orin · 2025–2026</span>
-                <span class="pill-badge pill-badge-gold">★ 1st Nationally</span>
-              </div>
-              <h3>Bosch Future Mobility Challenge 2026</h3>
-              <p>Led software stack development for our autonomous vehicle team (&ldquo;Drive Beyond&rdquo;). Engineered closed-loop navigation, lane following, intersection negotiation, traffic sign response, and PID control on an NVIDIA Jetson Orin Nano.</p>
-              <ul>
-                <li>1st place nationally in the 2026 qualification round</li>
-                <li>Recipient of 150M VND Bosch Vietnam sponsorship grant</li>
-                <li>Physical closed-loop execution on a 10×10m competition test track</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://www.youtube.com/watch?v=zDUCDjWeLuw" target="_blank" rel="noopener">Qualification video ↗</a>
-                <a href="certs/Letter-for-Drive-Beyond.pdf" target="_blank" rel="noopener">Bosch Sponsorship Letter (PDF) ↗</a>
-              </div>
-            </div>
+      <div class="eng-bento" style="margin-top: 24px;">
+        <!-- Featured Card: Phoenix ML -->
+        <div class="eng-card eng-card-featured">
+          <div class="eng-card-media">
+            <img src="assets/phoenix-system-architecture.webp" alt="Phoenix ML Platform Architecture" loading="lazy">
           </div>
-        </article>
-
-        <article class="project">
-          <div class="project-number">07</div>
-          <div class="project-content project-with-image">
-            <figure class="project-figure project-album" data-album>
-              <button class="album-stack" type="button" aria-label="Open all five BFMC 2025 photos">
-                <img class="album-photo" data-depth="0" src="assets/bfmc-2025-event-1.webp" alt="BFMC 2025 team portrait with the autonomous vehicle" loading="lazy">
-                <img class="album-photo" data-depth="1" src="assets/bfmc-2025-event-2.webp" alt="Presenting the BFMC 2025 autonomous-driving system to the judges" loading="lazy">
-                <img class="album-photo" data-depth="2" src="assets/bfmc-2025-event-3.webp" alt="Running the autonomous vehicle on the BFMC 2025 competition track" loading="lazy">
-                <img class="album-photo" data-depth="3" src="assets/bfmc-2025-event-4.webp" alt="BFMC 2025 autonomous vehicle navigating the competition track" loading="lazy">
-                <img class="album-photo" data-depth="4" src="assets/bfmc-2025-event-5.webp" alt="BFMC 2025 team photo at the competition venue" loading="lazy">
-              </button>
-              <div class="album-controls">
-                <button class="album-nav album-prev" type="button" aria-label="Previous photo">&#8249;</button>
-                <span class="album-counter" aria-live="polite">1 / 5</span>
-                <button class="album-nav album-next" type="button" aria-label="Next photo">&#8250;</button>
-              </div>
-            </figure>
-            <div class="project-details">
-              <div class="showcase-badges">
-                <span class="project-meta">Autonomous Driving · Robotics · 2025</span>
-                <span class="pill-badge pill-badge-silver">★ Global Top 9</span>
-              </div>
-              <h3>Bosch Future Mobility Challenge 2025</h3>
-              <p>Led software stack development for our autonomous vehicle, building real-time perception, navigation, and control capabilities that carried the team to the international finals.</p>
-              <ul>
-                <li>Global top 9 at the international finals</li>
-                <li>Best Team from Vietnam &amp; Asia (2025)</li>
-                <li>Finals hosted by Bosch Romania</li>
-              </ul>
-              <div class="project-links">
-                <a href="certs/bfmc-2025-certificate.webp" target="_blank" rel="noopener">Finalist Certificate ↗</a>
-                <a href="https://boschfuturemobility.com/" target="_blank" rel="noopener">Competition website ↗</a>
-              </div>
+          <div class="eng-card-body">
+            <div class="eng-card-topline">
+              <span class="eng-card-domain">MLOps · Domain-Driven Design · Distributed Systems</span>
+              <span class="pill-badge pill-badge-gold">★ Production MLOps Platform</span>
             </div>
-          </div>
-        </article>
-
-        <article class="project" id="project-knowledgeforge">
-          <div class="project-number">08</div>
-          <div class="project-content">
-            <div class="project-details">
-              <p class="project-meta">Multi-Agent Systems · LangGraph · RAG · 2025–2026</p>
-              <h3>KnowledgeForge (Agent Operating System — AOS)</h3>
-              <p>Architected an enterprise-grade Agent Operating System in Python and LangGraph that decomposes complex tasks into concurrent DAG execution via Kahn&rsquo;s Topological Sort. Integrates an MCTS decision engine, runtime AST-based safety validation &amp; skill hot-patching, and a reactive SSE streaming gateway.</p>
-              <ul>
-                <li>Sub-10ms Semantic Router &amp; MCTS Planning Engine</li>
-                <li>Continuous Empirical Learning (CEL) &amp; AST Hot-Patching</li>
-                <li>Multi-platform webhook delivery (Zalo, Discord, Telegram, Slack)</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://github.com/vtnguyen04/KnowledgeForge" target="_blank" rel="noopener">View repository ↗</a>
-              </div>
+            <h3 class="eng-card-title">Phoenix ML Platform — Real-Time Inference &amp; Self-Healing MLOps</h3>
+            <p class="eng-card-desc">
+              Four-layer Domain-Driven Design MLOps platform across 6 bounded contexts and 14 containerized services:
+            </p>
+            <ul class="eng-card-list">
+              <li><strong>Multi-Engine Serving:</strong> 5 ML domains served via ONNX, TensorRT, Triton, and BentoML (0.72 ms p99).</li>
+              <li><strong>Feature &amp; Stream Plane:</strong> Redis 7 online store (0.38 ms p50), Parquet/DVC, and Kafka + PyFlink.</li>
+              <li><strong>Self-Healing Loop:</strong> KS/PSI/χ²/W₁ drift guards auto-trigger Airflow + Optuna retraining in 17.2s.</li>
+            </ul>
+            <div class="eng-metrics-row">
+              <span class="eng-metric-chip">4-Layer DDD · 6 Contexts</span>
+              <span class="eng-metric-chip">5-Domain Model Zoo</span>
+              <span class="eng-metric-chip">0.72 ms P99 Latency</span>
+              <span class="eng-metric-chip">628 Automated Tests</span>
             </div>
-          </div>
-        </article>
-
-        <article class="project" id="project-distraction-detection">
-          <div class="project-number">09</div>
-          <div class="project-content">
-            <div class="project-details">
-              <p class="project-meta">Computer Vision · Real-Time Systems · 2024</p>
-              <h3>Real-Time Driver Distraction Detection System</h3>
-              <p>Engineered a real-time driver state monitoring system running across multiple worker processes, fusing 6 biometric signals through a temporal state machine and rendering a live operator HUD.</p>
-              <ul>
-                <li>Signal Fusion: EAR, MAR, Head Pose, PERCLOS, Blink Rate, YOLO</li>
-                <li>Multi-backend inference with hot-swappable runtimes</li>
-                <li>PySide6 live HUD with face-mesh overlays</li>
-              </ul>
-              <div class="project-links">
-                <a href="https://github.com/vtnguyen04/distracted-detection" target="_blank" rel="noopener">View repository ↗</a>
-              </div>
-            </div>
-          </div>
-        </article>
-      </div>
-
-      <!-- Core Technical Competencies Grid -->
-      <div class="skills-matrix-section">
-        <div class="skills-matrix-header">
-          <p class="label">Core Stack</p>
-          <h3>Technical Competencies &amp; System Stacks</h3>
-          <p>Comprehensive engineering toolset spanning deep learning research, edge deployment, and production systems.</p>
-        </div>
-        <div class="skills-matrix-grid">
-          <div class="skills-category">
-            <div class="skills-cat-title">Deep Learning &amp; Vision</div>
-            <div class="skills-tags">
-              <span class="skill-tag skill-tag-primary">PyTorch</span>
-              <span class="skill-tag skill-tag-primary">V-JEPA 2.1</span>
-              <span class="skill-tag skill-tag-primary">Cosmos-Predict2.5 DiT</span>
-              <span class="skill-tag">Qwen3-VL-8B</span>
-              <span class="skill-tag">DINOv3 / CLIP</span>
-              <span class="skill-tag">LoRA Adaptation</span>
-              <span class="skill-tag">YOLOv11</span>
-              <span class="skill-tag">Hugging Face</span>
-              <span class="skill-tag">OpenCV</span>
-            </div>
-          </div>
-          <div class="skills-category">
-            <div class="skills-cat-title">Edge AI &amp; Autonomous Systems</div>
-            <div class="skills-tags">
-              <span class="skill-tag skill-tag-primary">TensorRT (FP16/INT8)</span>
-              <span class="skill-tag skill-tag-primary">NVIDIA Jetson Orin Nano</span>
-              <span class="skill-tag">Linux SharedMemory IPC</span>
-              <span class="skill-tag">ZeroMQ Messaging</span>
-              <span class="skill-tag">Frenet Trajectory Planning</span>
-              <span class="skill-tag">PID &amp; Stanley Control</span>
-              <span class="skill-tag">Hailo NPU</span>
-              <span class="skill-tag">Docker</span>
-            </div>
-          </div>
-          <div class="skills-category">
-            <div class="skills-cat-title">Languages &amp; Infrastructure</div>
-            <div class="skills-tags">
-              <span class="skill-tag skill-tag-primary">Python (Expert)</span>
-              <span class="skill-tag skill-tag-primary">C++</span>
-              <span class="skill-tag">CUDA</span>
-              <span class="skill-tag">Bash / Linux</span>
-              <span class="skill-tag">SQL</span>
-              <span class="skill-tag">Pinecone Vector DB</span>
-              <span class="skill-tag">n8n Automation</span>
-              <span class="skill-tag">Git / CI/CD</span>
+            <div class="eng-card-links">
+              <a href="projects.html#project-phoenix">View Interactive Showcase &amp; Flow Video →</a>
             </div>
           </div>
         </div>
+
+        <!-- Card 2: BFMC -->
+        <div class="eng-card">
+          <div class="eng-card-header">
+            <div class="eng-card-topline">
+              <span class="eng-card-domain">Autonomous Driving · C++20 &amp; Python</span>
+              <span class="pill-badge pill-badge-gold">★ Rank 1 Vietnam · Top 9 Global</span>
+            </div>
+            <h3 class="eng-card-title">Bosch Future Mobility Challenge (BFMC 2025 &amp; 2026)</h3>
+            <ul class="eng-card-list">
+              <li><strong>Zero-Copy Runtime:</strong> Jetson Orin Nano, RealSense D435i RGB-D, STM32 MCU, and POSIX SHM rings.</li>
+              <li><strong>Multi-Task Perception:</strong> 21.8 ms TensorRT NeuroPilot network, FDAT loss, and Joseph-form EKF.</li>
+              <li><strong>23-State FSM &amp; Control:</strong> 9 maneuver handlers with Clothoid G1 + PD-Pure Pursuit at 30 Hz.</li>
+            </ul>
+          </div>
+          <div class="eng-metrics-row">
+            <span class="eng-metric-chip">21.8 ms TensorRT</span>
+            <span class="eng-metric-chip">23-State FSM</span>
+            <span class="eng-metric-chip">150M VND Grant</span>
+          </div>
+          <div class="eng-card-links">
+            <a href="projects.html#project-bfmc">View Interactive Showcase &amp; Flow Video →</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Insight Hunter RecSys -->
+        <div class="eng-card">
+          <div class="eng-card-header">
+            <div class="eng-card-topline">
+              <span class="eng-card-domain">Recommender Systems · Large-Scale Retrieval</span>
+              <span class="pill-badge pill-badge-gold">★ Top 5 Finalist Datathon</span>
+            </div>
+            <h3 class="eng-card-title">Insight Hunter: Chợ Tốt Real Estate RecSys</h3>
+            <ul class="eng-card-list">
+              <li><strong>Streaming Forensics:</strong> Out-of-core Polars processing 161.7M clickstream logs across 2.09M listings.</li>
+              <li><strong>Hybrid Retrieval:</strong> ContactALS (128D) + Vietnamese SBERT + Haversine cold-start BallTree KNN.</li>
+              <li><strong>LambdaRank &amp; MMR:</strong> +33.5% NDCG@10 lift, 11.5× catalog coverage, and 38.2 ms TreeSHAP serving.</li>
+            </ul>
+          </div>
+          <div class="eng-metrics-row">
+            <span class="eng-metric-chip">+33.5% NDCG@10</span>
+            <span class="eng-metric-chip">161.7M Events</span>
+            <span class="eng-metric-chip">11.5× Coverage Lift</span>
+          </div>
+          <div class="eng-card-links">
+            <a href="projects.html#project-recsys">View Interactive Showcase &amp; Flow Video →</a>
+          </div>
+        </div>
+
+        <!-- Card 4: KnowledgeForge -->
+        <div class="eng-card">
+          <div class="eng-card-header">
+            <div class="eng-card-topline">
+              <span class="eng-card-domain">Agentic AI · Multi-Agent DAG &amp; GraphRAG</span>
+              <span class="pill-badge">★ 6 Specialist Agents · 241 Endpoints</span>
+            </div>
+            <h3 class="eng-card-title">KnowledgeForge Enterprise Agentic OS</h3>
+            <ul class="eng-card-list">
+              <li><strong>Parallel Topological DAG:</strong> 4-lane complexity router &amp; 6 specialist agents with <code>bwrap</code> sandbox.</li>
+              <li><strong>Hybrid GraphRAG:</strong> Qdrant dense + BM25 + LightRAG/Neo4j ontology with Cross-Encoder reranking.</li>
+              <li><strong>4-Tier Memory &amp; TrustLayer:</strong> Redis/Qdrant/Neo4j/750+ skills + Presidio PII &amp; 3-Tier RBAC.</li>
+            </ul>
+          </div>
+          <div class="eng-metrics-row">
+            <span class="eng-metric-chip">#AgenticAOS</span>
+            <span class="eng-metric-chip">#HybridGraphRAG</span>
+            <span class="eng-metric-chip">#4TierMemory</span>
+          </div>
+          <div class="eng-card-links">
+            <a href="projects.html#project-knowledgeforge">View Interactive Showcase &amp; Live UI →</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Driver Distraction Detection -->
+        <div class="eng-card">
+          <div class="eng-card-header">
+            <div class="eng-card-topline">
+              <span class="eng-card-domain">Computer Vision · Multiprocessing IPC</span>
+              <span class="pill-badge">★ Zero-Copy POSIX IPC</span>
+            </div>
+            <h3 class="eng-card-title">Real-Time Driver Distraction Monitoring</h3>
+            <ul class="eng-card-list">
+              <li><strong>Zero-Copy IPC:</strong> 5 lock-free <code>/dev/shm</code> ring buffers running at 49.93 FPS (TensorRT FP16).</li>
+              <li><strong>6-Signal Fusion:</strong> 478-point FaceMesh EAR/PERCLOS, 6-DoF SolvePnP pose, and YOLOv8-cls behavior.</li>
+              <li><strong>Hysteresis Gate:</strong> 3-state temporal alert FSM eliminating single-frame blink false alarms.</li>
+            </ul>
+          </div>
+          <div class="eng-metrics-row">
+            <span class="eng-metric-chip">#ZeroCopyIPC</span>
+            <span class="eng-metric-chip">#478Landmarks</span>
+            <span class="eng-metric-chip">#49.93FPS</span>
+          </div>
+          <div class="eng-card-links">
+            <a href="projects.html#project-distraction">View Interactive Showcase &amp; Live HUD →</a>
+          </div>
+        </div>
+
+        <!-- Card 6: Revenue & COGS Forecasting -->
+        <div class="eng-card">
+          <div class="eng-card-header">
+            <div class="eng-card-topline">
+              <span class="eng-card-domain">Time Series · Prescriptive Analytics</span>
+              <span class="pill-badge pill-badge-gold">★ VinDatathon 2026</span>
+            </div>
+            <h3 class="eng-card-title">Revenue &amp; COGS Forecasting</h3>
+            <ul class="eng-card-list">
+              <li><strong>Zero-Leakage Forensics:</strong> Reconciles 12 ERP tables with 6-harmonic Fourier seasonality profiles.</li>
+              <li><strong>3-Tier Ensemble:</strong> Blends Q-Specialist LightGBM + L2 Ridge (0.70), GBDT (0.15), and Chronos-2 (0.15).</li>
+              <li><strong>Regime Calibration:</strong> Odd/Even-year Walsh COGS calibration cutting MAE by 42.2% to 636K VND.</li>
+            </ul>
+          </div>
+          <div class="eng-metrics-row">
+            <span class="eng-metric-chip">3-Tier Ensemble</span>
+            <span class="eng-metric-chip">R² = 0.880 · 636K MAE</span>
+            <span class="eng-metric-chip">Chronos-2 &amp; LightGBM</span>
+          </div>
+          <div class="eng-card-links">
+            <a href="projects.html#project-forecasting">View Interactive Showcase &amp; Flow Video →</a>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 36px; text-align: center;">
+        <a class="button" href="projects.html" style="font-size: .95rem; padding: 12px 28px;">
+          Explore All 6 Full Architecture Showcases &amp; System Blueprints →
+        </a>
       </div>
     </section>
 
@@ -925,28 +976,106 @@
       <div class="container">
         <div class="section-title">
           <p class="label">Experience</p>
-          <h2>Work & education</h2>
+          <h2>Work &amp; Education</h2>
         </div>
         <div class="timeline">
-          <article>
-            <time><span class="timeline-pulse"></span>2024–Present</time>
-            <div><h3>AI Engineer and Researcher</h3><p>University Research Lab, HCMUTE</p></div>
-            <p>Researched world models, foundation vision models, cross-domain surveillance perception, and autonomous driving. Authored/co-authored 5 research papers across ECCV Workshop (accepted), IEEE GTSD (published), and WACV Workshop (under review); software lead for BFMC 2025 (Top 9 Worldwide) &amp; BFMC 2026 (150M VND Bosch Sponsorship).</p>
+          <article class="timeline-item">
+            <div class="timeline-time-col">
+              <time class="timeline-time"><span class="timeline-pulse"></span>2024–Present</time>
+            </div>
+            <div class="timeline-role-col">
+              <h3 class="timeline-role-title">AI Engineer &amp; Researcher</h3>
+              <p class="timeline-org">University Research Lab · HCMUTE</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">World Models</span>
+                <span class="timeline-tag">Autonomous Systems</span>
+                <span class="timeline-tag">Edge AI</span>
+              </div>
+            </div>
+            <div class="timeline-desc-col">
+              <ul class="timeline-highlights">
+                <li>
+                  Researched non-generative world models (V-JEPA 2.1) and diffusion trajectory synthesis for end-to-end autonomous driving and cross-domain surveillance.
+                </li>
+                <li>
+                  Authored and co-authored 5 papers across ECCV 2026 Workshop (Oral &amp; Poster), IEEE GTSD 2026 (Published), and WACV 2027 Workshop (In Review).
+                </li>
+                <li>
+                  Software lead for Bosch Future Mobility Challenge (BFMC 2025 Global Top 9 in Romania &amp; BFMC 2026 Rank 1 Nationally); awarded 150M VND Bosch Research Sponsorship.
+                </li>
+              </ul>
+            </div>
           </article>
-          <article>
-            <time>Mar 2024–Dec 2024</time>
-            <div><h3>AI Engineer</h3><p><a href="https://aiotsemi.vn/" target="_blank" rel="noopener">AIoT & Semiconductor</a></p></div>
-            <p>Designed deep-learning industrial vision pipelines for PCB defect detection (for BACKER, 98.2% accuracy) and engineered multi-process zero-copy IPC via Linux SharedMemory across TensorRT, OpenVINO, and ONNX (3.2x CPU throughput speedup).</p>
+          <article class="timeline-item">
+            <div class="timeline-time-col">
+              <time class="timeline-time">Mar 2024–Dec 2024</time>
+            </div>
+            <div class="timeline-role-col">
+              <h3 class="timeline-role-title">AI Engineer</h3>
+              <p class="timeline-org"><a href="https://aiotsemi.vn/" target="_blank" rel="noopener">AIoT &amp; Semiconductor ↗</a></p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Industrial Vision</span>
+                <span class="timeline-tag">POSIX IPC</span>
+                <span class="timeline-tag">TensorRT</span>
+              </div>
+            </div>
+            <div class="timeline-desc-col">
+              <ul class="timeline-highlights">
+                <li>
+                  Architected deep learning visual inspection pipelines for BACKER printed circuit boards, achieving 98.2% defect classification accuracy.
+                </li>
+                <li>
+                  Engineered a multi-process zero-copy POSIX shared-memory runtime across TensorRT, OpenVINO, and ONNX backends, achieving a 3.2x CPU throughput speedup.
+                </li>
+                <li>
+                  Delivered continuous real-time defect triage deployed on industrial edge hardware.
+                </li>
+              </ul>
+            </div>
           </article>
-          <article>
-            <time>2022–2026</time>
-            <div><h3>B.Eng. Robotics & Artificial Intelligence</h3><p>HCMUTE · Expected 2026</p></div>
-            <p>Research publications across ECCV Workshop (Oral) and WACV Workshop; Software Lead for BFMC 2025 (Global Top 9 Romania) &amp; BFMC 2026 (150M VND Bosch Sponsorship); Third Prize ICPC National Contest (2024); Second Prize OLP (2023, 2022); HCMUTE Talent Scholarship Recipient.</p>
+          <article class="timeline-item">
+            <div class="timeline-time-col">
+              <time class="timeline-time">2022–2026</time>
+            </div>
+            <div class="timeline-role-col">
+              <h3 class="timeline-role-title">B.Eng. Robotics &amp; Artificial Intelligence</h3>
+              <p class="timeline-org">Ho Chi Minh City University of Technology and Education (HCMUTE)</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">GPA: Top 1%</span>
+                <span class="timeline-tag">Talent Scholar</span>
+                <span class="timeline-tag">Expected 2026</span>
+              </div>
+            </div>
+            <div class="timeline-desc-col">
+              <ul class="timeline-highlights">
+                <li>
+                  Third Prize ICPC National Contest (2024); Second Prize Vietnam National Olympiad in Informatics (OLP 2023, 2022); Top 5 Finalist VinUniversity Datathon 2026.
+                </li>
+                <li>
+                  Recipient of the HCMUTE Talent Scholarship and Certificate of Merit from the University Rector for scientific research and competitive programming achievements.
+                </li>
+              </ul>
+            </div>
           </article>
-          <article>
-            <time>2019–2022</time>
-            <div><h3>Le Quy Don High School for the Gifted</h3><p>Specialized in Informatics</p></div>
-            <p>Solid algorithmic foundation in competitive programming and computer science.</p>
+          <article class="timeline-item">
+            <div class="timeline-time-col">
+              <time class="timeline-time">2019–2022</time>
+            </div>
+            <div class="timeline-role-col">
+              <h3 class="timeline-role-title">Specialized Informatics Student</h3>
+              <p class="timeline-org">Le Quy Don High School for the Gifted</p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Informatics Major</span>
+                <span class="timeline-tag">Algorithms &amp; DS</span>
+              </div>
+            </div>
+            <div class="timeline-desc-col">
+              <ul class="timeline-highlights">
+                <li>
+                  Three-year specialized training in data structures, graph algorithms, dynamic programming, and computational complexity in C++ and Python.
+                </li>
+              </ul>
+            </div>
           </article>
         </div>
       </div>
@@ -966,6 +1095,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating Quick Scroll Navigation Controls -->
+  <div class="scroll-nav-controls" role="group" aria-label="Page scroll navigation">
+    <button class="scroll-nav-btn" id="scroll-top-btn" type="button" aria-label="Scroll to top" title="Scroll to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <button class="scroll-nav-btn" id="scroll-bottom-btn" type="button" aria-label="Scroll to bottom" title="Scroll to bottom">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+
   <!-- Command Palette Modal (⌘K / Ctrl+K) -->
   <div class="cmd-palette-backdrop" id="cmd-palette" role="dialog" aria-modal="true" aria-label="Quick Command Palette">
     <div class="cmd-palette-window">
@@ -990,7 +1134,7 @@
     <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
     <div class="media-lightbox-content"></div>
   </dialog>
-  <script type="module" src="js/main.js?v=25"></script>
-  <script nomodule src="script.js?v=25"></script>
+  <script type="module" src="js/main.js?v=32"></script>
+  <script nomodule src="script.js?v=32"></script>
 </body>
 </html>

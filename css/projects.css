@@ -6,7 +6,7 @@
 
 .project {
   display: grid;
-  grid-template-columns: 44px 1fr;
+  grid-template-columns: 44px minmax(0, 1fr);
   gap: 24px;
   padding: 52px 0;
   border-bottom: 1px solid var(--border);
@@ -22,7 +22,10 @@
   line-height: 1;
 }
 
-.project-content { width: 100%; }
+.project-content {
+  width: 100%;
+  min-width: 0;
+}
 
 .project-with-image {
   display: grid;
@@ -126,7 +129,7 @@
   hyphens: auto;
 }
 
-.project ul {
+.project .showcase-footer ul {
   display: flex;
   margin: 20px 0;
   padding: 0;
@@ -135,7 +138,7 @@
   list-style: none;
 }
 
-.project li {
+.project .showcase-footer li {
   padding: 5px 12px;
   color: var(--ink-soft);
   background: var(--paper);
@@ -146,7 +149,7 @@
   transition: border-color .18s ease, color .18s ease, background .18s ease;
 }
 
-.project li:hover {
+.project .showcase-footer li:hover {
   border-color: var(--accent);
   color: var(--accent);
   background: var(--accent-soft);
@@ -162,19 +165,284 @@
 .project-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 22px;
+  align-items: center;
+  gap: 10px 14px;
 }
 
-.project-links a {
+.project-links > a:not(.button):not(.pub-btn) {
   color: var(--accent);
-  font-size: 1rem;
+  font-size: .94rem;
   font-weight: 600;
   border-bottom: 1px solid transparent;
   transition: border-color .18s ease;
 }
 
-.project-links a:hover {
+.project-links > a:not(.button):not(.pub-btn):hover {
   border-bottom-color: var(--accent);
+}
+
+/* Action button styles inside project-links */
+.project-links .button,
+.project-links a.button,
+.showcase-footer .project-links a.button,
+.showcase-footer .project-links .button {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 9px 20px !important;
+  font-family: var(--font-sans) !important;
+  font-size: .88rem !important;
+  font-weight: 700 !important;
+  border-radius: 999px !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  transition: all .18s ease !important;
+  user-select: none !important;
+  line-height: 1.3 !important;
+}
+
+/* Primary Button in Project Links (Light Mode) */
+.project-links .button:not(.button-subtle):not(.button-ghost),
+.project-links a.button:not(.button-subtle):not(.button-ghost) {
+  background: #0f172a !important;
+  color: #ffffff !important;
+  border: 1px solid #0f172a !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) !important;
+}
+
+.project-links .button:not(.button-subtle):not(.button-ghost):hover,
+.project-links a.button:not(.button-subtle):not(.button-ghost):hover {
+  background: #334155 !important;
+  border-color: #334155 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.18) !important;
+}
+
+/* Subtle / Ghost Button in Project Links (Light Mode) */
+.project-links .button.button-subtle,
+.project-links .button.button-ghost,
+.project-links a.button.button-subtle,
+.project-links a.button.button-ghost {
+  background: #f1f5f9 !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.project-links .button.button-subtle:hover,
+.project-links .button.button-ghost:hover,
+.project-links a.button.button-subtle:hover,
+.project-links a.button.button-ghost:hover {
+  background: #ffffff !important;
+  border-color: #2563eb !important;
+  color: #2563eb !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.12) !important;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .project-links .button:not(.button-subtle):not(.button-ghost),
+[data-theme="dark"] .project-links a.button:not(.button-subtle):not(.button-ghost) {
+  background: #ffffff !important;
+  color: #0b0e14 !important;
+  border: 1px solid #ffffff !important;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.15) !important;
+}
+
+[data-theme="dark"] .project-links .button:not(.button-subtle):not(.button-ghost):hover,
+[data-theme="dark"] .project-links a.button:not(.button-subtle):not(.button-ghost):hover {
+  background: #f1f5f9 !important;
+  color: #000000 !important;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme="dark"] .project-links .button.button-subtle,
+[data-theme="dark"] .project-links .button.button-ghost,
+[data-theme="dark"] .project-links a.button.button-subtle,
+[data-theme="dark"] .project-links a.button.button-ghost {
+  background: rgba(255, 255, 255, 0.10) !important;
+  color: #f8fafc !important;
+  border: 1px solid rgba(255, 255, 255, 0.24) !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+[data-theme="dark"] .project-links .button.button-subtle:hover,
+[data-theme="dark"] .project-links .button.button-ghost:hover,
+[data-theme="dark"] .project-links a.button.button-subtle:hover,
+[data-theme="dark"] .project-links a.button.button-ghost:hover {
+  background: rgba(255, 255, 255, 0.20) !important;
+  border-color: #38bdf8 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.22) !important;
+}
+
+/* ============================================================
+   Engineering Systems & Software — High-Density Bento Grid
+   ============================================================ */
+
+.eng-bento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.eng-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 22px 24px;
+  background: var(--paper-soft);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform .2s cubic-bezier(0.16, 1, 0.3, 1), border-color .2s ease, box-shadow .2s ease;
+}
+
+.eng-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lift);
+}
+
+.eng-card-featured {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 24px;
+  align-items: center;
+  padding: 24px;
+}
+
+.eng-card-media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: calc(var(--radius) - 2px);
+  border: 1px solid var(--border);
+  background: #0b0f14;
+}
+
+.eng-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+
+.eng-card-header {
+  margin-bottom: 10px;
+}
+
+.eng-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.eng-card-domain {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+}
+
+.eng-card-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--ink);
+  letter-spacing: -.01em;
+}
+
+.eng-card-desc {
+  margin: 0 0 14px;
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.eng-metrics-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.eng-metric-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 8px;
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  font-weight: 500;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--ink-soft);
+}
+
+.eng-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.eng-tag {
+  display: inline-flex;
+  padding: 2px 7px;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  color: var(--faint);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.eng-card-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.eng-card-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: .82rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+
+.eng-card-links a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 900px) {
+  .eng-card-featured {
+    grid-template-columns: 1fr;
+  }
+  .eng-bento {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================================

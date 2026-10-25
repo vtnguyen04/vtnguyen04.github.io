@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=80">
+  <link rel="stylesheet" href="style.css?v=100">
 </head>
 <body>
   <div id="scroll-progress"></div>
@@ -21,9 +21,8 @@
         <span class="name-short">Thanh Nguyen</span>
       </a>
       <div class="nav-links">
-        <a class="nav-link-item" href="index.html">Home</a>
-        <a class="nav-link-item" href="index.html#research">Research</a>
-        <a class="nav-link-item" href="index.html#projects">Engineering</a>
+        <a class="nav-link-item" href="index.html">Research</a>
+        <a class="nav-link-item" href="projects.html">Engineering</a>
         <a class="nav-link-item" href="index.html#experience">Experience</a>
         <a class="nav-link-item nav-active" href="awards.html">Awards &amp; Honors</a>
       </div>
@@ -45,9 +44,8 @@
 
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-label="Mobile Navigation Menu">
-      <a href="index.html" class="drawer-link">🏠 Home</a>
-      <a href="index.html#research" class="drawer-link">🔬 Research &amp; Papers</a>
-      <a href="index.html#projects" class="drawer-link">⚙️ Engineering Systems</a>
+      <a href="index.html" class="drawer-link">🔬 Research &amp; Papers</a>
+      <a href="projects.html" class="drawer-link">⚙️ Engineering Systems</a>
       <a href="index.html#experience" class="drawer-link">💼 Experience</a>
       <a href="awards.html" class="drawer-link nav-active">🏆 Awards &amp; Honors</a>
       <div class="drawer-divider"></div>
@@ -66,11 +64,23 @@
       <p class="label">Recognition &amp; Credentials</p>
       <h1>Awards, Honors &amp; Certifications</h1>
       <p class="intro">A verified record of international challenge titles, competitive programming medals, academic distinctions, and engineering certifications in Artificial Intelligence, Foundation World Models, and Autonomous Systems.</p>
-      <div class="hero-links" style="margin-top: 18px;">
-        <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Google Scholar ↗</a>
-        <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview ↗</a>
-        <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub ↗</a>
-        <a href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">Full CV (PDF) ↗</a>
+      <div class="hero-chips" style="margin-top: 20px;">
+        <a class="hero-chip" href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.8 3.8v6.8L12 24l7.2-3.9v-6.8l4.8-3.8L12 0zm0 3.7 8.3 6.6-8.3 6.6-8.3-6.6L12 3.7z"/></svg>
+          Google Scholar ↗
+        </a>
+        <a class="hero-chip" href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          OpenReview ↗
+        </a>
+        <a class="hero-chip" href="https://github.com/vtnguyen04" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub ↗
+        </a>
+        <a class="hero-chip" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">
+          <svg width="14" height="14" viewBox="0 0 24 24"><path fill="currentColor" d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
+          Full CV (PDF) ↗
+        </a>
       </div>
 
       <div class="awards-stats-grid">
@@ -166,7 +176,7 @@
           </div>
         </article>
 
-        <article class="award-card has-cert">
+        <article class="award-card has-cert" id="bfmc-2026">
           <div class="award-year">2026</div>
           <figure class="award-cert-thumb" title="Click to view Bosch letter preview">
             <img src="certs/bosch-drive-beyond-letter.webp"
@@ -195,7 +205,7 @@
           </div>
         </article>
 
-        <article class="award-card has-cert">
+        <article class="award-card has-cert" id="bfmc-2025">
           <div class="award-year">2025</div>
           <figure class="award-cert-thumb" title="Click to view official certificate">
             <img src="certs/bfmc-2025-certificate.webp"
@@ -223,7 +233,7 @@
           </div>
         </article>
 
-        <article class="award-card has-cert">
+        <article class="award-card has-cert" id="datathon-2026">
           <div class="award-year">2026</div>
           <figure class="award-cert-thumb" title="Click to view certificate">
             <img src="certs/datathon-2026.webp"
@@ -238,16 +248,18 @@
               <h3 class="award-title">Top 5 Finalist — Datathon 2026: The Gridbreakers</h3>
               <span class="pill-badge pill-badge-bronze">Top 5 Finalist</span>
             </div>
-            <div class="award-org">VinUniversity Datathon 2026</div>
-            <p class="award-desc">Engineered predictive machine learning models and data optimization strategies on complex power grid reliability and energy distribution datasets.</p>
+            <div class="award-org">VinUniversity Datathon 2026 · Chợ Tốt Track</div>
+            <p class="award-desc">Top 5 Finalist at VinUniversity Datathon 2026. Built <em>Insight Hunter</em>, an end-to-end real estate recommendation &amp; opportunity distribution pipeline on 161.7M events and 25.5M contact transactions using 1024-dim Implicit ALS, LightGBM LambdaRank, and cold-start fallback cascade (Recall@10: 0.2116).</p>
             <div class="award-meta-tags">
               <span class="award-tag">VinUniversity</span>
               <span class="award-tag">Datathon</span>
-              <span class="award-tag">Machine Learning</span>
-              <span class="award-tag">Certificate</span>
+              <span class="award-tag">Recommender Systems</span>
+              <span class="award-tag">Implicit ALS</span>
+              <span class="award-tag">LightGBM</span>
             </div>
           </div>
           <div class="award-link-cell">
+            <a href="https://github.com/vtnguyen04/Real-Estate-Recomendation-System" target="_blank" rel="noopener">Code ↗</a>
             <a href="certs/datathon-2026.webp" target="_blank" rel="noopener">Certificate ↗</a>
           </div>
         </article>
@@ -597,6 +609,20 @@
     </div>
   </footer>
 
+  <!-- Floating Quick Scroll Navigation Controls -->
+  <div class="scroll-nav-controls" role="group" aria-label="Page scroll navigation">
+    <button class="scroll-nav-btn" id="scroll-top-btn" type="button" aria-label="Scroll to top" title="Scroll to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <button class="scroll-nav-btn" id="scroll-bottom-btn" type="button" aria-label="Scroll to bottom" title="Scroll to bottom">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+
   <!-- Command Palette Modal (⌘K / Ctrl+K) -->
   <div class="cmd-palette-backdrop" id="cmd-palette" role="dialog" aria-modal="true" aria-label="Quick Command Palette">
     <div class="cmd-palette-window">
@@ -622,7 +648,7 @@
     <div class="media-lightbox-content"></div>
   </dialog>
 
-  <script type="module" src="js/main.js?v=25"></script>
-  <script nomodule src="script.js?v=25"></script>
+  <script type="module" src="js/main.js?v=30"></script>
+  <script nomodule src="script.js?v=30"></script>
 </body>
 </html>

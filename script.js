@@ -1,7 +1,7 @@
 const lightbox = document.querySelector("#media-lightbox");
 const lightboxContent = lightbox.querySelector(".media-lightbox-content");
 const lightboxClose = lightbox.querySelector(".media-lightbox-close");
-const zoomableMedia = document.querySelectorAll("#research .project-figure:not([data-gallery]):not([data-album]) img, .showcase-main-figure img, .award-cert-thumb img");
+const zoomableMedia = document.querySelectorAll("#research .project-figure:not([data-gallery]):not([data-album]) img, #projects .project-figure:not([data-gallery]):not([data-album]) img, .showcase-main-figure img, .award-cert-thumb img, .zoomable-media");
 const galleries = document.querySelectorAll("#research [data-gallery]");
 const albums = document.querySelectorAll("#research [data-album]");
 
@@ -163,34 +163,81 @@ const showcases = document.querySelectorAll(".showcase-media-hub");
 showcases.forEach((hub) => {
   const tabs = hub.querySelectorAll(".showcase-tab");
   const thumbs = hub.querySelectorAll(".showcase-thumb");
+  const wrapper = hub.querySelector(".showcase-image-wrapper");
   const mainImg = hub.querySelector(".showcase-main-img");
+  const zoomHint = hub.querySelector(".showcase-zoom-hint");
   const caption = hub.querySelector(".showcase-caption");
+
+  if (!wrapper || !mainImg) return;
+
+  const mainVideo = document.createElement("video");
+  mainVideo.className = "showcase-main-video";
+  mainVideo.controls = true;
+  mainVideo.autoplay = true;
+  mainVideo.loop = true;
+  mainVideo.muted = true;
+  mainVideo.playsInline = true;
+  mainVideo.style.display = "none";
+  wrapper.appendChild(mainVideo);
 
   const viewsData = [];
   thumbs.forEach((thumb) => {
+    const thumbImg = thumb.querySelector("img");
     viewsData.push({
-      src: thumb.dataset.src || thumb.querySelector("img").src,
-      alt: thumb.dataset.alt || thumb.querySelector("img").alt,
+      src: thumb.dataset.src || thumbImg.src,
+      poster: thumbImg ? thumbImg.src : "",
+      alt: thumb.dataset.alt || (thumbImg ? thumbImg.alt : ""),
       caption: thumb.dataset.caption || "",
     });
   });
 
-  function selectView(index) {
-    if (!viewsData[index]) return;
+  function selectView(index, immediate = false) {
+    const view = viewsData[index];
+    if (!view) return;
     tabs.forEach((tab, i) => tab.classList.toggle("is-active", i === index));
     thumbs.forEach((thumb, i) => thumb.classList.toggle("is-active", i === index));
 
-    mainImg.style.opacity = "0.2";
-    mainImg.style.transform = "scale(0.98)";
+    const isVideo = view.src.toLowerCase().endsWith(".mp4");
+    if (isVideo) {
+      mainImg.style.display = "none";
+      if (zoomHint) zoomHint.style.display = "none";
+      mainVideo.style.display = "block";
+      if (view.poster) {
+        mainVideo.poster = view.poster;
+      }
+      if (!mainVideo.src.endsWith(view.src)) {
+        mainVideo.src = view.src;
+      }
+      mainVideo.currentTime = 0;
+      mainVideo.play().catch(() => {});
+      if (caption) caption.innerHTML = view.caption;
+    } else {
+      mainVideo.pause();
+      mainVideo.style.display = "none";
+      mainImg.style.display = "block";
+      if (zoomHint) zoomHint.style.display = "";
 
-    setTimeout(() => {
-      mainImg.src = viewsData[index].src;
-      mainImg.dataset.fullSrc = viewsData[index].src;
-      mainImg.alt = viewsData[index].alt;
-      if (caption) caption.innerHTML = viewsData[index].caption;
-      mainImg.style.opacity = "1";
-      mainImg.style.transform = "scale(1)";
-    }, 120);
+      if (immediate) {
+        mainImg.src = view.src;
+        mainImg.dataset.fullSrc = view.src;
+        mainImg.alt = view.alt;
+        if (caption) caption.innerHTML = view.caption;
+        mainImg.style.opacity = "1";
+        mainImg.style.transform = "scale(1)";
+      } else {
+        mainImg.style.opacity = "0.2";
+        mainImg.style.transform = "scale(0.98)";
+
+        setTimeout(() => {
+          mainImg.src = view.src;
+          mainImg.dataset.fullSrc = view.src;
+          mainImg.alt = view.alt;
+          if (caption) caption.innerHTML = view.caption;
+          mainImg.style.opacity = "1";
+          mainImg.style.transform = "scale(1)";
+        }, 120);
+      }
+    }
   }
 
   tabs.forEach((tab, index) => {
@@ -200,6 +247,8 @@ showcases.forEach((hub) => {
   thumbs.forEach((thumb, index) => {
     thumb.addEventListener("click", () => selectView(index));
   });
+
+  selectView(0, true);
 });
 
 /* ---------- Mobile Navigation Drawer ---------- */
@@ -231,4 +280,15 @@ if (mobileMenuBtn && mobileDrawer) {
     }
   });
 }
+
+/* ---------- Floating Scroll Navigation Controls ---------- */
+const fallbackTopBtn = document.getElementById("scroll-top-btn");
+const fallbackBottomBtn = document.getElementById("scroll-bottom-btn");
+if (fallbackTopBtn) {
+  fallbackTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+}
+if (fallbackBottomBtn) {
+  fallbackBottomBtn.addEventListener("click", () => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: "smooth" }));
+}
+
 

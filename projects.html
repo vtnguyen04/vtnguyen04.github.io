@@ -1,0 +1,1118 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Engineering Systems & Production Architectures by Vo Thanh Nguyen — MLOps platforms, real-time autonomous vehicle cyber-physical stacks, billion-scale recommendation engines, and zero-copy multiprocessing IPC runtimes.">
+  <title>Engineering Systems &amp; Software | Vo Thanh Nguyen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=105">
+</head>
+<body>
+  <div id="scroll-progress"></div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="name" href="index.html#top">
+        <span class="name-avatar-dot"></span>
+        <span class="name-full">Vo Thanh Nguyen</span>
+        <span class="name-short">Thanh Nguyen</span>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link-item" href="index.html">Research</a>
+        <a class="nav-link-item nav-active" href="projects.html">Engineering</a>
+        <a class="nav-link-item" href="index.html#experience">Experience</a>
+        <a class="nav-link-item" href="awards.html">Awards &amp; Honors</a>
+      </div>
+      <div class="nav-controls">
+        <button class="nav-cmd-btn" type="button" aria-label="Open Command Palette (Cmd+K)">
+          <span>Search</span>
+          <kbd class="nav-cmd-kbd">⌘K</kbd>
+        </button>
+        <a class="nav-cv-btn" href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener">CV (PDF) ↗</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
+          <span class="icon-sun" aria-hidden="true">&#9728;</span>
+          <span class="icon-moon" aria-hidden="true">&#9790;</span>
+        </button>
+        <button class="nav-menu-btn" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="menu-icon">☰</span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-nav-drawer" role="dialog" aria-label="Mobile Navigation Menu">
+      <a href="index.html" class="drawer-link">🔬 Research &amp; Papers</a>
+      <a href="projects.html" class="drawer-link nav-active">⚙️ Engineering Systems</a>
+      <a href="index.html#experience" class="drawer-link">💼 Experience &amp; Background</a>
+      <a href="awards.html" class="drawer-link">🏆 Awards &amp; Honors</a>
+      <div class="drawer-divider"></div>
+      <a href="VoThanhNguyen_CV.pdf" target="_blank" rel="noopener" class="drawer-link drawer-cv-link">📄 Full CV (PDF) ↗</a>
+      <div class="drawer-secondary-links">
+        <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview</a>
+        <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:nguyenvothanh04@gmail.com">Email</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Projects Page Hero -->
+    <section class="section container" style="padding-top: 56px; padding-bottom: 24px;">
+      <div class="section-title">
+        <p class="label">Production Infrastructure &amp; Applied AI</p>
+        <h1 style="font-size: clamp(2.1rem, 4.5vw, 2.9rem); font-weight: 800; letter-spacing: -0.03em; margin: 0 0 16px; color: var(--ink);">Engineering Systems &amp; Software</h1>
+        <p class="intro" style="max-width: 860px; font-size: 1.05rem; line-height: 1.65; color: var(--ink-soft); margin: 0 0 18px;">
+          Production-grade MLOps platforms, real-time autonomous driving stacks, large-scale recommendation engines, and zero-copy multiprocessing runtimes designed for low-latency reliability.
+        </p>
+        <div class="hero-chips" style="margin-top: 10px;">
+          <span class="hero-chip">⚡ 0.72 ms Inference · 4.8 ms HTTP E2E</span>
+          <span class="hero-chip">🏎️ Jetson Orin Nano · 21.8 ms Multi-Task Perception</span>
+          <span class="hero-chip">🎯 161.7M Clickstream Events · 11.5× Coverage</span>
+          <span class="hero-chip">⚙️ Zero-Copy POSIX Shared-Memory IPC</span>
+          <span class="hero-chip">🎬 Interactive Visual &amp; Video Walkthroughs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering Systems Gallery -->
+    <section class="section container" id="projects" style="padding-top: 0;">
+      <div class="projects">
+
+        <!-- ================================================================
+             01 · BOSCH FUTURE MOBILITY CHALLENGE (BFMC 2025 & 2026)
+             ================================================================ -->
+        <article class="project" id="project-bfmc">
+          <div class="project-number">01</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">#C++20 · #ZeroCopySHM · #TensorRT · #YOLO11 · #FDATLoss · #PurePursuit · #23StateFSM · #JetsonOrin</span>
+                <span class="pill-badge pill-badge-gold">★ 1st Nationally (2026)</span>
+                <span class="pill-badge pill-badge-silver">★ Global Top 9 (2025, Best in Asia)</span>
+                <span class="pill-badge">150M VND Bosch Sponsorship</span>
+              </div>
+              <h3>Bosch Future Mobility Challenge (BFMC 2025 &amp; 2026)</h3>
+              <p class="showcase-desc">1:10-scale autonomous driving stack on NVIDIA Jetson Orin Nano combining zero-copy C++20/Python IPC, 21.8 ms TensorRT multi-task perception, Joseph-form EKF localization, and a 23-state behavior FSM.</p>
+              <div class="showcase-spec-grid">
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">01 · Input &amp; Zero-Copy Data Plane</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>RGB-D &amp; MCU I/O:</strong> RealSense D435i RGB-D + STM32 IMU/odometry serial link.</li>
+                    <li><strong>Zero-Copy IPC:</strong> Lock-free POSIX SHM triple-buffers + ZeroMQ pub/sub bus.</li>
+                    <li><strong>C++20 Threads:</strong> Deterministic <code>std::jthread</code> worker pool with RAII teardown.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">02 · Core Perception &amp; EKF Engine</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>NeuroPilot Network:</strong> Joint 13-class YOLO11 + BiFPN + cubic Bézier trajectory head.</li>
+                    <li><strong>FDAT Lane Loss:</strong> Anisotropic tangent-normal loss cutting lateral error by 41%.</li>
+                    <li><strong>3D Tracking &amp; EKF:</strong> Depth-fused ByteTrack + Joseph-form EKF + KDTree map matching.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">03 · Output Control &amp; Track SLA</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>23-State FSM:</strong> 9 maneuver handlers (overtake, crosswalk, roundabout, parking).</li>
+                    <li><strong>30 Hz Control:</strong> Clothoid G1 spiral smoothing + PD-Pure Pursuit (3.8 cm RMSE).</li>
+                    <li><strong>Track Proven:</strong> 98.2% completion across 120 autonomous physical track runs.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="bfmc">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">▶️</span> Closed-Loop Track Demo
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">▶️</span> Central Ops Station
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🏁</span> Qualification Track Run
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🛣️</span> On-Track HUD
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📊</span> CARLA &amp; FDAT Eval
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🏎️</span> 1:10 Vehicle HW
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">⚡</span> Power Schematic
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🧠</span> Multi-Task Network
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">❖</span> System Architecture
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/bfmc-waypoint-thumb.webp"
+                       data-full-src="assets/bfmc-waypoint-thumb.webp"
+                       alt="Closed-Loop 1:10 Autonomous Track Run with NeuroPilot 10-Waypoint Trajectory and Traffic Sign Detection"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Closed-Loop 1:10 Track Run — NeuroPilot Waypoint &amp; Sign HUD):</strong> Real-time onboard deployment executing 10-waypoint cubic Bézier trajectory tracking, dynamic steering control (33.0 cm/s), and 3D traffic-sign/stop-line distance estimation.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/bfmc-stanley-run.mp4"
+                        data-alt="Closed-Loop 1:10 Autonomous Track Run with NeuroPilot 10-Waypoint Trajectory and Traffic Sign Detection"
+                        data-caption="&lt;strong&gt;Figure 1 (Closed-Loop 1:10 Track Run — NeuroPilot Waypoint &amp; Sign HUD):&lt;/strong&gt; Real-time onboard deployment executing 10-waypoint cubic Bézier trajectory tracking, dynamic steering control (33.0 cm/s), and 3D traffic-sign/stop-line distance estimation."
+                        title="Closed-Loop Track Demo">
+                  <img src="assets/bfmc-waypoint-thumb.webp" alt="Closed-Loop Track Demo thumbnail">
+                  <span class="thumb-label">▶️ Track Demo</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-central-ops.mp4"
+                        data-alt="DriveBeyond MK-1 Central Ops Ground Station and Autonomous Route Execution"
+                        data-caption="&lt;strong&gt;Figure 2 (DriveBeyond MK-1 Central Ops Ground Station):&lt;/strong&gt; Live ground-control telemetry console showing global KDTree route planning, 49.0 cm/s autonomous cruising, and real-time Jetson Orin system diagnostics."
+                        title="Central Ops Station">
+                  <img src="assets/bfmc-central-ops.webp" alt="Central Ops Station thumbnail">
+                  <span class="thumb-label">▶️ Central Ops</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-2026-qualification.gif"
+                        data-alt="Autonomous qualification run on 1:10 physical track"
+                        data-caption="&lt;strong&gt;Figure 3 (Live Qualification Track Run):&lt;/strong&gt; Unedited autonomous run executing lane keeping, intersection routing, crosswalk yielding, and parallel parking."
+                        title="Qualification Track Run">
+                  <img src="assets/bfmc-2026-qualification.gif" alt="Qualification Track Run thumbnail">
+                  <span class="thumb-label">Track Run</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-hud-results.webp"
+                        data-alt="Thesis Figure 5.4: Real-Time On-Track Telemetry HUD"
+                        data-caption="&lt;strong&gt;Figure 4 (Real-Time Telemetry HUD — Thesis Fig. 5.4):&lt;/strong&gt; Live Jetson Orin Nano deployment view showing 13-class traffic detection, spatial attention heatmap, and cubic Bézier trajectory."
+                        title="On-Track HUD">
+                  <img src="assets/bfmc-hud-results.webp" alt="On-Track HUD thumbnail">
+                  <span class="thumb-label">On-Track HUD</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-control-eval.webp"
+                        data-alt="Thesis Figure 5.1: CARLA Town02 Trajectory Tracking & FDAT Ablation"
+                        data-caption="&lt;strong&gt;Figure 5 (CARLA &amp; FDAT Evaluation — Thesis Fig. 5.1):&lt;/strong&gt; Quantitative trajectory tracking comparison in CARLA Town02 showing 3.8 cm lateral RMSE and 41% error reduction via Frenet-inspired FDAT loss."
+                        title="CARLA &amp; FDAT Eval">
+                  <img src="assets/bfmc-thesis-control-eval.webp" alt="CARLA Eval thumbnail">
+                  <span class="thumb-label">CARLA &amp; FDAT</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-vehicle-hw.webp"
+                        data-alt="Thesis Figure 4.1: 1:10 Scale Autonomous Vehicle Hardware"
+                        data-caption="&lt;strong&gt;Figure 6 (1:10 Scale Vehicle Hardware — Thesis Fig. 4.1):&lt;/strong&gt; Physical competition platform integrating NVIDIA Jetson Orin Nano 8GB, Intel RealSense D435i RGB-D camera, BNO055 IMU, and STM32 Nucleo controller."
+                        title="1:10 Vehicle HW">
+                  <img src="assets/bfmc-thesis-vehicle-hw.webp" alt="1:10 Vehicle HW thumbnail">
+                  <span class="thumb-label">Vehicle HW</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-power-distribution.webp"
+                        data-alt="Thesis Figure 4.2: Electrical Power & STM32 Actuation Schematic"
+                        data-caption="&lt;strong&gt;Figure 7 (Power &amp; Actuation Schematic — Thesis Fig. 4.2):&lt;/strong&gt; Dual-rail power isolation, buck converters, BLDC traction drive, and STM32 hardware watchdog interlocks."
+                        title="Power Schematic">
+                  <img src="assets/bfmc-thesis-power-distribution.webp" alt="Power Schematic thumbnail">
+                  <span class="thumb-label">Power Circuit</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-network-heads.webp"
+                        data-alt="Thesis Figure 3.2: NeuroPilot Multi-Task Architecture"
+                        data-caption="&lt;strong&gt;Figure 8 (NeuroPilot Multi-Task Network — Thesis Fig. 3.2):&lt;/strong&gt; Shared YOLO11 + BiFPN backbone with 13-class detection head, FiLM navigation routing, and cubic Bézier trajectory head (21.8 ms FP16)."
+                        title="Multi-Task Network">
+                  <img src="assets/bfmc-thesis-network-heads.webp" alt="Multi-Task Network thumbnail">
+                  <span class="thumb-label">Multi-Task AI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-fig3-1.webp"
+                        data-alt="Thesis Figure 3.1: Overall Autonomous Driving System Architecture"
+                        data-caption="&lt;strong&gt;Figure 9 (System Architecture — Thesis Fig. 3.1):&lt;/strong&gt; End-to-end autonomous driving pipeline connecting RGB-D &amp; IMU sensing, NeuroPilot multi-task perception, behavior state machine, and STM32 actuation."
+                        title="System Architecture">
+                  <img src="assets/bfmc-thesis-fig3-1.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="project-links">
+                <a class="button" href="https://youtu.be/3ac3bCF342c" target="_blank" rel="noopener">Watch 2026 Qualification Video ↗</a>
+                <a class="button button-subtle" href="https://youtu.be/m22d4nL5C00" target="_blank" rel="noopener">Watch 2025 Finals Video ↗</a>
+                <a class="button button-subtle" href="awards.html#bfmc-2026">View Competition Gallery ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             02 · INSIGHT HUNTER — REAL ESTATE RECSYS (DATATHON TOP 5)
+             ================================================================ -->
+        <article class="project" id="project-recsys">
+          <div class="project-number">02</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">#RecSys · #Polars · #ContactALS · #VN_SBERT · #BallTreeKNN · #LambdaRank · #MMR · #TreeSHAP</span>
+                <span class="pill-badge pill-badge-gold">🏆 Top 5 Finalist — VinUniversity Datathon 2026</span>
+              </div>
+              <h3>Insight Hunter: Large-Scale Real Estate Recommendation System</h3>
+              <p class="showcase-desc">4-stage hybrid retrieval and diversity-aware reranking pipeline trained on 161.7M clickstream logs and 2.09M property listings, lifting NDCG@10 by +33.5% and catalog exposure by 11.5×.</p>
+              <div class="showcase-spec-grid">
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">01 · Input &amp; Hybrid Retrieval</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Polars Streaming:</strong> Out-of-core processing of 161.7M logs within a 12 GB RAM cap.</li>
+                    <li><strong>Intent Weighting:</strong> Distinguishes passive pageviews (1.0) from Zalo/phone leads (6.0).</li>
+                    <li><strong>Hybrid Candidates:</strong> Fuses ContactALS (128D) + VN-SBERT + Haversine BallTree KNN.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">02 · Core Rules &amp; LambdaRank</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Municipal Guard:</strong> Enforces post-2025 district/ward boundaries and budget corridors.</li>
+                    <li><strong>Quality Gate:</strong> Prioritizes verified legal titles (<em>Sổ hồng</em>) and media completeness.</li>
+                    <li><strong>LightGBM Reranker:</strong> Pairwise LambdaRank over 42 spatial, price, and session features.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">03 · Output Fairness &amp; SLA</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>MMR Diversity (λ=0.7):</strong> Cuts seller Gini concentration by 38.4% across 415K sellers.</li>
+                    <li><strong>11.5× Coverage:</strong> Expands active catalog exposure from 3.7% to 42.6% of listings.</li>
+                    <li><strong>TreeSHAP Serving:</strong> Returns Top-10 slate with real-time reason codes in 38.2 ms.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="recsys">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">📊</span> Intent &amp; Exposure Funnel
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📈</span> 11.5× Coverage Lift
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🏆</span> Finalist Certificate
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">❖</span> Hybrid Architecture
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/recsys-funnel.webp"
+                       data-full-src="assets/recsys-funnel.webp"
+                       alt="User Intent Conversion Funnel and Marketplace Exposure Paradox"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Intent Funnel &amp; Exposure Paradox):</strong> Analysis of 161.7M clickstream events showing 21.0% verified lead conversion and resolving the individual-seller exposure imbalance.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/recsys-funnel.webp"
+                        data-alt="User Intent Conversion Funnel and Marketplace Exposure Paradox"
+                        data-caption="&lt;strong&gt;Figure 1 (Intent Funnel &amp; Exposure Paradox):&lt;/strong&gt; Analysis of 161.7M clickstream events showing 21.0% verified lead conversion and resolving the individual-seller exposure imbalance."
+                        title="Intent &amp; Exposure Funnel">
+                  <img src="assets/recsys-funnel.webp" alt="Intent Funnel thumbnail">
+                  <span class="thumb-label">Intent Funnel</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/recsys-coverage.webp"
+                        data-alt="Catalog Coverage Expansion and Seller Reach Lift"
+                        data-caption="&lt;strong&gt;Figure 2 (11.5× Catalog Coverage Lift):&lt;/strong&gt; MMR diversity reranking expands catalog coverage from 3.7% to 42.6% and reaches 415,280 unique sellers while preserving 98.5% peak NDCG."
+                        title="11.5× Coverage Lift">
+                  <img src="assets/recsys-coverage.webp" alt="Coverage Lift thumbnail">
+                  <span class="thumb-label">11.5× Coverage</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="certs/datathon-2026.webp"
+                        data-alt="VinUniversity Datathon 2026 Top 5 Finalist Certificate"
+                        data-caption="&lt;strong&gt;Figure 3 (Official Finalist Recognition):&lt;/strong&gt; Certificate of Achievement awarded to Vo Thanh Nguyen (Team Insight Hunter) at the VinUniversity Datathon 2026 Finals."
+                        title="Finalist Certificate">
+                  <img src="certs/datathon-2026.webp" alt="Datathon Certificate thumbnail">
+                  <span class="thumb-label">Certificate</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/recsys-architecture.webp"
+                        data-alt="Insight Hunter 4-Stage Hybrid Retrieval and Reranking Architecture"
+                        data-caption="&lt;strong&gt;Figure 4 (4-Stage Pipeline Architecture):&lt;/strong&gt; Out-of-core Polars feature extraction, hybrid ContactALS + VN-SBERT + Haversine retrieval, domain rule filtering, and LightGBM LambdaRank + MMR reranking."
+                        title="Hybrid Architecture">
+                  <img src="assets/recsys-architecture.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="project-links">
+                <a class="button" href="awards.html#datathon-2026">View Finalist Certificate &amp; Gallery ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             03 · KNOWLEDGEFORGE — ENTERPRISE AGENTIC OS & HYBRID GRAPHRAG
+             ================================================================ -->
+        <article class="project" id="project-knowledgeforge">
+          <div class="project-number">03</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">#AgenticAOS · #MultiAgentDAG · #NextJS15 · #React19 · #FastAPI · #HybridGraphRAG · #4TierMemory · #TrustLayer · #OpenTelemetry</span>
+                <span class="pill-badge">6 Specialist Agents · 241 Endpoints · 1,593 Tests</span>
+              </div>
+              <h3>KnowledgeForge: Enterprise Agentic OS &amp; Hybrid GraphRAG Platform</h3>
+              <p class="showcase-desc">Enterprise Agentic AI Operating System pairing a Next.js 15 / React 19 workspace with a 241-endpoint FastAPI control plane, 4-lane topological DAG orchestration, hybrid Qdrant + BM25 + LightRAG/Neo4j retrieval, and 4-tier cognitive memory.</p>
+              <div class="showcase-spec-grid">
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">01 · Input &amp; Hybrid GraphRAG</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>14-Channel Ingress:</strong> Omnichannel gateway + Microsoft Presidio PII masking &amp; 3-Tier RBAC.</li>
+                    <li><strong>Tri-Modal Retrieval:</strong> Qdrant dense vectors + BM25 lexical + LightRAG / Neo4j ontology traversal.</li>
+                    <li><strong>Deduplication &amp; Rerank:</strong> MinHash LSH deduplication + RRF (k=60) + Cross-Encoder + MMR.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">02 · Core Multi-Agent DAG Engine</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>4-Lane Complexity Gate:</strong> Routes queries across Fast-Path, Single-Agent, Parallel DAG, and Deep Research.</li>
+                    <li><strong>6 Specialist Agents:</strong> Planner, RAG, DataAnalyst, Coding, SecurityAuditor, and Verifier waves.</li>
+                    <li><strong>Zero-Egress Sandbox:</strong> Linux Bubblewrap (<code>bwrap --unshare-all</code>) + MoA consensus &amp; Oracle guard.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">03 · Output Verification &amp; Memory</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>4-Tier Memory:</strong> Redis working (T1), Qdrant/Mongo episodic (T2), Neo4j/mem0 (T3), 750+ skills (T4).</li>
+                    <li><strong>5-Layer Context Engine:</strong> Prefix-cached prompt assembly (88.4% hit) + PostgreSQL delta checkpoints.</li>
+                    <li><strong>Verified Generation:</strong> Atomic claim faithfulness gate (τ = 0.70) + live OpenTelemetry trace UI.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="knowledgeforge">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">▶️</span> Live UI Walkthrough
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">💬</span> Live Chat &amp; Tool Trace UI
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📊</span> Live OTel Trace Explorer
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🗂️</span> Live Vector &amp; RBAC Console
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔀</span> Multi-Agent DAG Flow
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">❖</span> System Architecture
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/kf-live-ui.webp"
+                       data-full-src="assets/kf-live-ui.webp"
+                       alt="Live KnowledgeForge Next.js 15 Web Application Walkthrough Video"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Live Interactive Web UI Walkthrough):</strong> Real screen recording navigating the live KnowledgeForge Chat Workspace, Multi-Agent Activity Drawer, OTel Trace Explorer, and Vector Store Console.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/kf-walkthrough.mp4"
+                        data-alt="Live KnowledgeForge Next.js 15 Web Application Walkthrough Video"
+                        data-caption="&lt;strong&gt;Figure 1 (Live Interactive Web UI Walkthrough):&lt;/strong&gt; Real screen recording navigating the live KnowledgeForge Chat Workspace, Multi-Agent Activity Drawer, OTel Trace Explorer, and Vector Store Console."
+                        title="Live UI Walkthrough">
+                  <img src="assets/kf-live-ui.webp" alt="Live Walkthrough Video thumbnail">
+                  <span class="thumb-label">▶️ Live UI Video</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/kf-live-ui.webp"
+                        data-alt="Live KnowledgeForge Next.js 15 Chat Workspace and Multi-Agent Activity Trace"
+                        data-caption="&lt;strong&gt;Figure 2 (Live Next.js 15 Chat Workspace &amp; Activity Trace):&lt;/strong&gt; Real captured browser session showing grounded multi-agent response with inline source citations and expanded tool-call JSON payloads."
+                        title="Live Chat &amp; Tool Trace UI">
+                  <img src="assets/kf-live-ui.webp" alt="Live Chat UI thumbnail">
+                  <span class="thumb-label">Live Chat UI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/kf-agent-graph.webp"
+                        data-alt="Live KnowledgeForge OpenTelemetry Trace Explorer and Span Hierarchy"
+                        data-caption="&lt;strong&gt;Figure 3 (Live OTel Trace &amp; Latency Explorer UI):&lt;/strong&gt; Real captured admin telemetry console displaying p50 (195 ms) / p95 (385 ms) latency cards and the expanded multi-agent span timeline tree."
+                        title="Live OTel Trace Explorer">
+                  <img src="assets/kf-agent-graph.webp" alt="Live OTel Trace UI thumbnail">
+                  <span class="thumb-label">Live Trace UI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/kf-memory-view.webp"
+                        data-alt="Live KnowledgeForge Vector Store and 3-Tier RBAC Document Console"
+                        data-caption="&lt;strong&gt;Figure 4 (Live Vector Store &amp; RBAC Document Console):&lt;/strong&gt; Real captured knowledge base manager listing indexed enterprise documents, vector chunk counts, and Organization/Department RBAC scopes."
+                        title="Live Vector &amp; RBAC Console">
+                  <img src="assets/kf-memory-view.webp" alt="Live Vector Console thumbnail">
+                  <span class="thumb-label">Live KB UI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/kf-orchestration.webp"
+                        data-alt="KnowledgeForge Multi-Agent DAG Routing and Reflexion Loop"
+                        data-caption="&lt;strong&gt;Figure 5 (Multi-Agent DAG Orchestration):&lt;/strong&gt; Complexity routing gate, topological DAG wave planner, parallel specialist execution, and Critic/Verifier gate."
+                        title="Multi-Agent DAG Flow">
+                  <img src="assets/kf-orchestration.webp" alt="Agent Orchestration thumbnail">
+                  <span class="thumb-label">DAG Flow</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/kf-architecture.webp"
+                        data-alt="KnowledgeForge Enterprise Agentic OS Architecture"
+                        data-caption="&lt;strong&gt;Figure 6 (System Architecture):&lt;/strong&gt; End-to-end architecture connecting Next.js 15 / FastAPI ingress, 4-lane topological DAG orchestration, hybrid GraphRAG retrieval, and 4-tier cognitive memory."
+                        title="System Architecture">
+                  <img src="assets/kf-architecture.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="project-links">
+                <a class="button" href="https://github.com/vtnguyen04/KnowledgeForge" target="_blank" rel="noopener">View Repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             04 · REAL-TIME DRIVER DISTRACTION & FATIGUE MONITORING
+             ================================================================ -->
+        <article class="project" id="project-distraction">
+          <div class="project-number">04</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">#ZeroCopyIPC · #SharedMemory · #TensorRT · #MediaPipe · #YOLOv8Cls · #SolvePnP · #PySide6 · #EdgeAI</span>
+                <span class="pill-badge">49.93 FPS Real-Time · Zero-Copy IPC</span>
+              </div>
+              <h3>Real-Time Driver Distraction &amp; Fatigue Monitoring System</h3>
+              <p class="showcase-desc">Zero-copy multiprocessing driver monitoring system bypassing Python's GIL via POSIX shared-memory rings to fuse 478-point MediaPipe FaceMesh and TensorRT YOLOv8-cls inference at 49.93 FPS.</p>
+              <div class="showcase-spec-grid">
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">01 · Input &amp; Zero-Copy POSIX IPC</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>5 SHM Ring Buffers:</strong> Lock-free <code>/dev/shm</code> frame &amp; result rings (0.12 ms IPC).</li>
+                    <li><strong>GIL Bypass:</strong> Dedicated OS workers for camera capture, FaceMesh, and YOLO GPU.</li>
+                    <li><strong>5 Pluggable Backends:</strong> Hot-swappable TensorRT FP16, PyTorch CUDA, ONNX, and OpenVINO.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">02 · Core 6-Signal Biometric Fusion</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Ocular &amp; Yawn Fatigue:</strong> Adaptive EAR blink detector, MAR yawn ratio &amp; 30s rolling PERCLOS.</li>
+                    <li><strong>3D Head Pose:</strong> 478-point FaceMesh + <code>cv2.solvePnP</code> Pitch/Yaw/Roll estimation.</li>
+                    <li><strong>Behavior Classifier:</strong> YOLOv8n-cls classifying 10 StateFarm distracted driving actions.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">03 · Output Hysteresis &amp; Safety HUD</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>3-State Alert FSM:</strong> <code>NORMAL → WARNING (1.0s) → ALERT (1.5s)</code> transition gate.</li>
+                    <li><strong>Blink Suppression:</strong> Eliminates transient single-frame false alarms during normal blinks.</li>
+                    <li><strong>Live PySide6 HUD:</strong> Non-blocking acoustic alarm daemon + 50 FPS telemetry dashboard.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="distraction">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">▶️</span> Real-Time HUD Walkthrough
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🖥️</span> Live PySide6 HUD
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">❖</span> Zero-Copy IPC Architecture
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/distraction-hud-frame.webp"
+                       data-full-src="assets/distraction-hud-frame.webp"
+                       alt="Real-Time Driver Monitoring HUD Video Recording"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Real-Time Driver HUD Walkthrough):</strong> Full-rate recording of the live driver distraction and fatigue detection HUD tracking 478-point FaceMesh, 6-DoF head pose, and hysteresis alerting.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/distraction-walkthrough.mp4"
+                        data-alt="Real-Time Driver Monitoring HUD Video Recording"
+                        data-caption="&lt;strong&gt;Figure 1 (Real-Time Driver HUD Walkthrough):&lt;/strong&gt; Full-rate recording of the live driver distraction and fatigue detection HUD tracking 478-point FaceMesh, 6-DoF head pose, and hysteresis alerting."
+                        title="Real-Time HUD Walkthrough">
+                  <img src="assets/distraction-hud-frame.webp" alt="Real-Time HUD Walkthrough thumbnail">
+                  <span class="thumb-label">▶️ Live HUD Video</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/distraction-hud-frame.webp"
+                        data-alt="Live PySide6 and OpenCV Driver Monitoring Telemetry HUD"
+                        data-caption="&lt;strong&gt;Figure 2 (Live PySide6 Multi-Modal HUD):&lt;/strong&gt; Real-time driver monitoring interface displaying 478-point FaceMesh landmarks, EAR/MAR/PERCLOS gauges, 6-DoF head pose, and hysteresis state."
+                        title="Live PySide6 HUD">
+                  <img src="assets/distraction-hud-frame.webp" alt="Live HUD Frame thumbnail">
+                  <span class="thumb-label">Live HUD UI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/distraction-ipc-architecture.webp"
+                        data-alt="Zero-Copy POSIX Shared-Memory Multi-Process Architecture"
+                        data-caption="&lt;strong&gt;Figure 3 (Zero-Copy Multiprocessing IPC):&lt;/strong&gt; Four-stage pipeline linking lock-free &lt;code&gt;/dev/shm&lt;/code&gt; ring buffers, parallel MediaPipe &amp; TensorRT workers, 6-signal fusion, and hysteresis alerting."
+                        title="Zero-Copy IPC Architecture">
+                  <img src="assets/distraction-ipc-architecture.webp" alt="IPC Architecture thumbnail">
+                  <span class="thumb-label">IPC Pipeline</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="project-links">
+                <a class="button" href="https://github.com/vtnguyen04/Distraction-Driver-Detection" target="_blank" rel="noopener">View Repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             05 · REVENUE & COGS MULTI-HORIZON FORECASTING SYSTEM
+             ================================================================ -->
+        <article class="project" id="project-forecasting">
+          <div class="project-number">05</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">#TimeSeries · #LightGBM · #FourierSeasonality · #Chronos2 · #RidgeL2 · #WalshCalibration · #WalkForwardCV</span>
+                <span class="pill-badge">636K VND Best MAE (-42.2% Error)</span>
+              </div>
+              <h3>Enterprise Revenue &amp; COGS Multi-Horizon Forecasting System</h3>
+              <p class="showcase-desc">Zero-leakage financial forecasting pipeline reconciling 12 relational ERP tables with multiplicative seasonality decomposition, a 3-tier ensemble (Q-Specialist LightGBM, Ridge, Chronos-2 120M), and odd/even-year COGS regime calibration over a 548-day horizon.</p>
+              <div class="showcase-spec-grid">
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">01 · Input ERP &amp; Seasonality</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>12 Relational Tables:</strong> Reconciles daily revenue, COGS, orders, traffic, and promotions.</li>
+                    <li><strong>Multiplicative Profile:</strong> Decomposes annual baseline level from 6-harmonic Fourier waves.</li>
+                    <li><strong>Zero-Leakage Features:</strong> Strictly causal lags, rolling volatility, and promo shock priors.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">02 · Core 3-Tier Ensemble Engine</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Tier A (w=0.70):</strong> Quarter-specialized LightGBM MAE boosters + L2 Ridge shape regularizer.</li>
+                    <li><strong>Tier B (w=0.15):</strong> Post-2014 era-weighted GBDT &amp; Huber models resilient to macro shocks.</li>
+                    <li><strong>Tier C (w=0.15):</strong> Amazon Chronos-2 (120M) foundation model trajectory priors.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">03 · Output Calibration &amp; SLA</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Odd/Even Walsh Fix:</strong> Corrects alternating fiscal-year COGS accounting shifts (-75% err).</li>
+                    <li><strong>22-Iteration Progression:</strong> Cuts expanding-window MAE from 1,100K down to 636K VND.</li>
+                    <li><strong>548-Day Output:</strong> Exports synchronized P10/P50/P90 Revenue, COGS, and Margin bands.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="forecasting">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">📈</span> 548-Day Trajectory
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🎯</span> Conformal Overlay
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔄</span> Seasonality &amp; COGS
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">❖</span> Pipeline Architecture
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/revenue-cogs-timeline.webp"
+                       data-full-src="assets/revenue-cogs-timeline.webp"
+                       alt="Multi-Year Historical Ledger to 548-Day Calibrated Forecast Trajectory"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (548-Day Forecast Trajectory):</strong> Joint daily Revenue and COGS historical ledger and calibrated 548-day forecast horizon comparing the 3-Tier Ensemble against Chronos-2 (120M).
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/revenue-cogs-timeline.webp"
+                        data-alt="Multi-Year Historical Ledger to 548-Day Calibrated Forecast Trajectory"
+                        data-caption="&lt;strong&gt;Figure 1 (548-Day Forecast Trajectory):&lt;/strong&gt; Joint daily Revenue and COGS historical ledger and calibrated 548-day forecast horizon comparing the 3-Tier Ensemble against Chronos-2 (120M)."
+                        title="548-Day Trajectory">
+                  <img src="assets/revenue-cogs-timeline.webp" alt="548-Day Trajectory thumbnail">
+                  <span class="thumb-label">Trajectory</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/revenue-cogs-overlay.webp"
+                        data-alt="548-Day Prediction Zone Overlay and 90% Conformal Bounds"
+                        data-caption="&lt;strong&gt;Figure 2 (548-Day Prediction Zone Overlay &amp; Conformal Bounds):&lt;/strong&gt; Synchronized P10/P50/P90 conformal prediction intervals comparing Tier A (LightGBM + Ridge) and Tier C (Chronos-2 120M) against the calibrated 3-tier ensemble (636K VND MAE) across the 548-day evaluation window."
+                        title="Conformal Overlay">
+                  <img src="assets/revenue-cogs-overlay.webp" alt="548-Day Conformal Overlay thumbnail">
+                  <span class="thumb-label">Conformal Overlay</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/revenue-cogs-seasonality.webp"
+                        data-alt="Annual Multiplicative Seasonality Fit and Odd/Even-Year COGS Calibration"
+                        data-caption="&lt;strong&gt;Figure 3 (Seasonality &amp; Odd/Even COGS Calibration):&lt;/strong&gt; 6-harmonic Fourier seasonal profile fit (R² = 0.994) and odd/even fiscal regime COGS error reduction."
+                        title="Seasonality &amp; COGS">
+                  <img src="assets/revenue-cogs-seasonality.webp" alt="Seasonality Fit thumbnail">
+                  <span class="thumb-label">Seasonality</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/revenue-cogs-pipeline.webp"
+                        data-alt="Revenue and COGS Multiplicative Seasonality and 3-Tier Ensemble Architecture"
+                        data-caption="&lt;strong&gt;Figure 4 (Forecasting Pipeline Architecture):&lt;/strong&gt; Six-stage pipeline from 12 relational ERP tables and multiplicative Fourier seasonality to the 70/15/15 3-Tier Ensemble and Walsh COGS calibration."
+                        title="Pipeline Architecture">
+                  <img src="assets/revenue-cogs-pipeline.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="project-links">
+                <a class="button" href="https://github.com/vtnguyen04/Revenue-COGS-Forecasting" target="_blank" rel="noopener">View Repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             06 · PHOENIX ML — ENTERPRISE SELF-HEALING MLOPS PLATFORM
+             ================================================================ -->
+        <article class="project" id="project-phoenix">
+          <div class="project-number">06</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">#MLOps · #DDD · #CQRS · #ONNXRuntime · #TensorRT · #Airflow · #MLflow · #Kafka · #RedisFeatureStore · #Grafana · #JaegerOTel</span>
+                <span class="pill-badge">0.72 ms Compute p99 · 14 Services · 628 Tests</span>
+              </div>
+              <h3>Phoenix ML: Self-Healing Enterprise MLOps &amp; Multi-Engine Serving Platform</h3>
+              <p class="showcase-desc">4-layer Domain-Driven Design MLOps platform orchestrating 14 containerized services across 5 ML domains with 0.72 ms ONNX/TensorRT inference, Redis/Parquet feature stores, Evidently drift guards, MLflow + MinIO registry, and autonomous Apache Airflow + Optuna self-healing.</p>
+              <div class="showcase-spec-grid">
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">01 · Input Feature Store &amp; Streaming</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Dual Feature Store:</strong> Redis 7 online store (0.21 ms p50) + Parquet/DVC offline store.</li>
+                    <li><strong>Kafka + PyFlink:</strong> Real-time sliding-window stream aggregations and feedback joiner.</li>
+                    <li><strong>5 Active Domains:</strong> Credit-Risk, Fraud, House-Price, Vision CIFAR-10, and Sentiment.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">02 · Core DDD Serving &amp; Routing</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Clean Architecture:</strong> 6 bounded contexts with strict CQRS command/query separation.</li>
+                    <li><strong>4 Traffic Routers:</strong> Single Champion, A/B Test (90/10), Canary (80/20), and Shadow Mirror.</li>
+                    <li><strong>Fault Isolation:</strong> 3-state Circuit Breaker (&lt;10 ms trip) across 4 pluggable ML engines.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">03 · Output Self-Healing &amp; OTel SLA</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>4 Drift Engines:</strong> KS-test, PSI, Chi-Square, and Wasserstein + Evidently AI reports.</li>
+                    <li><strong>Airflow + MLflow:</strong> 6 Airflow DAGs + Optuna HPO + MinIO S3 / MLflow Champion promotion gate.</li>
+                    <li><strong>Full Observability:</strong> 6-panel Grafana dashboard, Prometheus, Jaeger OTel tracing &amp; K8s HPA.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="phoenix-ml">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">▶️</span> Live Platform Walkthrough
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🖥️</span> Live Control Plane UI
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔄</span> Live Airflow DAGs UI
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🧪</span> Live MLflow Registry UI
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📊</span> Live Grafana Dashboard
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔍</span> Live Jaeger OTel Trace
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📡</span> Live FastAPI /docs UI
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">❖</span> Platform Architecture
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/phoenix-control-plane.webp"
+                       data-full-src="assets/phoenix-control-plane.webp"
+                       alt="Live Phoenix ML Multi-Service Walkthrough across Control Plane, Airflow, MLflow, Grafana, Jaeger, and FastAPI"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Full-Stack MLOps Platform Walkthrough):</strong> End-to-end walkthrough across all 6 live operational interfaces: React Control Plane, Apache Airflow 2.9 self-healing DAGs, MLflow 2.16 Model Registry, 6-panel Grafana dashboard, Jaeger OTel distributed trace waterfall, and FastAPI Swagger UI.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/phoenix-serving-demo.mp4"
+                        data-alt="Live Phoenix ML Multi-Service Walkthrough across Control Plane, Airflow, MLflow, Grafana, Jaeger, and FastAPI"
+                        data-caption="&lt;strong&gt;Figure 1 (Full-Stack MLOps Platform Walkthrough):&lt;/strong&gt; End-to-end walkthrough across all 6 live operational interfaces: React Control Plane, Apache Airflow 2.9 self-healing DAGs, MLflow 2.16 Model Registry, 6-panel Grafana dashboard, Jaeger OTel distributed trace waterfall, and FastAPI Swagger UI."
+                        title="Live Platform Walkthrough">
+                  <img src="assets/phoenix-control-plane.webp" alt="Live Serving Video thumbnail">
+                  <span class="thumb-label">▶️ Full Stack Demo</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-control-plane.webp"
+                        data-alt="Live Phoenix ML React Control Plane Dashboard"
+                        data-caption="&lt;strong&gt;Figure 2 (Live React Control Plane UI):&lt;/strong&gt; Real captured browser session of the Phoenix ML frontend showing Champion vs Challenger metrics, KS drift alert, and 30-feature credit-risk inference (GOOD 96.5%, 0.7 ms)."
+                        title="Live Control Plane UI">
+                  <img src="assets/phoenix-control-plane.webp" alt="Live Control Plane thumbnail">
+                  <span class="thumb-label">Control Plane UI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-airflow-ui.webp"
+                        data-alt="Live Apache Airflow 2.9 Self-Healing Pipeline and Credit-Risk Retraining DAG Execution"
+                        data-caption="&lt;strong&gt;Figure 3 (Live Apache Airflow 2.9 Orchestrator UI):&lt;/strong&gt; Execution graph and task logs for &lt;code&gt;self_healing_pipeline&lt;/code&gt; &amp; &lt;code&gt;training_credit_risk&lt;/code&gt; (&lt;code&gt;validate_data → train_model → evaluate_model → log_to_mlflow → register_model&lt;/code&gt;, 17.2s total)."
+                        title="Live Airflow DAGs UI">
+                  <img src="assets/phoenix-airflow-ui.webp" alt="Live Airflow UI thumbnail">
+                  <span class="thumb-label">Airflow DAGs UI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-mlflow-registry.webp"
+                        data-alt="Live MLflow 2.16 Model Registry and Optuna Bayesian HPO Experiment Tracking"
+                        data-caption="&lt;strong&gt;Figure 4 (Live MLflow 2.16 Model Registry &amp; Optuna HPO):&lt;/strong&gt; Experiment runs comparing &lt;code&gt;@challenger (v2-optuna)&lt;/code&gt; (ROC-AUC 0.906, F1 0.938, Accuracy 0.942) against &lt;code&gt;@champion (v1)&lt;/code&gt; with MinIO S3 ONNX artifacts."
+                        title="Live MLflow Registry UI">
+                  <img src="assets/phoenix-mlflow-registry.webp" alt="Live MLflow Registry thumbnail">
+                  <span class="thumb-label">MLflow Registry</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-grafana-live.webp"
+                        data-alt="Live 6-Panel Grafana MLOps Dashboard Scraping Prometheus Telemetry"
+                        data-caption="&lt;strong&gt;Figure 5 (Live 6-Panel Grafana MLOps Dashboard):&lt;/strong&gt; Real-time Prometheus telemetry panels monitoring Prediction Request Rate (1,284 req/s), Latency (p99 0.72 ms), Confidence Distribution, KS Feature Drift (0.2051), Auto-Heal Triggers, and Live Accuracy."
+                        title="Live Grafana Dashboard">
+                  <img src="assets/phoenix-grafana-live.webp" alt="Live Grafana UI thumbnail">
+                  <span class="thumb-label">Grafana 6-Panel</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-mlflow-ui.webp"
+                        data-alt="Live Jaeger OpenTelemetry Distributed Tracing Waterfall UI"
+                        data-caption="&lt;strong&gt;Figure 6 (Live Jaeger OTel Distributed Trace Waterfall):&lt;/strong&gt; Real captured Jaeger trace timeline showing 5 spans across phoenix-api-gateway, redis-feature-store (210µs), onnx-inference-engine (310µs), and evidently-drift-worker (115µs)."
+                        title="Live Jaeger OTel Trace">
+                  <img src="assets/phoenix-mlflow-ui.webp" alt="Live Jaeger UI thumbnail">
+                  <span class="thumb-label">Jaeger Trace UI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-fastapi-docs.webp"
+                        data-alt="Live Phoenix ML FastAPI OpenAPI Swagger UI with Executed Prediction"
+                        data-caption="&lt;strong&gt;Figure 7 (Live FastAPI OpenAPI /docs UI):&lt;/strong&gt; Real captured FastAPI Swagger interface executing a live POST /api/v1/predict request with a 200 OK sub-millisecond response."
+                        title="Live FastAPI /docs UI">
+                  <img src="assets/phoenix-fastapi-docs.webp" alt="Live FastAPI Docs thumbnail">
+                  <span class="thumb-label">FastAPI /docs UI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-system-architecture.webp"
+                        data-alt="Phoenix ML 4-Layer DDD and Self-Healing MLOps Architecture"
+                        data-caption="&lt;strong&gt;Figure 8 (Platform Architecture):&lt;/strong&gt; End-to-end enterprise MLOps architecture integrating Kafka/Flink streaming, Feast Redis/Parquet feature stores, multi-engine serving, and Airflow + Optuna self-healing."
+                        title="Platform Architecture">
+                  <img src="assets/phoenix-system-architecture.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="project-links">
+                <a class="button" href="https://github.com/vtnguyen04/phoenix_ML" target="_blank" rel="noopener">View Repository ↗</a>
+                <a class="button button-subtle" href="https://vtnguyen04.github.io/phoenix_ML/" target="_blank" rel="noopener">Documentation ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             07 · NATURAL LANDSCAPE IMAGE RETRIEVAL — MULTIMODAL CLIP + FAISS
+             ================================================================ -->
+        <article class="project" id="project-nlir">
+          <div class="project-number">07</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">#MultimodalRetrieval · #OpenAICLIP · #ViTB32 · #FaissIndexFlatIP · #CBIR · #TBIR · #HDF5 · #Flask · #PexelsAPI</span>
+                <span class="pill-badge">&lt;1 ms Faiss Cosine Search · Dual CBIR + TBIR</span>
+              </div>
+              <h3>Natural Landscape Image Search: Multimodal CLIP ViT-B/32 &amp; Faiss Retrieval Engine</h3>
+              <p class="showcase-desc">Dual-mode Content-Based (CBIR) and Text-Based (TBIR) visual search engine projecting high-resolution landscape photographs and natural-language queries into a shared 512-D OpenAI CLIP ViT-B/32 hypersphere indexed with Facebook Faiss IndexFlatIP.</p>
+              <div class="showcase-spec-grid">
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">01 · Input Corpus &amp; Multimodal Query</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Pexels API Crawler:</strong> Automated harvester across 6 landscape taxonomies and 25+ sub-terms.</li>
+                    <li><strong>Dual Query Ingress:</strong> Accepts reference image uploads (CBIR) or free-text prompts (TBIR).</li>
+                    <li><strong>HDF5 Persistence:</strong> Stores precomputed float32 feature matrices and UTF-8 paths in <code>clip_features.h5</code>.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">02 · Core CLIP ViT-B/32 &amp; Faiss Engine</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Shared 512-D Space:</strong> Joint Vision Transformer (ViT-B/32) and BPE causal text encoder projection.</li>
+                    <li><strong>Unit-Hypersphere Norm:</strong> L2-normalizes all image and text embeddings (<code>||v||₂ = 1.0</code>).</li>
+                    <li><strong>Faiss IndexFlatIP:</strong> Exact inner-product search equivalent to cosine similarity in &lt;1 ms.</li>
+                  </ul>
+                </div>
+                <div class="showcase-spec-card">
+                  <h4 class="spec-card-title">03 · Output CBIR + TBIR Web Engine</h4>
+                  <ul class="spec-card-list">
+                    <li><strong>Zero-Shot Alignment:</strong> Retrieves semantically matching scenes without manual category labels.</li>
+                    <li><strong>Configurable Top-K:</strong> Interactive Flask web interface supporting dynamic K=1..36 ranking.</li>
+                    <li><strong>Cosine Score Badges:</strong> Responsive gallery displaying real-time similarity scores and modal zoom.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="nlir">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">▶️</span> Live CBIR &amp; TBIR Demo
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🖼️</span> Visual Image Search (CBIR)
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔤</span> Semantic Text Search (TBIR)
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">❖</span> System Architecture
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/nlir-cbir-ui.webp"
+                       data-full-src="assets/nlir-cbir-ui.webp"
+                       alt="Live Natural Landscape Image Retrieval CBIR and TBIR Web Demo"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Live Multimodal CBIR + TBIR Search Walkthrough):</strong> Interactive demonstration executing visual image-to-image (CBIR) and natural-language text-to-image (TBIR) retrieval over the Pexels landscape corpus using OpenAI CLIP ViT-B/32 and Faiss IndexFlatIP.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/nlir-walkthrough.mp4"
+                        data-alt="Live Natural Landscape Image Retrieval CBIR and TBIR Web Demo"
+                        data-caption="&lt;strong&gt;Figure 1 (Live Multimodal CBIR + TBIR Search Walkthrough):&lt;/strong&gt; Interactive demonstration executing visual image-to-image (CBIR) and natural-language text-to-image (TBIR) retrieval over the Pexels landscape corpus using OpenAI CLIP ViT-B/32 and Faiss IndexFlatIP."
+                        title="Live CBIR &amp; TBIR Demo">
+                  <img src="assets/nlir-cbir-ui.webp" alt="Live NLIR Demo Video thumbnail">
+                  <span class="thumb-label">▶️ Live Search Demo</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/nlir-cbir-ui.webp"
+                        data-alt="Content-Based Image Retrieval (CBIR) Visual Similarity Search Results"
+                        data-caption="&lt;strong&gt;Figure 2 (Content-Based Image Retrieval — CBIR):&lt;/strong&gt; Uploading a coastal beach query image extracts a 512-D CLIP visual vector and retrieves the Top-8 visually similar Pexels landscapes ranked by exact Faiss cosine similarity (0.94 to 0.80 in 0.8 ms)."
+                        title="Visual Image Search (CBIR)">
+                  <img src="assets/nlir-cbir-ui.webp" alt="CBIR Visual Search thumbnail">
+                  <span class="thumb-label">CBIR Image Search</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/nlir-tbir-ui.webp"
+                        data-alt="Text-Based Image Retrieval (TBIR) Zero-Shot Semantic Search Results"
+                        data-caption="&lt;strong&gt;Figure 3 (Text-Based Image Retrieval — TBIR):&lt;/strong&gt; Entering a natural-language scene query (&lt;code&gt;&quot;desert&quot;&lt;/code&gt;) projects the prompt via CLIP's text transformer to retrieve the Top-8 matching sand-dune landscapes in 0.6 ms."
+                        title="Semantic Text Search (TBIR)">
+                  <img src="assets/nlir-tbir-ui.webp" alt="TBIR Text Search thumbnail">
+                  <span class="thumb-label">TBIR Text Search</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/nlir-architecture.webp"
+                        data-alt="Natural Landscape Image Retrieval CLIP ViT-B/32 and Faiss Architecture"
+                        data-caption="&lt;strong&gt;Figure 4 (System Architecture):&lt;/strong&gt; Four-stage pipeline linking the Pexels REST API crawler, OpenAI CLIP ViT-B/32 dual vision-text encoders, HDF5 + Faiss IndexFlatIP storage, and the Flask CBIR/TBIR web gateway."
+                        title="System Architecture">
+                  <img src="assets/nlir-architecture.webp" alt="NLIR Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="project-links">
+                <a class="button" href="https://github.com/vtnguyen04/Natural-Landscape-Image-Retrieval" target="_blank" rel="noopener">View Repository ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Core Technical Competencies Grid -->
+      <div class="skills-matrix-section">
+        <div class="skills-matrix-header">
+          <p class="label">Core Stack</p>
+          <h3>Technical Competencies &amp; System Stacks</h3>
+          <p>Comprehensive engineering toolset spanning deep learning research, edge deployment, and production systems.</p>
+        </div>
+        <div class="skills-matrix-grid">
+          <div class="skills-category">
+            <div class="skills-cat-title">Deep Learning &amp; Vision</div>
+            <div class="skills-tags">
+              <span class="skill-tag skill-tag-primary">PyTorch</span>
+              <span class="skill-tag skill-tag-primary">V-JEPA 2.1</span>
+              <span class="skill-tag skill-tag-primary">Cosmos-Predict2.5 DiT</span>
+              <span class="skill-tag">Qwen3-VL-8B</span>
+              <span class="skill-tag">DINOv3 / CLIP</span>
+              <span class="skill-tag">LoRA Adaptation</span>
+              <span class="skill-tag">YOLOv11</span>
+              <span class="skill-tag">Hugging Face</span>
+              <span class="skill-tag">OpenCV</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <div class="skills-cat-title">Edge AI, Robotics &amp; Autonomous Systems</div>
+            <div class="skills-tags">
+              <span class="skill-tag skill-tag-primary">TensorRT (FP16/INT8)</span>
+              <span class="skill-tag skill-tag-primary">Intel RealSense D435i RGB-D</span>
+              <span class="skill-tag skill-tag-primary">C++20 (std::jthread)</span>
+              <span class="skill-tag">POSIX SharedMemory IPC</span>
+              <span class="skill-tag">ZeroMQ XSUB/XPUB</span>
+              <span class="skill-tag">Joseph-Form EKF &amp; ByteTrack</span>
+              <span class="skill-tag">23-State Autonomy FSM</span>
+              <span class="skill-tag">Clothoid G1 &amp; PDPP Control</span>
+              <span class="skill-tag">STM32 NUCLEO Serial</span>
+            </div>
+          </div>
+          <div class="skills-category">
+            <div class="skills-cat-title">MLOps, Distributed Serving &amp; Data Systems</div>
+            <div class="skills-tags">
+              <span class="skill-tag skill-tag-primary">FastAPI / gRPC / BentoML</span>
+              <span class="skill-tag skill-tag-primary">ONNX / Triton / OpenVINO</span>
+              <span class="skill-tag skill-tag-primary">Apache Airflow &amp; Kafka KRaft</span>
+              <span class="skill-tag">MLflow + MinIO Registry</span>
+              <span class="skill-tag">Redis 7 Feature Store</span>
+              <span class="skill-tag">Prometheus / Grafana / Jaeger</span>
+              <span class="skill-tag">Polars LazyFrame &amp; LightGBM</span>
+              <span class="skill-tag">LangGraph &amp; Hybrid GraphRAG</span>
+              <span class="skill-tag">Docker &amp; Kubernetes HPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p>Last update: October 2026 · Hosted on GitHub Pages</p>
+      <div class="footer-links">
+        <a href="index.html">Research</a>
+        <a href="projects.html">Engineering</a>
+        <a href="awards.html">Awards &amp; Honors</a>
+        <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a href="https://github.com/vtnguyen04" target="_blank" rel="noopener">GitHub ↗</a>
+        <a href="mailto:nguyenvothanh04@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Scroll Navigation Controls -->
+  <div class="scroll-nav-controls" role="group" aria-label="Page scroll navigation">
+    <button class="scroll-nav-btn" id="scroll-top-btn" type="button" aria-label="Scroll to top" title="Scroll to top">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <button class="scroll-nav-btn" id="scroll-bottom-btn" type="button" aria-label="Scroll to bottom" title="Scroll to bottom">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Command Palette Modal (⌘K / Ctrl+K) -->
+  <div class="cmd-palette-backdrop" id="cmd-palette" role="dialog" aria-modal="true" aria-label="Quick Command Palette">
+    <div class="cmd-palette-window">
+      <div class="cmd-palette-search">
+        <span class="cmd-search-icon">🔍</span>
+        <input class="cmd-search-input" id="cmd-input" type="text" placeholder="Type a command or search papers, code, awards..." autocomplete="off" spellcheck="false">
+        <kbd class="cmd-search-esc">ESC</kbd>
+      </div>
+      <ul class="cmd-palette-list" id="cmd-list"></ul>
+      <div class="cmd-palette-footer">
+        <div class="cmd-footer-keys">
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">↑</kbd><kbd class="cmd-key">↓</kbd> Navigate</span>
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">↵</kbd> Select</span>
+          <span class="cmd-footer-key-item"><kbd class="cmd-key">esc</kbd> Close</span>
+        </div>
+        <span>Linear-Grade Quick Navigation</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lightbox dialog for viewing full-size images / videos -->
+  <dialog class="media-lightbox" id="media-lightbox" aria-label="Media Preview">
+    <button class="media-lightbox-close" type="button" aria-label="Close expanded media">Close</button>
+    <div class="media-lightbox-content"></div>
+  </dialog>
+  <script type="module" src="js/main.js?v=36"></script>
+  <script nomodule src="script.js?v=36"></script>
+</body>
+</html>
