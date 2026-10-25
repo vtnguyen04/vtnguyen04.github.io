@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=105">
+  <link rel="stylesheet" href="style.css?v=106">
 </head>
 <body>
   <div id="scroll-progress"></div>
@@ -90,37 +90,79 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">#C++20 · #ZeroCopySHM · #TensorRT · #YOLO11 · #FDATLoss · #PurePursuit · #23StateFSM · #JetsonOrin</span>
+                <span class="showcase-timeline-pill">Oct 2024 – May 2026</span>
+                <span class="showcase-domain-pill">Autonomous Driving · Embedded C++20 &amp; TensorRT</span>
                 <span class="pill-badge pill-badge-gold">★ 1st Nationally (2026)</span>
                 <span class="pill-badge pill-badge-silver">★ Global Top 9 (2025, Best in Asia)</span>
-                <span class="pill-badge">150M VND Bosch Sponsorship</span>
+                <span class="pill-badge">150M VND Bosch Grant</span>
               </div>
               <h3>Bosch Future Mobility Challenge (BFMC 2025 &amp; 2026)</h3>
-              <p class="showcase-desc">1:10-scale autonomous driving stack on NVIDIA Jetson Orin Nano combining zero-copy C++20/Python IPC, 21.8 ms TensorRT multi-task perception, Joseph-form EKF localization, and a 23-state behavior FSM.</p>
-              <div class="showcase-spec-grid">
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">01 · Input &amp; Zero-Copy Data Plane</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>RGB-D &amp; MCU I/O:</strong> RealSense D435i RGB-D + STM32 IMU/odometry serial link.</li>
-                    <li><strong>Zero-Copy IPC:</strong> Lock-free POSIX SHM triple-buffers + ZeroMQ pub/sub bus.</li>
-                    <li><strong>C++20 Threads:</strong> Deterministic <code>std::jthread</code> worker pool with RAII teardown.</li>
-                  </ul>
+              <p class="showcase-desc">1:10-scale autonomous driving stack on NVIDIA Jetson Orin Nano uniting zero-copy C++20/Python IPC, 21.8 ms TensorRT multi-task perception, Joseph-form EKF localization, and a 23-state behavior FSM.</p>
+
+              <div class="showcase-arch-strip">
+                <div class="showcase-kpi-bar">
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">21.8 ms</span>
+                    <span class="kpi-label">TensorRT FP16 Multi-Task</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">3.8 cm</span>
+                    <span class="kpi-label">Lateral Tracking RMSE</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">98.2%</span>
+                    <span class="kpi-label">120-Run Track Completion</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">30 Hz</span>
+                    <span class="kpi-label">23-State FSM &amp; STM32 Loop</span>
+                  </div>
                 </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">02 · Core Perception &amp; EKF Engine</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>NeuroPilot Network:</strong> Joint 13-class YOLO11 + BiFPN + cubic Bézier trajectory head.</li>
-                    <li><strong>FDAT Lane Loss:</strong> Anisotropic tangent-normal loss cutting lateral error by 41%.</li>
-                    <li><strong>3D Tracking &amp; EKF:</strong> Depth-fused ByteTrack + Joseph-form EKF + KDTree map matching.</li>
-                  </ul>
-                </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">03 · Output Control &amp; Track SLA</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>23-State FSM:</strong> 9 maneuver handlers (overtake, crosswalk, roundabout, parking).</li>
-                    <li><strong>30 Hz Control:</strong> Clothoid G1 spiral smoothing + PD-Pure Pursuit (3.8 cm RMSE).</li>
-                    <li><strong>Track Proven:</strong> 98.2% completion across 120 autonomous physical track runs.</li>
-                  </ul>
+                <div class="showcase-flow-stages">
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">01</span>
+                        <h4 class="flow-stage-title">Sensing &amp; Zero-Copy IPC</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Streams RGB-D frames and 100 Hz IMU telemetry via lock-free POSIX shared memory and C++20 worker threads.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">RealSense D435i</span>
+                      <span class="flow-tag">POSIX /dev/shm</span>
+                      <span class="flow-tag">ZeroMQ Bus</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">02</span>
+                        <h4 class="flow-stage-title">NeuroPilot &amp; EKF Fusion</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Joint 13-class detection, FiLM-routed cubic Bézier waypoints (FDAT loss, -41% error), and Joseph-form EKF pose.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">YOLOv11 + BiFPN</span>
+                      <span class="flow-tag">FDAT Loss</span>
+                      <span class="flow-tag">Joseph EKF</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">03</span>
+                        <h4 class="flow-stage-title">23-State FSM &amp; Actuation</h4>
+                      </div>
+                    </div>
+                    <p class="flow-stage-desc">Orchestrates 9 urban maneuvers with Clothoid G1 smoothing, PD-Pure Pursuit steering, and STM32 watchdog safety.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">23-State FSM</span>
+                      <span class="flow-tag">Clothoid PDPP</span>
+                      <span class="flow-tag">STM32 Nucleo</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -128,6 +170,12 @@
             <div class="showcase-media-hub" data-showcase="bfmc">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">▶️</span> Closed-Loop Track Demo
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">▶️</span> Central Ops Station
+                </button>
+                <button class="showcase-tab" type="button">
                   <span class="tab-icon">❖</span> System Architecture
                 </button>
                 <button class="showcase-tab" type="button">
@@ -135,12 +183,6 @@
                 </button>
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">🧠</span> Multi-Task Network
-                </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">▶️</span> Closed-Loop Track Demo
-                </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">▶️</span> Central Ops Station
                 </button>
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">🛣️</span> On-Track HUD
@@ -159,46 +201,22 @@
               <figure class="project-figure showcase-main-figure">
                 <div class="showcase-image-wrapper">
                   <img class="showcase-main-img zoomable-media"
-                       src="assets/bfmc-architecture.webp"
-                       data-full-src="assets/bfmc-architecture.webp"
-                       alt="BFMC Autonomous Vehicle System Architecture: NeuroPilot Perception, EKF Localization, 23-State FSM & STM32 Control"
+                       src="assets/bfmc-waypoint-thumb.webp"
+                       data-full-src="assets/bfmc-waypoint-thumb.webp"
+                       alt="Closed-Loop 1:10 Autonomous Track Run with NeuroPilot 10-Waypoint Trajectory and Traffic Sign Detection"
                        loading="lazy">
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Cyber-Physical System Architecture):</strong> End-to-end 1:10 autonomous driving architecture integrating Intel RealSense D435i &amp; BNO055 EKF localization, NeuroPilot multi-task TensorRT perception (21.8 ms), 23-state behavioral FSM, and 30 Hz STM32 Nucleo actuation.
+                  <strong>Figure 1 (Closed-Loop 1:10 Track Run — NeuroPilot Waypoint &amp; Sign HUD):</strong> Real-time onboard deployment executing 10-waypoint cubic Bézier trajectory tracking, dynamic steering control (33.0 cm/s), and 3D traffic-sign/stop-line distance estimation.
                 </figcaption>
               </figure>
 
               <div class="showcase-thumbs">
                 <button class="showcase-thumb is-active" type="button"
-                        data-src="assets/bfmc-architecture.webp"
-                        data-alt="BFMC Autonomous Vehicle System Architecture: NeuroPilot Perception, EKF Localization, 23-State FSM & STM32 Control"
-                        data-caption="&lt;strong&gt;Figure 1 (Cyber-Physical System Architecture):&lt;/strong&gt; End-to-end 1:10 autonomous driving architecture integrating Intel RealSense D435i &amp; BNO055 EKF localization, NeuroPilot multi-task TensorRT perception (21.8 ms), 23-state behavioral FSM, and 30 Hz STM32 Nucleo actuation."
-                        title="System Architecture">
-                  <img src="assets/bfmc-architecture.webp" alt="System Architecture thumbnail">
-                  <span class="thumb-label">Architecture</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/bfmc-thesis-fig3-1.webp"
-                        data-alt="Thesis Figure 3.1: Overall Autonomous Driving System Architecture"
-                        data-caption="&lt;strong&gt;Figure 2 (Thesis Pipeline — Fig. 3.1):&lt;/strong&gt; Six-layer cyber-physical control loop connecting RGB-D &amp; IMU sensing, NeuroPilot perception, behavioral supervisor state machine, pure pursuit control, and STM32 PWM actuation."
-                        title="Thesis Pipeline (Fig. 3.1)">
-                  <img src="assets/bfmc-thesis-fig3-1.webp" alt="Thesis Pipeline Fig 3.1 thumbnail">
-                  <span class="thumb-label">Thesis Fig. 3.1</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/bfmc-thesis-network-heads.webp"
-                        data-alt="Thesis Figure 3.2: NeuroPilot Multi-Task Architecture"
-                        data-caption="&lt;strong&gt;Figure 3 (NeuroPilot Multi-Task Network — Thesis Fig. 3.2):&lt;/strong&gt; Shared YOLO11 + BiFPN backbone with 13-class detection head, FiLM navigation routing, and cubic Bézier trajectory head (21.8 ms FP16)."
-                        title="Multi-Task Network">
-                  <img src="assets/bfmc-thesis-network-heads.webp" alt="Multi-Task Network thumbnail">
-                  <span class="thumb-label">Multi-Task AI</span>
-                </button>
-                <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-stanley-run.mp4"
                         data-alt="Closed-Loop 1:10 Autonomous Track Run with NeuroPilot 10-Waypoint Trajectory and Traffic Sign Detection"
-                        data-caption="&lt;strong&gt;Figure 4 (Closed-Loop 1:10 Track Run — NeuroPilot Waypoint &amp; Sign HUD):&lt;/strong&gt; Real-time onboard deployment executing 10-waypoint cubic Bézier trajectory tracking, dynamic steering control (33.0 cm/s), and 3D traffic-sign/stop-line distance estimation."
+                        data-caption="&lt;strong&gt;Figure 1 (Closed-Loop 1:10 Track Run — NeuroPilot Waypoint &amp; Sign HUD):&lt;/strong&gt; Real-time onboard deployment executing 10-waypoint cubic Bézier trajectory tracking, dynamic steering control (33.0 cm/s), and 3D traffic-sign/stop-line distance estimation."
                         title="Closed-Loop Track Demo">
                   <img src="assets/bfmc-waypoint-thumb.webp" alt="Closed-Loop Track Demo thumbnail">
                   <span class="thumb-label">▶️ Track Demo</span>
@@ -206,10 +224,34 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-central-ops.mp4"
                         data-alt="DriveBeyond MK-1 Central Ops Ground Station and Autonomous Route Execution"
-                        data-caption="&lt;strong&gt;Figure 5 (DriveBeyond MK-1 Central Ops Ground Station):&lt;/strong&gt; Live ground-control telemetry console showing global KDTree route planning, 49.0 cm/s autonomous cruising, and real-time Jetson Orin system diagnostics."
+                        data-caption="&lt;strong&gt;Figure 2 (DriveBeyond MK-1 Central Ops Ground Station):&lt;/strong&gt; Live ground-control telemetry console showing global KDTree route planning, 49.0 cm/s autonomous cruising, and real-time Jetson Orin system diagnostics."
                         title="Central Ops Station">
                   <img src="assets/bfmc-central-ops.webp" alt="Central Ops Station thumbnail">
                   <span class="thumb-label">▶️ Central Ops</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-architecture.webp"
+                        data-alt="BFMC Autonomous Vehicle System Architecture: NeuroPilot Perception, EKF Localization, 23-State FSM & STM32 Control"
+                        data-caption="&lt;strong&gt;Figure 3 (Cyber-Physical System Architecture):&lt;/strong&gt; End-to-end 1:10 autonomous driving architecture integrating Intel RealSense D435i &amp; BNO055 EKF localization, NeuroPilot multi-task TensorRT perception (21.8 ms), 23-state behavioral FSM, and 30 Hz STM32 Nucleo actuation."
+                        title="System Architecture">
+                  <img src="assets/bfmc-architecture.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-fig3-1.webp"
+                        data-alt="Thesis Figure 3.1: Overall Autonomous Driving System Architecture"
+                        data-caption="&lt;strong&gt;Figure 4 (Thesis Pipeline — Fig. 3.1):&lt;/strong&gt; Six-layer cyber-physical control loop connecting RGB-D &amp; IMU sensing, NeuroPilot perception, behavioral supervisor state machine, pure pursuit control, and STM32 PWM actuation."
+                        title="Thesis Pipeline (Fig. 3.1)">
+                  <img src="assets/bfmc-thesis-fig3-1.webp" alt="Thesis Pipeline Fig 3.1 thumbnail">
+                  <span class="thumb-label">Thesis Fig. 3.1</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-network-heads.webp"
+                        data-alt="Thesis Figure 3.2: NeuroPilot Multi-Task Architecture"
+                        data-caption="&lt;strong&gt;Figure 5 (NeuroPilot Multi-Task Network — Thesis Fig. 3.2):&lt;/strong&gt; Shared YOLO11 + BiFPN backbone with 13-class detection head, FiLM navigation routing, and cubic Bézier trajectory head (21.8 ms FP16)."
+                        title="Multi-Task Network">
+                  <img src="assets/bfmc-thesis-network-heads.webp" alt="Multi-Task Network thumbnail">
+                  <span class="thumb-label">Multi-Task AI</span>
                 </button>
                 <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-hud-results.webp"
@@ -264,35 +306,77 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">#RecSys · #Polars · #ContactALS · #VN_SBERT · #BallTreeKNN · #LambdaRank · #MMR · #TreeSHAP</span>
+                <span class="showcase-timeline-pill">Jan 2026 – Mar 2026</span>
+                <span class="showcase-domain-pill">Recommender Systems · Large-Scale Retrieval</span>
                 <span class="pill-badge pill-badge-gold">🏆 Top 5 Finalist — VinUniversity Datathon 2026</span>
               </div>
               <h3>Insight Hunter: Large-Scale Real Estate Recommendation System</h3>
-              <p class="showcase-desc">4-stage hybrid retrieval and diversity-aware reranking pipeline trained on 161.7M clickstream logs and 2.09M property listings, lifting NDCG@10 by +33.5% and catalog exposure by 11.5×.</p>
-              <div class="showcase-spec-grid">
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">01 · Input &amp; Hybrid Retrieval</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Polars Streaming:</strong> Out-of-core processing of 161.7M logs within a 12 GB RAM cap.</li>
-                    <li><strong>Intent Weighting:</strong> Distinguishes passive pageviews (1.0) from Zalo/phone leads (6.0).</li>
-                    <li><strong>Hybrid Candidates:</strong> Fuses ContactALS (128D) + VN-SBERT + Haversine BallTree KNN.</li>
-                  </ul>
+              <p class="showcase-desc">4-stage hybrid retrieval and diversity-aware reranking pipeline trained on 161.7M Chợ Tốt clickstream logs and 2.09M property listings, lifting NDCG@10 by +33.5% and catalog exposure by 11.5×.</p>
+
+              <div class="showcase-arch-strip">
+                <div class="showcase-kpi-bar">
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">161.7M</span>
+                    <span class="kpi-label">Clickstream Events (12 GB Cap)</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">+33.5%</span>
+                    <span class="kpi-label">NDCG@10 Ranking Lift</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">11.5×</span>
+                    <span class="kpi-label">Catalog Exposure (42.6%)</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">38.2 ms</span>
+                    <span class="kpi-label">p99 TreeSHAP Slate Serving</span>
+                  </div>
                 </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">02 · Core Rules &amp; LambdaRank</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Municipal Guard:</strong> Enforces post-2025 district/ward boundaries and budget corridors.</li>
-                    <li><strong>Quality Gate:</strong> Prioritizes verified legal titles (<em>Sổ hồng</em>) and media completeness.</li>
-                    <li><strong>LightGBM Reranker:</strong> Pairwise LambdaRank over 42 spatial, price, and session features.</li>
-                  </ul>
-                </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">03 · Output Fairness &amp; SLA</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>MMR Diversity (λ=0.7):</strong> Cuts seller Gini concentration by 38.4% across 415K sellers.</li>
-                    <li><strong>11.5× Coverage:</strong> Expands active catalog exposure from 3.7% to 42.6% of listings.</li>
-                    <li><strong>TreeSHAP Serving:</strong> Returns Top-10 slate with real-time reason codes in 38.2 ms.</li>
-                  </ul>
+                <div class="showcase-flow-stages">
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">01</span>
+                        <h4 class="flow-stage-title">Streaming &amp; Tri-Modal Recall</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Out-of-core Polars matrix weighting high-intent leads (6.0×) with ContactALS, VN-SBERT, and Haversine BallTree KNN.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Polars LazyFrame</span>
+                      <span class="flow-tag">ContactALS 128D</span>
+                      <span class="flow-tag">VN-SBERT + KNN</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">02</span>
+                        <h4 class="flow-stage-title">Domain Guard &amp; LambdaRank</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Prunes 91.9% out-of-zone listings via post-2025 ward boundaries and scores Top-500 candidates across 42 features.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Ward Boundary Gate</span>
+                      <span class="flow-tag">Legal Title Filter</span>
+                      <span class="flow-tag">LightGBM LambdaRank</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">03</span>
+                        <h4 class="flow-stage-title">MMR Fairness &amp; Explainability</h4>
+                      </div>
+                    </div>
+                    <p class="flow-stage-desc">Cuts seller Gini monopoly by 38.4% across 415K sellers and serves Top-10 slates with real-time TreeSHAP attributions.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">MMR (λ=0.7)</span>
+                      <span class="flow-tag">415K Seller Reach</span>
+                      <span class="flow-tag">TreeSHAP API</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -379,35 +463,77 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">#AgenticAOS · #MultiAgentDAG · #NextJS15 · #React19 · #FastAPI · #HybridGraphRAG · #4TierMemory · #TrustLayer · #OpenTelemetry</span>
+                <span class="showcase-timeline-pill">Aug 2025 – Feb 2026</span>
+                <span class="showcase-domain-pill">Agentic AI · Multi-Agent DAG &amp; Hybrid GraphRAG</span>
                 <span class="pill-badge">6 Specialist Agents · 241 Endpoints · 1,593 Tests</span>
               </div>
               <h3>KnowledgeForge: Enterprise Agentic OS &amp; Hybrid GraphRAG Platform</h3>
-              <p class="showcase-desc">Enterprise Agentic AI Operating System pairing a Next.js 15 / React 19 workspace with a 241-endpoint FastAPI control plane, 4-lane topological DAG orchestration, hybrid Qdrant + BM25 + LightRAG/Neo4j retrieval, and 4-tier cognitive memory.</p>
-              <div class="showcase-spec-grid">
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">01 · Input &amp; Hybrid GraphRAG</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>14-Channel Ingress:</strong> Omnichannel gateway + Microsoft Presidio PII masking &amp; 3-Tier RBAC.</li>
-                    <li><strong>Tri-Modal Retrieval:</strong> Qdrant dense vectors + BM25 lexical + LightRAG / Neo4j ontology traversal.</li>
-                    <li><strong>Deduplication &amp; Rerank:</strong> MinHash LSH deduplication + RRF (k=60) + Cross-Encoder + MMR.</li>
-                  </ul>
+              <p class="showcase-desc">Enterprise Agentic AI Operating System pairing a Next.js 15 / React 19 workspace with a 241-endpoint FastAPI control plane, 6-agent topological DAG orchestration, tri-modal GraphRAG retrieval, and 4-tier cognitive memory.</p>
+
+              <div class="showcase-arch-strip">
+                <div class="showcase-kpi-bar">
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">241 APIs</span>
+                    <span class="kpi-label">FastAPI Control Plane &amp; RBAC</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">6 Agents</span>
+                    <span class="kpi-label">Parallel Topological DAG Waves</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">88.4%</span>
+                    <span class="kpi-label">5-Layer Prefix Cache Hit Rate</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">1,593 Tests</span>
+                    <span class="kpi-label">RAGAS Claim Faithfulness ≥ 0.85</span>
+                  </div>
                 </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">02 · Core Multi-Agent DAG Engine</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>4-Lane Complexity Gate:</strong> Routes queries across Fast-Path, Single-Agent, Parallel DAG, and Deep Research.</li>
-                    <li><strong>6 Specialist Agents:</strong> Planner, RAG, DataAnalyst, Coding, SecurityAuditor, and Verifier waves.</li>
-                    <li><strong>Zero-Egress Sandbox:</strong> Linux Bubblewrap (<code>bwrap --unshare-all</code>) + MoA consensus &amp; Oracle guard.</li>
-                  </ul>
-                </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">03 · Output Verification &amp; Memory</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>4-Tier Memory:</strong> Redis working (T1), Qdrant/Mongo episodic (T2), Neo4j/mem0 (T3), 750+ skills (T4).</li>
-                    <li><strong>5-Layer Context Engine:</strong> Prefix-cached prompt assembly (88.4% hit) + PostgreSQL delta checkpoints.</li>
-                    <li><strong>Verified Generation:</strong> Atomic claim faithfulness gate (τ = 0.70) + live OpenTelemetry trace UI.</li>
-                  </ul>
+                <div class="showcase-flow-stages">
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">01</span>
+                        <h4 class="flow-stage-title">TrustLayer &amp; Hybrid GraphRAG</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Sanitizes 14-channel inputs via Presidio PII masking and fuses Qdrant dense, BM25 lexical, and Neo4j/LightRAG hops.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Presidio PII + RBAC</span>
+                      <span class="flow-tag">Qdrant + BM25 + Neo4j</span>
+                      <span class="flow-tag">MinHash + Cross-Encoder</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">02</span>
+                        <h4 class="flow-stage-title">6-Agent Topological DAG</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Routes tasks across 4 complexity lanes into parallel specialist waves isolated inside zero-egress Bubblewrap sandboxes.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">LangGraph DAG</span>
+                      <span class="flow-tag">Bubblewrap Sandbox</span>
+                      <span class="flow-tag">9Router Multi-LLM</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">03</span>
+                        <h4 class="flow-stage-title">4-Tier Memory &amp; Claim Gate</h4>
+                      </div>
+                    </div>
+                    <p class="flow-stage-desc">Persists T1–T4 cognitive memory (Redis, Qdrant, Neo4j, 750+ skills) with DeBERTa NLI atomic citation verification.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">T1–T4 Memory</span>
+                      <span class="flow-tag">DeBERTa Claim Gate</span>
+                      <span class="flow-tag">OpenTelemetry UI</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -527,35 +653,77 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">#ZeroCopyIPC · #SharedMemory · #TensorRT · #MediaPipe · #YOLOv8Cls · #SolvePnP · #PySide6 · #EdgeAI</span>
-                <span class="pill-badge">49.93 FPS Real-Time · Zero-Copy IPC</span>
+                <span class="showcase-timeline-pill">Mar 2024 – Nov 2024</span>
+                <span class="showcase-domain-pill">Edge Computer Vision · Zero-Copy POSIX IPC</span>
+                <span class="pill-badge">49.93 FPS Real-Time · 0.12 ms Shared-Memory IPC</span>
               </div>
               <h3>Real-Time Driver Distraction &amp; Fatigue Monitoring System</h3>
-              <p class="showcase-desc">Zero-copy multiprocessing driver monitoring system bypassing Python's GIL via POSIX shared-memory rings to fuse 478-point MediaPipe FaceMesh and TensorRT YOLOv8-cls inference at 49.93 FPS.</p>
-              <div class="showcase-spec-grid">
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">01 · Input &amp; Zero-Copy POSIX IPC</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>5 SHM Ring Buffers:</strong> Lock-free <code>/dev/shm</code> frame &amp; result rings (0.12 ms IPC).</li>
-                    <li><strong>GIL Bypass:</strong> Dedicated OS workers for camera capture, FaceMesh, and YOLO GPU.</li>
-                    <li><strong>5 Pluggable Backends:</strong> Hot-swappable TensorRT FP16, PyTorch CUDA, ONNX, and OpenVINO.</li>
-                  </ul>
+              <p class="showcase-desc">Zero-copy multiprocessing driver safety runtime bypassing Python's GIL via POSIX shared-memory rings to fuse 478-point FaceMesh biometrics and TensorRT YOLOv8-cls behavior recognition at 49.93 FPS.</p>
+
+              <div class="showcase-arch-strip">
+                <div class="showcase-kpi-bar">
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">49.93 FPS</span>
+                    <span class="kpi-label">End-to-End Pipeline Throughput</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">0.12 ms</span>
+                    <span class="kpi-label">Lock-Free /dev/shm Ring IPC</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">99.51%</span>
+                    <span class="kpi-label">10-Class Distraction Top-1 Acc</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">-68%</span>
+                    <span class="kpi-label">False-Positive Blink Reduction</span>
+                  </div>
                 </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">02 · Core 6-Signal Biometric Fusion</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Ocular &amp; Yawn Fatigue:</strong> Adaptive EAR blink detector, MAR yawn ratio &amp; 30s rolling PERCLOS.</li>
-                    <li><strong>3D Head Pose:</strong> 478-point FaceMesh + <code>cv2.solvePnP</code> Pitch/Yaw/Roll estimation.</li>
-                    <li><strong>Behavior Classifier:</strong> YOLOv8n-cls classifying 10 StateFarm distracted driving actions.</li>
-                  </ul>
-                </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">03 · Output Hysteresis &amp; Safety HUD</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>3-State Alert FSM:</strong> <code>NORMAL → WARNING (1.0s) → ALERT (1.5s)</code> transition gate.</li>
-                    <li><strong>Blink Suppression:</strong> Eliminates transient single-frame false alarms during normal blinks.</li>
-                    <li><strong>Live PySide6 HUD:</strong> Non-blocking acoustic alarm daemon + 50 FPS telemetry dashboard.</li>
-                  </ul>
+                <div class="showcase-flow-stages">
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">01</span>
+                        <h4 class="flow-stage-title">Zero-Copy POSIX SHM Bus</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Decouples camera DMA capture, CPU geometric workers, and GPU inference across 5 lock-free shared-memory rings.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">5 /dev/shm Rings</span>
+                      <span class="flow-tag">Zero Serialization</span>
+                      <span class="flow-tag">True GIL Bypass</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">02</span>
+                        <h4 class="flow-stage-title">Dual CPU/GPU Biometric Workers</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Runs 478-pt FaceMesh EAR/MAR/PERCLOS + 6-DoF SolvePnP head pose alongside TensorRT FP16 YOLOv8n-cls.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">MediaPipe 478-Pt</span>
+                      <span class="flow-tag">cv2.solvePnP 6-DoF</span>
+                      <span class="flow-tag">TensorRT / OpenVINO</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">03</span>
+                        <h4 class="flow-stage-title">6-Signal Hysteresis &amp; HUD</h4>
+                      </div>
+                    </div>
+                    <p class="flow-stage-desc">Suppresses transient blink spikes via a 3-state temporal FSM (1.0s Warning / 1.5s Alert) and 50 FPS OpenGL HUD.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Blink Gate (&lt;300ms)</span>
+                      <span class="flow-tag">3-State Alert FSM</span>
+                      <span class="flow-tag">PySide6 OpenGL HUD</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -620,35 +788,77 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">#TimeSeries · #LightGBM · #FourierSeasonality · #Chronos2 · #RidgeL2 · #WalshCalibration · #WalkForwardCV</span>
+                <span class="showcase-timeline-pill">Sep 2025 – Jan 2026</span>
+                <span class="showcase-domain-pill">Financial Time-Series · 3-Tier Ensemble ML</span>
                 <span class="pill-badge">636K VND Best MAE (-42.2% Error)</span>
               </div>
               <h3>Enterprise Revenue &amp; COGS Multi-Horizon Forecasting System</h3>
-              <p class="showcase-desc">Zero-leakage financial forecasting pipeline reconciling 12 relational ERP tables with multiplicative seasonality decomposition, a 3-tier ensemble (Q-Specialist LightGBM, Ridge, Chronos-2 120M), and odd/even-year COGS regime calibration over a 548-day horizon.</p>
-              <div class="showcase-spec-grid">
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">01 · Input ERP &amp; Seasonality</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>12 Relational Tables:</strong> Reconciles daily revenue, COGS, orders, traffic, and promotions.</li>
-                    <li><strong>Multiplicative Profile:</strong> Decomposes annual baseline level from 6-harmonic Fourier waves.</li>
-                    <li><strong>Zero-Leakage Features:</strong> Strictly causal lags, rolling volatility, and promo shock priors.</li>
-                  </ul>
+              <p class="showcase-desc">Zero-leakage financial forecasting pipeline reconciling 12 relational ERP tables with 6-harmonic Fourier seasonality, a 70/15/15 3-tier ensemble, and odd/even-year COGS regime calibration over a 548-day horizon.</p>
+
+              <div class="showcase-arch-strip">
+                <div class="showcase-kpi-bar">
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">636K VND</span>
+                    <span class="kpi-label">Expanding-Window MAE (-42.2%)</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">548 Days</span>
+                    <span class="kpi-label">P10 / P50 / P90 Forecast Horizon</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">70/15/15</span>
+                    <span class="kpi-label">3-Tier Ensemble Blend Weights</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">-75% Err</span>
+                    <span class="kpi-label">Odd/Even Walsh COGS Calibration</span>
+                  </div>
                 </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">02 · Core 3-Tier Ensemble Engine</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Tier A (w=0.70):</strong> Quarter-specialized LightGBM MAE boosters + L2 Ridge shape regularizer.</li>
-                    <li><strong>Tier B (w=0.15):</strong> Post-2014 era-weighted GBDT &amp; Huber models resilient to macro shocks.</li>
-                    <li><strong>Tier C (w=0.15):</strong> Amazon Chronos-2 (120M) foundation model trajectory priors.</li>
-                  </ul>
-                </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">03 · Output Calibration &amp; SLA</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Odd/Even Walsh Fix:</strong> Corrects alternating fiscal-year COGS accounting shifts (-75% err).</li>
-                    <li><strong>22-Iteration Progression:</strong> Cuts expanding-window MAE from 1,100K down to 636K VND.</li>
-                    <li><strong>548-Day Output:</strong> Exports synchronized P10/P50/P90 Revenue, COGS, and Margin bands.</li>
-                  </ul>
+                <div class="showcase-flow-stages">
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">01</span>
+                        <h4 class="flow-stage-title">ERP Schema &amp; Fourier Profile</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Reconciles 12 ERP tables into a daily ledger and decomposes annual baseline level from 6-harmonic Fourier waves.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">12 ERP Tables</span>
+                      <span class="flow-tag">6-Harmonic Fourier</span>
+                      <span class="flow-tag">Zero-Leakage Lags</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">02</span>
+                        <h4 class="flow-stage-title">3-Tier Ensemble (70/15/15)</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Blends Quarter-Specialist LightGBM + L2 Ridge (0.70), Era-Weighted GBDT/Huber (0.15), and Chronos-2 120M (0.15).</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Q-LightGBM + Ridge</span>
+                      <span class="flow-tag">Huber + GBDT</span>
+                      <span class="flow-tag">Chronos-2 (120M)</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">03</span>
+                        <h4 class="flow-stage-title">Walsh Fix &amp; Conformal SLA</h4>
+                      </div>
+                    </div>
+                    <p class="flow-stage-desc">Corrects alternating fiscal-year COGS regime shifts via Walsh basis functions and exports 548-day conformal bands.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Walsh COGS Fix</span>
+                      <span class="flow-tag">R² = 0.880</span>
+                      <span class="flow-tag">548-Day Conformal</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -735,35 +945,77 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">#MLOps · #DDD · #CQRS · #ONNXRuntime · #TensorRT · #Airflow · #MLflow · #Kafka · #RedisFeatureStore · #Grafana · #JaegerOTel</span>
+                <span class="showcase-timeline-pill">Nov 2024 – Jul 2025</span>
+                <span class="showcase-domain-pill">Distributed MLOps · 4-Layer DDD &amp; Multi-Engine Serving</span>
                 <span class="pill-badge">0.72 ms Compute p99 · 14 Services · 628 Tests</span>
               </div>
               <h3>Phoenix ML: Self-Healing Enterprise MLOps &amp; Multi-Engine Serving Platform</h3>
-              <p class="showcase-desc">4-layer Domain-Driven Design MLOps platform orchestrating 14 containerized services across 5 ML domains with 0.72 ms ONNX/TensorRT inference, Redis/Parquet feature stores, Evidently drift guards, MLflow + MinIO registry, and autonomous Apache Airflow + Optuna self-healing.</p>
-              <div class="showcase-spec-grid">
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">01 · Input Feature Store &amp; Streaming</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Dual Feature Store:</strong> Redis 7 online store (0.21 ms p50) + Parquet/DVC offline store.</li>
-                    <li><strong>Kafka + PyFlink:</strong> Real-time sliding-window stream aggregations and feedback joiner.</li>
-                    <li><strong>5 Active Domains:</strong> Credit-Risk, Fraud, House-Price, Vision CIFAR-10, and Sentiment.</li>
-                  </ul>
+              <p class="showcase-desc">4-layer Domain-Driven Design MLOps platform orchestrating 14 containerized services across 5 ML domains with 0.72 ms ONNX/TensorRT serving, dual Redis/Parquet feature stores, and autonomous Airflow + Optuna self-healing.</p>
+
+              <div class="showcase-arch-strip">
+                <div class="showcase-kpi-bar">
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">0.72 ms</span>
+                    <span class="kpi-label">p99 Compute Latency (ONNX/TRT)</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">14 Services</span>
+                    <span class="kpi-label">4-Layer DDD · 6 Bounded Contexts</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">1,284 req/s</span>
+                    <span class="kpi-label">4 Traffic Routers + Circuit Breaker</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">17.2 s</span>
+                    <span class="kpi-label">Airflow + Optuna Auto-Heal Cycle</span>
+                  </div>
                 </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">02 · Core DDD Serving &amp; Routing</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Clean Architecture:</strong> 6 bounded contexts with strict CQRS command/query separation.</li>
-                    <li><strong>4 Traffic Routers:</strong> Single Champion, A/B Test (90/10), Canary (80/20), and Shadow Mirror.</li>
-                    <li><strong>Fault Isolation:</strong> 3-state Circuit Breaker (&lt;10 ms trip) across 4 pluggable ML engines.</li>
-                  </ul>
-                </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">03 · Output Self-Healing &amp; OTel SLA</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>4 Drift Engines:</strong> KS-test, PSI, Chi-Square, and Wasserstein + Evidently AI reports.</li>
-                    <li><strong>Airflow + MLflow:</strong> 6 Airflow DAGs + Optuna HPO + MinIO S3 / MLflow Champion promotion gate.</li>
-                    <li><strong>Full Observability:</strong> 6-panel Grafana dashboard, Prometheus, Jaeger OTel tracing &amp; K8s HPA.</li>
-                  </ul>
+                <div class="showcase-flow-stages">
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">01</span>
+                        <h4 class="flow-stage-title">Streaming &amp; Dual Feature Store</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Ingests Kafka events via PyFlink into Feast Redis 7 online store (0.21 ms p50) and Parquet/DVC offline storage.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Kafka + PyFlink</span>
+                      <span class="flow-tag">Redis 7 (0.21ms)</span>
+                      <span class="flow-tag">Parquet + DVC</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">02</span>
+                        <h4 class="flow-stage-title">CQRS &amp; 4-Router Inference</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Routes requests via Single, A/B (90/10), Canary (80/20), and Shadow strategies across 4 runtimes with circuit isolation.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">CQRS Bus</span>
+                      <span class="flow-tag">ONNX + TensorRT</span>
+                      <span class="flow-tag">Triton + BentoML</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">03</span>
+                        <h4 class="flow-stage-title">Drift Guards &amp; Self-Healing</h4>
+                      </div>
+                    </div>
+                    <p class="flow-stage-desc">Detects KS/PSI/χ²/W₁ drift to trigger 6 Airflow retraining DAGs, Optuna HPO, and MLflow Champion hot-swaps.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Evidently 4-Test</span>
+                      <span class="flow-tag">Airflow + Optuna</span>
+                      <span class="flow-tag">MLflow + Grafana</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -906,35 +1158,77 @@
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">#MultimodalRetrieval · #OpenAICLIP · #ViTB32 · #FaissIndexFlatIP · #CBIR · #TBIR · #HDF5 · #Flask · #PexelsAPI</span>
+                <span class="showcase-timeline-pill">Apr 2023 – Oct 2023</span>
+                <span class="showcase-domain-pill">Multimodal Search · OpenAI CLIP &amp; Faiss Vector Engine</span>
                 <span class="pill-badge">&lt;1 ms Faiss Cosine Search · Dual CBIR + TBIR</span>
               </div>
               <h3>Natural Landscape Image Search: Multimodal CLIP ViT-B/32 &amp; Faiss Retrieval Engine</h3>
-              <p class="showcase-desc">Dual-mode Content-Based (CBIR) and Text-Based (TBIR) visual search engine projecting high-resolution landscape photographs and natural-language queries into a shared 512-D OpenAI CLIP ViT-B/32 hypersphere indexed with Facebook Faiss IndexFlatIP.</p>
-              <div class="showcase-spec-grid">
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">01 · Input Corpus &amp; Multimodal Query</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Pexels API Crawler:</strong> Automated harvester across 6 landscape taxonomies and 25+ sub-terms.</li>
-                    <li><strong>Dual Query Ingress:</strong> Accepts reference image uploads (CBIR) or free-text prompts (TBIR).</li>
-                    <li><strong>HDF5 Persistence:</strong> Stores precomputed float32 feature matrices and UTF-8 paths in <code>clip_features.h5</code>.</li>
-                  </ul>
+              <p class="showcase-desc">Dual-mode Content-Based (CBIR) and Text-Based (TBIR) visual search engine projecting high-resolution landscapes and natural-language queries into a shared 512-D OpenAI CLIP ViT-B/32 hypersphere indexed with Facebook Faiss.</p>
+
+              <div class="showcase-arch-strip">
+                <div class="showcase-kpi-bar">
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">0.8 ms</span>
+                    <span class="kpi-label">Exact Faiss Inner-Product Search</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">512-D</span>
+                    <span class="kpi-label">L2-Normalized CLIP Hypersphere</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">6 Domains</span>
+                    <span class="kpi-label">25+ Automated Pexels Taxonomies</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">CBIR + TBIR</span>
+                    <span class="kpi-label">Zero-Shot Image &amp; Text Queries</span>
+                  </div>
                 </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">02 · Core CLIP ViT-B/32 &amp; Faiss Engine</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Shared 512-D Space:</strong> Joint Vision Transformer (ViT-B/32) and BPE causal text encoder projection.</li>
-                    <li><strong>Unit-Hypersphere Norm:</strong> L2-normalizes all image and text embeddings (<code>||v||₂ = 1.0</code>).</li>
-                    <li><strong>Faiss IndexFlatIP:</strong> Exact inner-product search equivalent to cosine similarity in &lt;1 ms.</li>
-                  </ul>
-                </div>
-                <div class="showcase-spec-card">
-                  <h4 class="spec-card-title">03 · Output CBIR + TBIR Web Engine</h4>
-                  <ul class="spec-card-list">
-                    <li><strong>Zero-Shot Alignment:</strong> Retrieves semantically matching scenes without manual category labels.</li>
-                    <li><strong>Configurable Top-K:</strong> Interactive Flask web interface supporting dynamic K=1..36 ranking.</li>
-                    <li><strong>Cosine Score Badges:</strong> Responsive gallery displaying real-time similarity scores and modal zoom.</li>
-                  </ul>
+                <div class="showcase-flow-stages">
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">01</span>
+                        <h4 class="flow-stage-title">Pexels Harvester &amp; Dual Ingress</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Crawls curated HD landscape corpora across 6 biome taxonomies and accepts image uploads or free-text prompts.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Pexels REST API</span>
+                      <span class="flow-tag">CBIR Image Upload</span>
+                      <span class="flow-tag">TBIR Text Prompt</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">02</span>
+                        <h4 class="flow-stage-title">CLIP ViT-B/32 &amp; HDF5 Store</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Projects visual patches and BPE text tokens into unit-normalized 512-D float32 vectors persisted in HDF5.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">CLIP ViT-B/32</span>
+                      <span class="flow-tag">L2 Unit Norm</span>
+                      <span class="flow-tag">HDF5 Tensor Store</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">03</span>
+                        <h4 class="flow-stage-title">Faiss IndexFlatIP &amp; Web UI</h4>
+                      </div>
+                    </div>
+                    <p class="flow-stage-desc">Executes exact cosine-equivalent inner-product retrieval in &lt;1 ms and renders interactive Top-K galleries.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Faiss IndexFlatIP</span>
+                      <span class="flow-tag">Dynamic Top-K</span>
+                      <span class="flow-tag">Flask Web UI</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
