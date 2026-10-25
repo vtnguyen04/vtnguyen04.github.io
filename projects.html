@@ -128,6 +128,15 @@
             <div class="showcase-media-hub" data-showcase="bfmc">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> System Architecture
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📐</span> Thesis Pipeline (Fig. 3.1)
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🧠</span> Multi-Task Network
+                </button>
+                <button class="showcase-tab" type="button">
                   <span class="tab-icon">▶️</span> Closed-Loop Track Demo
                 </button>
                 <button class="showcase-tab" type="button">
@@ -145,33 +154,51 @@
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">⚡</span> Power Schematic
                 </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">🧠</span> Multi-Task Network
-                </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">❖</span> System Architecture
-                </button>
               </div>
 
               <figure class="project-figure showcase-main-figure">
                 <div class="showcase-image-wrapper">
                   <img class="showcase-main-img zoomable-media"
-                       src="assets/bfmc-waypoint-thumb.webp"
-                       data-full-src="assets/bfmc-waypoint-thumb.webp"
-                       alt="Closed-Loop 1:10 Autonomous Track Run with NeuroPilot 10-Waypoint Trajectory and Traffic Sign Detection"
+                       src="assets/bfmc-architecture.webp"
+                       data-full-src="assets/bfmc-architecture.webp"
+                       alt="BFMC Autonomous Vehicle System Architecture: NeuroPilot Perception, EKF Localization, 23-State FSM & STM32 Control"
                        loading="lazy">
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Closed-Loop 1:10 Track Run — NeuroPilot Waypoint &amp; Sign HUD):</strong> Real-time onboard deployment executing 10-waypoint cubic Bézier trajectory tracking, dynamic steering control (33.0 cm/s), and 3D traffic-sign/stop-line distance estimation.
+                  <strong>Figure 1 (Cyber-Physical System Architecture):</strong> End-to-end 1:10 autonomous driving architecture integrating Intel RealSense D435i &amp; BNO055 EKF localization, NeuroPilot multi-task TensorRT perception (21.8 ms), 23-state behavioral FSM, and 30 Hz STM32 Nucleo actuation.
                 </figcaption>
               </figure>
 
               <div class="showcase-thumbs">
                 <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/bfmc-architecture.webp"
+                        data-alt="BFMC Autonomous Vehicle System Architecture: NeuroPilot Perception, EKF Localization, 23-State FSM & STM32 Control"
+                        data-caption="&lt;strong&gt;Figure 1 (Cyber-Physical System Architecture):&lt;/strong&gt; End-to-end 1:10 autonomous driving architecture integrating Intel RealSense D435i &amp; BNO055 EKF localization, NeuroPilot multi-task TensorRT perception (21.8 ms), 23-state behavioral FSM, and 30 Hz STM32 Nucleo actuation."
+                        title="System Architecture">
+                  <img src="assets/bfmc-architecture.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-fig3-1.webp"
+                        data-alt="Thesis Figure 3.1: Overall Autonomous Driving System Architecture"
+                        data-caption="&lt;strong&gt;Figure 2 (Thesis Pipeline — Fig. 3.1):&lt;/strong&gt; Six-layer cyber-physical control loop connecting RGB-D &amp; IMU sensing, NeuroPilot perception, behavioral supervisor state machine, pure pursuit control, and STM32 PWM actuation."
+                        title="Thesis Pipeline (Fig. 3.1)">
+                  <img src="assets/bfmc-thesis-fig3-1.webp" alt="Thesis Pipeline Fig 3.1 thumbnail">
+                  <span class="thumb-label">Thesis Fig. 3.1</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/bfmc-thesis-network-heads.webp"
+                        data-alt="Thesis Figure 3.2: NeuroPilot Multi-Task Architecture"
+                        data-caption="&lt;strong&gt;Figure 3 (NeuroPilot Multi-Task Network — Thesis Fig. 3.2):&lt;/strong&gt; Shared YOLO11 + BiFPN backbone with 13-class detection head, FiLM navigation routing, and cubic Bézier trajectory head (21.8 ms FP16)."
+                        title="Multi-Task Network">
+                  <img src="assets/bfmc-thesis-network-heads.webp" alt="Multi-Task Network thumbnail">
+                  <span class="thumb-label">Multi-Task AI</span>
+                </button>
+                <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-stanley-run.mp4"
                         data-alt="Closed-Loop 1:10 Autonomous Track Run with NeuroPilot 10-Waypoint Trajectory and Traffic Sign Detection"
-                        data-caption="&lt;strong&gt;Figure 1 (Closed-Loop 1:10 Track Run — NeuroPilot Waypoint &amp; Sign HUD):&lt;/strong&gt; Real-time onboard deployment executing 10-waypoint cubic Bézier trajectory tracking, dynamic steering control (33.0 cm/s), and 3D traffic-sign/stop-line distance estimation."
+                        data-caption="&lt;strong&gt;Figure 4 (Closed-Loop 1:10 Track Run — NeuroPilot Waypoint &amp; Sign HUD):&lt;/strong&gt; Real-time onboard deployment executing 10-waypoint cubic Bézier trajectory tracking, dynamic steering control (33.0 cm/s), and 3D traffic-sign/stop-line distance estimation."
                         title="Closed-Loop Track Demo">
                   <img src="assets/bfmc-waypoint-thumb.webp" alt="Closed-Loop Track Demo thumbnail">
                   <span class="thumb-label">▶️ Track Demo</span>
@@ -179,7 +206,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-central-ops.mp4"
                         data-alt="DriveBeyond MK-1 Central Ops Ground Station and Autonomous Route Execution"
-                        data-caption="&lt;strong&gt;Figure 2 (DriveBeyond MK-1 Central Ops Ground Station):&lt;/strong&gt; Live ground-control telemetry console showing global KDTree route planning, 49.0 cm/s autonomous cruising, and real-time Jetson Orin system diagnostics."
+                        data-caption="&lt;strong&gt;Figure 5 (DriveBeyond MK-1 Central Ops Ground Station):&lt;/strong&gt; Live ground-control telemetry console showing global KDTree route planning, 49.0 cm/s autonomous cruising, and real-time Jetson Orin system diagnostics."
                         title="Central Ops Station">
                   <img src="assets/bfmc-central-ops.webp" alt="Central Ops Station thumbnail">
                   <span class="thumb-label">▶️ Central Ops</span>
@@ -187,7 +214,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-hud-results.webp"
                         data-alt="Thesis Figure 5.4: Real-Time On-Track Telemetry HUD"
-                        data-caption="&lt;strong&gt;Figure 3 (Real-Time Telemetry HUD — Thesis Fig. 5.4):&lt;/strong&gt; Live Jetson Orin Nano deployment view showing 13-class traffic detection, spatial attention heatmap, and cubic Bézier trajectory."
+                        data-caption="&lt;strong&gt;Figure 6 (Real-Time Telemetry HUD — Thesis Fig. 5.4):&lt;/strong&gt; Live Jetson Orin Nano deployment view showing 13-class traffic detection, spatial attention heatmap, and cubic Bézier trajectory."
                         title="On-Track HUD">
                   <img src="assets/bfmc-hud-results.webp" alt="On-Track HUD thumbnail">
                   <span class="thumb-label">On-Track HUD</span>
@@ -195,7 +222,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-thesis-control-eval.webp"
                         data-alt="Thesis Figure 5.1: CARLA Town02 Trajectory Tracking & FDAT Ablation"
-                        data-caption="&lt;strong&gt;Figure 4 (CARLA &amp; FDAT Evaluation — Thesis Fig. 5.1):&lt;/strong&gt; Quantitative trajectory tracking comparison in CARLA Town02 showing 3.8 cm lateral RMSE and 41% error reduction via Frenet-inspired FDAT loss."
+                        data-caption="&lt;strong&gt;Figure 7 (CARLA &amp; FDAT Evaluation — Thesis Fig. 5.1):&lt;/strong&gt; Quantitative trajectory tracking comparison in CARLA Town02 showing 3.8 cm lateral RMSE and 41% error reduction via Frenet-inspired FDAT loss."
                         title="CARLA &amp; FDAT Eval">
                   <img src="assets/bfmc-thesis-control-eval.webp" alt="CARLA Eval thumbnail">
                   <span class="thumb-label">CARLA &amp; FDAT</span>
@@ -203,7 +230,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-thesis-vehicle-hw.webp"
                         data-alt="Thesis Figure 4.1: 1:10 Scale Autonomous Vehicle Hardware"
-                        data-caption="&lt;strong&gt;Figure 5 (1:10 Scale Vehicle Hardware — Thesis Fig. 4.1):&lt;/strong&gt; Physical competition platform integrating NVIDIA Jetson Orin Nano 8GB, Intel RealSense D435i RGB-D camera, BNO055 IMU, and STM32 Nucleo controller."
+                        data-caption="&lt;strong&gt;Figure 8 (1:10 Scale Vehicle Hardware — Thesis Fig. 4.1):&lt;/strong&gt; Physical competition platform integrating NVIDIA Jetson Orin Nano 8GB, Intel RealSense D435i RGB-D camera, BNO055 IMU, and STM32 Nucleo controller."
                         title="1:10 Vehicle HW">
                   <img src="assets/bfmc-thesis-vehicle-hw.webp" alt="1:10 Vehicle HW thumbnail">
                   <span class="thumb-label">Vehicle HW</span>
@@ -211,26 +238,10 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/bfmc-thesis-power-distribution.webp"
                         data-alt="Thesis Figure 4.2: Electrical Power & STM32 Actuation Schematic"
-                        data-caption="&lt;strong&gt;Figure 6 (Power &amp; Actuation Schematic — Thesis Fig. 4.2):&lt;/strong&gt; Dual-rail power isolation, buck converters, BLDC traction drive, and STM32 hardware watchdog interlocks."
+                        data-caption="&lt;strong&gt;Figure 9 (Power &amp; Actuation Schematic — Thesis Fig. 4.2):&lt;/strong&gt; Dual-rail power isolation, buck converters, BLDC traction drive, and STM32 hardware watchdog interlocks."
                         title="Power Schematic">
                   <img src="assets/bfmc-thesis-power-distribution.webp" alt="Power Schematic thumbnail">
                   <span class="thumb-label">Power Circuit</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/bfmc-thesis-network-heads.webp"
-                        data-alt="Thesis Figure 3.2: NeuroPilot Multi-Task Architecture"
-                        data-caption="&lt;strong&gt;Figure 7 (NeuroPilot Multi-Task Network — Thesis Fig. 3.2):&lt;/strong&gt; Shared YOLO11 + BiFPN backbone with 13-class detection head, FiLM navigation routing, and cubic Bézier trajectory head (21.8 ms FP16)."
-                        title="Multi-Task Network">
-                  <img src="assets/bfmc-thesis-network-heads.webp" alt="Multi-Task Network thumbnail">
-                  <span class="thumb-label">Multi-Task AI</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/bfmc-thesis-fig3-1.webp"
-                        data-alt="Thesis Figure 3.1: Overall Autonomous Driving System Architecture"
-                        data-caption="&lt;strong&gt;Figure 8 (System Architecture — Thesis Fig. 3.1):&lt;/strong&gt; End-to-end autonomous driving pipeline connecting RGB-D &amp; IMU sensing, NeuroPilot multi-task perception, behavior state machine, and STM32 actuation."
-                        title="System Architecture">
-                  <img src="assets/bfmc-thesis-fig3-1.webp" alt="System Architecture thumbnail">
-                  <span class="thumb-label">Architecture</span>
                 </button>
               </div>
             </div>
@@ -289,6 +300,9 @@
             <div class="showcase-media-hub" data-showcase="recsys">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> Hybrid Architecture
+                </button>
+                <button class="showcase-tab" type="button">
                   <span class="tab-icon">📊</span> Intent &amp; Exposure Funnel
                 </button>
                 <button class="showcase-tab" type="button">
@@ -297,30 +311,35 @@
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">🏆</span> Finalist Certificate
                 </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">❖</span> Hybrid Architecture
-                </button>
               </div>
 
               <figure class="project-figure showcase-main-figure">
                 <div class="showcase-image-wrapper">
                   <img class="showcase-main-img zoomable-media"
-                       src="assets/recsys-funnel.webp"
-                       data-full-src="assets/recsys-funnel.webp"
-                       alt="User Intent Conversion Funnel and Marketplace Exposure Paradox"
+                       src="assets/recsys-architecture.webp"
+                       data-full-src="assets/recsys-architecture.webp"
+                       alt="Insight Hunter 4-Stage Hybrid Retrieval and Reranking Architecture"
                        loading="lazy">
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Intent Funnel &amp; Exposure Paradox):</strong> Analysis of 161.7M clickstream events showing 21.0% verified lead conversion and resolving the individual-seller exposure imbalance.
+                  <strong>Figure 1 (4-Stage Pipeline Architecture):</strong> Out-of-core Polars feature extraction, hybrid ContactALS + VN-SBERT + Haversine retrieval, domain rule filtering, and LightGBM LambdaRank + MMR reranking.
                 </figcaption>
               </figure>
 
               <div class="showcase-thumbs">
                 <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/recsys-architecture.webp"
+                        data-alt="Insight Hunter 4-Stage Hybrid Retrieval and Reranking Architecture"
+                        data-caption="&lt;strong&gt;Figure 1 (4-Stage Pipeline Architecture):&lt;/strong&gt; Out-of-core Polars feature extraction, hybrid ContactALS + VN-SBERT + Haversine retrieval, domain rule filtering, and LightGBM LambdaRank + MMR reranking."
+                        title="Hybrid Architecture">
+                  <img src="assets/recsys-architecture.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
                         data-src="assets/recsys-funnel.webp"
                         data-alt="User Intent Conversion Funnel and Marketplace Exposure Paradox"
-                        data-caption="&lt;strong&gt;Figure 1 (Intent Funnel &amp; Exposure Paradox):&lt;/strong&gt; Analysis of 161.7M clickstream events showing 21.0% verified lead conversion and resolving the individual-seller exposure imbalance."
+                        data-caption="&lt;strong&gt;Figure 2 (Intent Funnel &amp; Exposure Paradox):&lt;/strong&gt; Analysis of 161.7M clickstream events showing 21.0% verified lead conversion and resolving the individual-seller exposure imbalance."
                         title="Intent &amp; Exposure Funnel">
                   <img src="assets/recsys-funnel.webp" alt="Intent Funnel thumbnail">
                   <span class="thumb-label">Intent Funnel</span>
@@ -328,7 +347,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/recsys-coverage.webp"
                         data-alt="Catalog Coverage Expansion and Seller Reach Lift"
-                        data-caption="&lt;strong&gt;Figure 2 (11.5× Catalog Coverage Lift):&lt;/strong&gt; MMR diversity reranking expands catalog coverage from 3.7% to 42.6% and reaches 415,280 unique sellers while preserving 98.5% peak NDCG."
+                        data-caption="&lt;strong&gt;Figure 3 (11.5× Catalog Coverage Lift):&lt;/strong&gt; MMR diversity reranking expands catalog coverage from 3.7% to 42.6% and reaches 415,280 unique sellers while preserving 98.5% peak NDCG."
                         title="11.5× Coverage Lift">
                   <img src="assets/recsys-coverage.webp" alt="Coverage Lift thumbnail">
                   <span class="thumb-label">11.5× Coverage</span>
@@ -336,18 +355,10 @@
                 <button class="showcase-thumb" type="button"
                         data-src="certs/datathon-2026.webp"
                         data-alt="VinUniversity Datathon 2026 Top 5 Finalist Certificate"
-                        data-caption="&lt;strong&gt;Figure 3 (Official Finalist Recognition):&lt;/strong&gt; Certificate of Achievement awarded to Vo Thanh Nguyen (Team Insight Hunter) at the VinUniversity Datathon 2026 Finals."
+                        data-caption="&lt;strong&gt;Figure 4 (Official Finalist Recognition):&lt;/strong&gt; Certificate of Achievement awarded to Vo Thanh Nguyen (Team Insight Hunter) at the VinUniversity Datathon 2026 Finals."
                         title="Finalist Certificate">
                   <img src="certs/datathon-2026.webp" alt="Datathon Certificate thumbnail">
                   <span class="thumb-label">Certificate</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/recsys-architecture.webp"
-                        data-alt="Insight Hunter 4-Stage Hybrid Retrieval and Reranking Architecture"
-                        data-caption="&lt;strong&gt;Figure 4 (4-Stage Pipeline Architecture):&lt;/strong&gt; Out-of-core Polars feature extraction, hybrid ContactALS + VN-SBERT + Haversine retrieval, domain rule filtering, and LightGBM LambdaRank + MMR reranking."
-                        title="Hybrid Architecture">
-                  <img src="assets/recsys-architecture.webp" alt="System Architecture thumbnail">
-                  <span class="thumb-label">Architecture</span>
                 </button>
               </div>
             </div>
@@ -404,6 +415,18 @@
             <div class="showcase-media-hub" data-showcase="knowledgeforge">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> System Architecture
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔀</span> Multi-Agent DAG Flow
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🕸️</span> Hybrid GraphRAG Pipeline
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🧠</span> 4-Tier Memory &amp; Context
+                </button>
+                <button class="showcase-tab" type="button">
                   <span class="tab-icon">💬</span> Live Chat &amp; Tool Trace UI
                 </button>
                 <button class="showcase-tab" type="button">
@@ -412,33 +435,59 @@
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">🗂️</span> Live Vector &amp; RBAC Console
                 </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">🔀</span> Multi-Agent DAG Flow
-                </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">❖</span> System Architecture
-                </button>
               </div>
 
               <figure class="project-figure showcase-main-figure">
                 <div class="showcase-image-wrapper">
                   <img class="showcase-main-img zoomable-media"
-                       src="assets/kf-live-ui.webp"
-                       data-full-src="assets/kf-live-ui.webp"
-                       alt="Live KnowledgeForge Next.js 15 Chat Workspace and Multi-Agent Activity Trace"
+                       src="assets/kf-architecture.webp"
+                       data-full-src="assets/kf-architecture.webp"
+                       alt="KnowledgeForge Enterprise Agentic OS Architecture"
                        loading="lazy">
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Live Next.js 15 Chat Workspace &amp; Activity Trace):</strong> Real captured browser session showing grounded multi-agent response with inline source citations and expanded tool-call JSON payloads.
+                  <strong>Figure 1 (System Architecture):</strong> End-to-end architecture connecting Next.js 15 / FastAPI TrustLayer ingress, LangGraph topological multi-agent orchestration, hybrid GraphRAG retrieval, 4-tier cognitive memory, and OpenTelemetry observability.
                 </figcaption>
               </figure>
 
               <div class="showcase-thumbs">
                 <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/kf-architecture.webp"
+                        data-alt="KnowledgeForge Enterprise Agentic OS Architecture"
+                        data-caption="&lt;strong&gt;Figure 1 (System Architecture):&lt;/strong&gt; End-to-end architecture connecting Next.js 15 / FastAPI TrustLayer ingress, LangGraph topological multi-agent orchestration, hybrid GraphRAG retrieval, 4-tier cognitive memory, and OpenTelemetry observability."
+                        title="System Architecture">
+                  <img src="assets/kf-architecture.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/kf-orchestration.webp"
+                        data-alt="KnowledgeForge Multi-Agent DAG Routing and Self-Correction Loop"
+                        data-caption="&lt;strong&gt;Figure 2 (Multi-Agent Topological DAG &amp; Self-Correction):&lt;/strong&gt; TrustLayer PII/RBAC gate, PlannerAgent dependency compiler, parallel Wave 1 &amp; Wave 2 Bubblewrap sandbox execution, and DeBERTa Faithfulness (&amp;ge;0.85) self-correction retry loop."
+                        title="Multi-Agent DAG Flow">
+                  <img src="assets/kf-orchestration.webp" alt="Agent Orchestration thumbnail">
+                  <span class="thumb-label">DAG Flow</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/kf-rag-pipeline.webp"
+                        data-alt="KnowledgeForge Tri-Modal Hybrid GraphRAG and Verified Citation Pipeline"
+                        data-caption="&lt;strong&gt;Figure 3 (Tri-Modal Hybrid GraphRAG &amp; Citation Pipeline):&lt;/strong&gt; Layout-aware chunking, MinHash LSH near-duplicate pruning, parallel Qdrant + BM25 + Neo4j/LightRAG retrieval, RRF + Cross-Encoder + MMR reranking, and RAGAS atomic claim verification."
+                        title="Hybrid GraphRAG Pipeline">
+                  <img src="assets/kf-rag-pipeline.webp" alt="Hybrid GraphRAG Pipeline thumbnail">
+                  <span class="thumb-label">GraphRAG Flow</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/kf-memory-flow.webp"
+                        data-alt="KnowledgeForge 4-Tier Cognitive Memory, 5-Layer Context Engine and Zero-Trust Sandbox"
+                        data-caption="&lt;strong&gt;Figure 4 (4-Tier Cognitive Memory &amp; 5-Layer Context Engine):&lt;/strong&gt; T1 Redis/Postgres working state, T2 Qdrant/MongoDB episodic recall, T3 Neo4j/mem0 entity graph, T4 750+ CEL skills, 5-layer prefix-cached prompt assembly (88.4% hit), and Bubblewrap zero-egress sandbox."
+                        title="4-Tier Memory &amp; Context">
+                  <img src="assets/kf-memory-flow.webp" alt="4-Tier Memory & Context thumbnail">
+                  <span class="thumb-label">4-Tier Memory</span>
+                </button>
+                <button class="showcase-thumb" type="button"
                         data-src="assets/kf-live-ui.webp"
                         data-alt="Live KnowledgeForge Next.js 15 Chat Workspace and Multi-Agent Activity Trace"
-                        data-caption="&lt;strong&gt;Figure 1 (Live Next.js 15 Chat Workspace &amp; Activity Trace):&lt;/strong&gt; Real captured browser session showing grounded multi-agent response with inline source citations and expanded tool-call JSON payloads."
+                        data-caption="&lt;strong&gt;Figure 5 (Live Next.js 15 Chat Workspace &amp; Activity Trace):&lt;/strong&gt; Real captured browser session showing grounded multi-agent response with inline source citations and expanded tool-call JSON payloads."
                         title="Live Chat &amp; Tool Trace UI">
                   <img src="assets/kf-live-ui.webp" alt="Live Chat UI thumbnail">
                   <span class="thumb-label">Live Chat UI</span>
@@ -446,7 +495,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/kf-agent-graph.webp"
                         data-alt="Live KnowledgeForge OpenTelemetry Trace Explorer and Span Hierarchy"
-                        data-caption="&lt;strong&gt;Figure 2 (Live OTel Trace &amp; Latency Explorer UI):&lt;/strong&gt; Real captured admin telemetry console displaying p50 (195 ms) / p95 (385 ms) latency cards and the expanded multi-agent span timeline tree."
+                        data-caption="&lt;strong&gt;Figure 6 (Live OTel Trace &amp; Latency Explorer UI):&lt;/strong&gt; Real captured admin telemetry console displaying p50 (195 ms) / p95 (385 ms) latency cards and the expanded multi-agent span timeline tree."
                         title="Live OTel Trace Explorer">
                   <img src="assets/kf-agent-graph.webp" alt="Live OTel Trace UI thumbnail">
                   <span class="thumb-label">Live Trace UI</span>
@@ -454,26 +503,10 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/kf-memory-view.webp"
                         data-alt="Live KnowledgeForge Vector Store and 3-Tier RBAC Document Console"
-                        data-caption="&lt;strong&gt;Figure 3 (Live Vector Store &amp; RBAC Document Console):&lt;/strong&gt; Real captured knowledge base manager listing indexed enterprise documents, vector chunk counts, and Organization/Department RBAC scopes."
+                        data-caption="&lt;strong&gt;Figure 7 (Live Vector Store &amp; RBAC Document Console):&lt;/strong&gt; Real captured knowledge base manager listing indexed enterprise documents, vector chunk counts, and Organization/Department RBAC scopes."
                         title="Live Vector &amp; RBAC Console">
                   <img src="assets/kf-memory-view.webp" alt="Live Vector Console thumbnail">
                   <span class="thumb-label">Live KB UI</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/kf-orchestration.webp"
-                        data-alt="KnowledgeForge Multi-Agent DAG Routing and Reflexion Loop"
-                        data-caption="&lt;strong&gt;Figure 4 (Multi-Agent DAG Orchestration):&lt;/strong&gt; Complexity routing gate, topological DAG wave planner, parallel specialist execution, and Critic/Verifier gate."
-                        title="Multi-Agent DAG Flow">
-                  <img src="assets/kf-orchestration.webp" alt="Agent Orchestration thumbnail">
-                  <span class="thumb-label">DAG Flow</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/kf-architecture.webp"
-                        data-alt="KnowledgeForge Enterprise Agentic OS Architecture"
-                        data-caption="&lt;strong&gt;Figure 5 (System Architecture):&lt;/strong&gt; End-to-end architecture connecting Next.js 15 / FastAPI ingress, 4-lane topological DAG orchestration, hybrid GraphRAG retrieval, and 4-tier cognitive memory."
-                        title="System Architecture">
-                  <img src="assets/kf-architecture.webp" alt="System Architecture thumbnail">
-                  <span class="thumb-label">Architecture</span>
                 </button>
               </div>
             </div>
@@ -530,43 +563,43 @@
             <div class="showcase-media-hub" data-showcase="distraction">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
-                  <span class="tab-icon">▶️</span> Real-Time HUD Walkthrough
+                  <span class="tab-icon">❖</span> Zero-Copy IPC Architecture
                 </button>
                 <button class="showcase-tab" type="button">
-                  <span class="tab-icon">❖</span> Zero-Copy IPC Architecture
+                  <span class="tab-icon">▶️</span> Real-Time HUD Walkthrough
                 </button>
               </div>
 
               <figure class="project-figure showcase-main-figure">
                 <div class="showcase-image-wrapper">
                   <img class="showcase-main-img zoomable-media"
-                       src="assets/distraction-hud-frame.webp"
-                       data-full-src="assets/distraction-hud-frame.webp"
-                       alt="Real-Time Driver Monitoring HUD Video Recording"
+                       src="assets/distraction-ipc-architecture.webp"
+                       data-full-src="assets/distraction-ipc-architecture.webp"
+                       alt="Zero-Copy POSIX Shared-Memory Multi-Process Architecture"
                        loading="lazy">
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Real-Time Driver HUD Walkthrough):</strong> Full-rate recording of the live driver distraction and fatigue detection HUD tracking 478-point FaceMesh, 6-DoF head pose, and hysteresis alerting.
+                  <strong>Figure 1 (Zero-Copy Multiprocessing IPC):</strong> Four-stage pipeline linking lock-free <code>/dev/shm</code> ring buffers, parallel MediaPipe &amp; TensorRT workers, 6-signal fusion, and hysteresis alerting.
                 </figcaption>
               </figure>
 
               <div class="showcase-thumbs">
                 <button class="showcase-thumb is-active" type="button"
-                        data-src="assets/distraction-walkthrough.mp4"
-                        data-alt="Real-Time Driver Monitoring HUD Video Recording"
-                        data-caption="&lt;strong&gt;Figure 1 (Real-Time Driver HUD Walkthrough):&lt;/strong&gt; Full-rate recording of the live driver distraction and fatigue detection HUD tracking 478-point FaceMesh, 6-DoF head pose, and hysteresis alerting."
-                        title="Real-Time HUD Walkthrough">
-                  <img src="assets/distraction-hud-frame.webp" alt="Real-Time HUD Walkthrough thumbnail">
-                  <span class="thumb-label">▶️ Live HUD Demo</span>
-                </button>
-                <button class="showcase-thumb" type="button"
                         data-src="assets/distraction-ipc-architecture.webp"
                         data-alt="Zero-Copy POSIX Shared-Memory Multi-Process Architecture"
-                        data-caption="&lt;strong&gt;Figure 2 (Zero-Copy Multiprocessing IPC):&lt;/strong&gt; Four-stage pipeline linking lock-free &lt;code&gt;/dev/shm&lt;/code&gt; ring buffers, parallel MediaPipe &amp; TensorRT workers, 6-signal fusion, and hysteresis alerting."
+                        data-caption="&lt;strong&gt;Figure 1 (Zero-Copy Multiprocessing IPC):&lt;/strong&gt; Four-stage pipeline linking lock-free &lt;code&gt;/dev/shm&lt;/code&gt; ring buffers, parallel MediaPipe &amp; TensorRT workers, 6-signal fusion, and hysteresis alerting."
                         title="Zero-Copy IPC Architecture">
                   <img src="assets/distraction-ipc-architecture.webp" alt="IPC Architecture thumbnail">
                   <span class="thumb-label">IPC Pipeline</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/distraction-walkthrough.mp4"
+                        data-alt="Real-Time Driver Monitoring HUD Video Recording"
+                        data-caption="&lt;strong&gt;Figure 2 (Real-Time Driver HUD Walkthrough):&lt;/strong&gt; Full-rate recording of the live driver distraction and fatigue detection HUD tracking 478-point FaceMesh, 6-DoF head pose, and hysteresis alerting."
+                        title="Real-Time HUD Walkthrough">
+                  <img src="assets/distraction-hud-frame.webp" alt="Real-Time HUD Walkthrough thumbnail">
+                  <span class="thumb-label">▶️ Live HUD Demo</span>
                 </button>
               </div>
             </div>
@@ -623,6 +656,9 @@
             <div class="showcase-media-hub" data-showcase="forecasting">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> Pipeline Architecture
+                </button>
+                <button class="showcase-tab" type="button">
                   <span class="tab-icon">📈</span> 548-Day Trajectory
                 </button>
                 <button class="showcase-tab" type="button">
@@ -631,30 +667,35 @@
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">🔄</span> Seasonality &amp; COGS
                 </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">❖</span> Pipeline Architecture
-                </button>
               </div>
 
               <figure class="project-figure showcase-main-figure">
                 <div class="showcase-image-wrapper">
                   <img class="showcase-main-img zoomable-media"
-                       src="assets/revenue-cogs-timeline.webp"
-                       data-full-src="assets/revenue-cogs-timeline.webp"
-                       alt="Multi-Year Historical Ledger to 548-Day Calibrated Forecast Trajectory"
+                       src="assets/revenue-cogs-pipeline.webp"
+                       data-full-src="assets/revenue-cogs-pipeline.webp"
+                       alt="Revenue and COGS Multiplicative Seasonality and 3-Tier Ensemble Architecture"
                        loading="lazy">
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (548-Day Forecast Trajectory):</strong> Joint daily Revenue and COGS historical ledger and calibrated 548-day forecast horizon comparing the 3-Tier Ensemble against Chronos-2 (120M).
+                  <strong>Figure 1 (Forecasting Pipeline Architecture):</strong> Six-stage pipeline from 12 relational ERP tables and multiplicative Fourier seasonality to the 70/15/15 3-Tier Ensemble and Walsh COGS calibration.
                 </figcaption>
               </figure>
 
               <div class="showcase-thumbs">
                 <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/revenue-cogs-pipeline.webp"
+                        data-alt="Revenue and COGS Multiplicative Seasonality and 3-Tier Ensemble Architecture"
+                        data-caption="&lt;strong&gt;Figure 1 (Forecasting Pipeline Architecture):&lt;/strong&gt; Six-stage pipeline from 12 relational ERP tables and multiplicative Fourier seasonality to the 70/15/15 3-Tier Ensemble and Walsh COGS calibration."
+                        title="Pipeline Architecture">
+                  <img src="assets/revenue-cogs-pipeline.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
                         data-src="assets/revenue-cogs-timeline.webp"
                         data-alt="Multi-Year Historical Ledger to 548-Day Calibrated Forecast Trajectory"
-                        data-caption="&lt;strong&gt;Figure 1 (548-Day Forecast Trajectory):&lt;/strong&gt; Joint daily Revenue and COGS historical ledger and calibrated 548-day forecast horizon comparing the 3-Tier Ensemble against Chronos-2 (120M)."
+                        data-caption="&lt;strong&gt;Figure 2 (548-Day Forecast Trajectory):&lt;/strong&gt; Joint daily Revenue and COGS historical ledger and calibrated 548-day forecast horizon comparing the 3-Tier Ensemble against Chronos-2 (120M)."
                         title="548-Day Trajectory">
                   <img src="assets/revenue-cogs-timeline.webp" alt="548-Day Trajectory thumbnail">
                   <span class="thumb-label">Trajectory</span>
@@ -662,7 +703,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/revenue-cogs-overlay.webp"
                         data-alt="548-Day Prediction Zone Overlay and 90% Conformal Bounds"
-                        data-caption="&lt;strong&gt;Figure 2 (548-Day Prediction Zone Overlay &amp; Conformal Bounds):&lt;/strong&gt; Synchronized P10/P50/P90 conformal prediction intervals comparing Tier A (LightGBM + Ridge) and Tier C (Chronos-2 120M) against the calibrated 3-tier ensemble (636K VND MAE) across the 548-day evaluation window."
+                        data-caption="&lt;strong&gt;Figure 3 (548-Day Prediction Zone Overlay &amp; Conformal Bounds):&lt;/strong&gt; Synchronized P10/P50/P90 conformal prediction intervals comparing Tier A (LightGBM + Ridge) and Tier C (Chronos-2 120M) against the calibrated 3-tier ensemble (636K VND MAE) across the 548-day evaluation window."
                         title="Conformal Overlay">
                   <img src="assets/revenue-cogs-overlay.webp" alt="548-Day Conformal Overlay thumbnail">
                   <span class="thumb-label">Conformal Overlay</span>
@@ -670,18 +711,10 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/revenue-cogs-seasonality.webp"
                         data-alt="Annual Multiplicative Seasonality Fit and Odd/Even-Year COGS Calibration"
-                        data-caption="&lt;strong&gt;Figure 3 (Seasonality &amp; Odd/Even COGS Calibration):&lt;/strong&gt; 6-harmonic Fourier seasonal profile fit (R² = 0.994) and odd/even fiscal regime COGS error reduction."
+                        data-caption="&lt;strong&gt;Figure 4 (Seasonality &amp; Odd/Even COGS Calibration):&lt;/strong&gt; 6-harmonic Fourier seasonal profile fit (R² = 0.994) and odd/even fiscal regime COGS error reduction."
                         title="Seasonality &amp; COGS">
                   <img src="assets/revenue-cogs-seasonality.webp" alt="Seasonality Fit thumbnail">
                   <span class="thumb-label">Seasonality</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/revenue-cogs-pipeline.webp"
-                        data-alt="Revenue and COGS Multiplicative Seasonality and 3-Tier Ensemble Architecture"
-                        data-caption="&lt;strong&gt;Figure 4 (Forecasting Pipeline Architecture):&lt;/strong&gt; Six-stage pipeline from 12 relational ERP tables and multiplicative Fourier seasonality to the 70/15/15 3-Tier Ensemble and Walsh COGS calibration."
-                        title="Pipeline Architecture">
-                  <img src="assets/revenue-cogs-pipeline.webp" alt="System Architecture thumbnail">
-                  <span class="thumb-label">Architecture</span>
                 </button>
               </div>
             </div>
@@ -738,10 +771,19 @@
             <div class="showcase-media-hub" data-showcase="phoenix-ml">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> Platform Architecture
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">⚡</span> CQRS &amp; 4-Router Serving
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔄</span> Self-Healing &amp; Drift Loop
+                </button>
+                <button class="showcase-tab" type="button">
                   <span class="tab-icon">🖥️</span> Live Control Plane UI
                 </button>
                 <button class="showcase-tab" type="button">
-                  <span class="tab-icon">🔄</span> Live Airflow DAGs UI
+                  <span class="tab-icon">🌀</span> Live Airflow DAGs UI
                 </button>
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">🧪</span> Live MLflow Registry UI
@@ -755,30 +797,51 @@
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">📡</span> Live FastAPI /docs UI
                 </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">❖</span> Platform Architecture
-                </button>
               </div>
 
               <figure class="project-figure showcase-main-figure">
                 <div class="showcase-image-wrapper">
                   <img class="showcase-main-img zoomable-media"
-                       src="assets/phoenix-control-plane.webp"
-                       data-full-src="assets/phoenix-control-plane.webp"
-                       alt="Live Phoenix ML React Control Plane Dashboard"
+                       src="assets/phoenix-system-architecture.webp"
+                       data-full-src="assets/phoenix-system-architecture.webp"
+                       alt="Phoenix ML 4-Layer DDD and Self-Healing MLOps Architecture"
                        loading="lazy">
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Live React Control Plane UI):</strong> Real captured browser session of the Phoenix ML frontend showing Champion vs Challenger metrics, KS drift alert, and 30-feature credit-risk inference (GOOD 96.5%, 0.7 ms).
+                  <strong>Figure 1 (Platform Architecture):</strong> End-to-end enterprise MLOps architecture integrating Kafka/Flink streaming, Feast Redis/Parquet feature stores, multi-engine serving, and Airflow + Optuna self-healing.
                 </figcaption>
               </figure>
 
               <div class="showcase-thumbs">
                 <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/phoenix-system-architecture.webp"
+                        data-alt="Phoenix ML 4-Layer DDD and Self-Healing MLOps Architecture"
+                        data-caption="&lt;strong&gt;Figure 1 (Platform Architecture):&lt;/strong&gt; End-to-end enterprise MLOps architecture integrating Kafka/Flink streaming, Feast Redis/Parquet feature stores, multi-engine serving, and Airflow + Optuna self-healing."
+                        title="Platform Architecture">
+                  <img src="assets/phoenix-system-architecture.webp" alt="System Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-inference-engine.webp"
+                        data-alt="Phoenix ML 4-Layer DDD Clean Architecture, CQRS Bus, and 4-Strategy Multi-Engine Serving"
+                        data-caption="&lt;strong&gt;Figure 2 (4-Layer DDD Clean Architecture &amp; Multi-Engine Serving):&lt;/strong&gt; CQRS Command/Query Bus, Chain-of-Responsibility pipeline, 4 traffic routing strategies (Single, A/B 90/10, Canary 80/20, Shadow Mirror), 3-state Circuit Breaker, and 4 inference runtimes (0.72 ms p99)."
+                        title="CQRS &amp; 4-Router Serving">
+                  <img src="assets/phoenix-inference-engine.webp" alt="CQRS &amp; Serving Engine thumbnail">
+                  <span class="thumb-label">CQRS &amp; Routers</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/phoenix-mlops-pipeline.webp"
+                        data-alt="Phoenix ML Closed-Loop Autonomous Self-Healing, 4-Method Drift Detection, and Airflow Retraining"
+                        data-caption="&lt;strong&gt;Figure 3 (Autonomous Self-Healing &amp; Drift Retraining Loop):&lt;/strong&gt; Closed-loop MLOps feedback cycle connecting Kafka event logs, 4-method statistical drift engines (KS, PSI, Chi-Square, Wasserstein), Apache Airflow 5-step retraining DAGs, Optuna Bayesian HPO, and MLflow Champion promotion."
+                        title="Self-Healing &amp; Drift Loop">
+                  <img src="assets/phoenix-mlops-pipeline.webp" alt="Self-Healing MLOps Loop thumbnail">
+                  <span class="thumb-label">Self-Healing Loop</span>
+                </button>
+                <button class="showcase-thumb" type="button"
                         data-src="assets/phoenix-control-plane.webp"
                         data-alt="Live Phoenix ML React Control Plane Dashboard"
-                        data-caption="&lt;strong&gt;Figure 1 (Live React Control Plane UI):&lt;/strong&gt; Real captured browser session of the Phoenix ML frontend showing Champion vs Challenger metrics, KS drift alert, and 30-feature credit-risk inference (GOOD 96.5%, 0.7 ms)."
+                        data-caption="&lt;strong&gt;Figure 4 (Live React Control Plane UI):&lt;/strong&gt; Real captured browser session of the Phoenix ML frontend showing Champion vs Challenger metrics, KS drift alert, and 30-feature credit-risk inference (GOOD 96.5%, 0.7 ms)."
                         title="Live Control Plane UI">
                   <img src="assets/phoenix-control-plane.webp" alt="Live Control Plane thumbnail">
                   <span class="thumb-label">Control Plane UI</span>
@@ -786,7 +849,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/phoenix-airflow-ui.webp"
                         data-alt="Live Apache Airflow 2.9 Self-Healing Pipeline and Credit-Risk Retraining DAG Execution"
-                        data-caption="&lt;strong&gt;Figure 2 (Live Apache Airflow 2.9 Orchestrator UI):&lt;/strong&gt; Execution graph and task logs for &lt;code&gt;self_healing_pipeline&lt;/code&gt; &amp; &lt;code&gt;training_credit_risk&lt;/code&gt; (&lt;code&gt;validate_data → train_model → evaluate_model → log_to_mlflow → register_model&lt;/code&gt;, 17.2s total)."
+                        data-caption="&lt;strong&gt;Figure 5 (Live Apache Airflow 2.9 Orchestrator UI):&lt;/strong&gt; Execution graph and task logs for &lt;code&gt;self_healing_pipeline&lt;/code&gt; &amp; &lt;code&gt;training_credit_risk&lt;/code&gt; (&lt;code&gt;validate_data → train_model → evaluate_model → log_to_mlflow → register_model&lt;/code&gt;, 17.2s total)."
                         title="Live Airflow DAGs UI">
                   <img src="assets/phoenix-airflow-ui.webp" alt="Live Airflow UI thumbnail">
                   <span class="thumb-label">Airflow DAGs UI</span>
@@ -794,7 +857,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/phoenix-mlflow-registry.webp"
                         data-alt="Live MLflow 2.16 Model Registry and Optuna Bayesian HPO Experiment Tracking"
-                        data-caption="&lt;strong&gt;Figure 3 (Live MLflow 2.16 Model Registry &amp; Optuna HPO):&lt;/strong&gt; Experiment runs comparing &lt;code&gt;@challenger (v2-optuna)&lt;/code&gt; (ROC-AUC 0.906, F1 0.938, Accuracy 0.942) against &lt;code&gt;@champion (v1)&lt;/code&gt; with MinIO S3 ONNX artifacts."
+                        data-caption="&lt;strong&gt;Figure 6 (Live MLflow 2.16 Model Registry &amp; Optuna HPO):&lt;/strong&gt; Experiment runs comparing &lt;code&gt;@challenger (v2-optuna)&lt;/code&gt; (ROC-AUC 0.906, F1 0.938, Accuracy 0.942) against &lt;code&gt;@champion (v1)&lt;/code&gt; with MinIO S3 ONNX artifacts."
                         title="Live MLflow Registry UI">
                   <img src="assets/phoenix-mlflow-registry.webp" alt="Live MLflow Registry thumbnail">
                   <span class="thumb-label">MLflow Registry</span>
@@ -802,7 +865,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/phoenix-grafana-live.webp"
                         data-alt="Live 6-Panel Grafana MLOps Dashboard Scraping Prometheus Telemetry"
-                        data-caption="&lt;strong&gt;Figure 4 (Live 6-Panel Grafana MLOps Dashboard):&lt;/strong&gt; Real-time Prometheus telemetry panels monitoring Prediction Request Rate (1,284 req/s), Latency (p99 0.72 ms), Confidence Distribution, KS Feature Drift (0.2051), Auto-Heal Triggers, and Live Accuracy."
+                        data-caption="&lt;strong&gt;Figure 7 (Live 6-Panel Grafana MLOps Dashboard):&lt;/strong&gt; Real-time Prometheus telemetry panels monitoring Prediction Request Rate (1,284 req/s), Latency (p99 0.72 ms), Confidence Distribution, KS Feature Drift (0.2051), Auto-Heal Triggers, and Live Accuracy."
                         title="Live Grafana Dashboard">
                   <img src="assets/phoenix-grafana-live.webp" alt="Live Grafana UI thumbnail">
                   <span class="thumb-label">Grafana 6-Panel</span>
@@ -810,7 +873,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/phoenix-mlflow-ui.webp"
                         data-alt="Live Jaeger OpenTelemetry Distributed Tracing Waterfall UI"
-                        data-caption="&lt;strong&gt;Figure 5 (Live Jaeger OTel Distributed Trace Waterfall):&lt;/strong&gt; Real captured Jaeger trace timeline showing 5 spans across phoenix-api-gateway, redis-feature-store (210µs), onnx-inference-engine (310µs), and evidently-drift-worker (115µs)."
+                        data-caption="&lt;strong&gt;Figure 8 (Live Jaeger OTel Distributed Trace Waterfall):&lt;/strong&gt; Real captured Jaeger trace timeline showing 5 spans across phoenix-api-gateway, redis-feature-store (210µs), onnx-inference-engine (310µs), and evidently-drift-worker (115µs)."
                         title="Live Jaeger OTel Trace">
                   <img src="assets/phoenix-mlflow-ui.webp" alt="Live Jaeger UI thumbnail">
                   <span class="thumb-label">Jaeger Trace UI</span>
@@ -818,18 +881,10 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/phoenix-fastapi-docs.webp"
                         data-alt="Live Phoenix ML FastAPI OpenAPI Swagger UI with Executed Prediction"
-                        data-caption="&lt;strong&gt;Figure 6 (Live FastAPI OpenAPI /docs UI):&lt;/strong&gt; Real captured FastAPI Swagger interface executing a live POST /api/v1/predict request with a 200 OK sub-millisecond response."
+                        data-caption="&lt;strong&gt;Figure 9 (Live FastAPI OpenAPI /docs UI):&lt;/strong&gt; Real captured FastAPI Swagger interface executing a live POST /api/v1/predict request with a 200 OK sub-millisecond response."
                         title="Live FastAPI /docs UI">
                   <img src="assets/phoenix-fastapi-docs.webp" alt="Live FastAPI Docs thumbnail">
                   <span class="thumb-label">FastAPI /docs UI</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/phoenix-system-architecture.webp"
-                        data-alt="Phoenix ML 4-Layer DDD and Self-Healing MLOps Architecture"
-                        data-caption="&lt;strong&gt;Figure 7 (Platform Architecture):&lt;/strong&gt; End-to-end enterprise MLOps architecture integrating Kafka/Flink streaming, Feast Redis/Parquet feature stores, multi-engine serving, and Airflow + Optuna self-healing."
-                        title="Platform Architecture">
-                  <img src="assets/phoenix-system-architecture.webp" alt="System Architecture thumbnail">
-                  <span class="thumb-label">Architecture</span>
                 </button>
               </div>
             </div>
@@ -887,35 +942,43 @@
             <div class="showcase-media-hub" data-showcase="nlir">
               <div class="showcase-tabs" role="tablist">
                 <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> System Architecture
+                </button>
+                <button class="showcase-tab" type="button">
                   <span class="tab-icon">🖼️</span> Visual Image Search (CBIR)
                 </button>
                 <button class="showcase-tab" type="button">
                   <span class="tab-icon">🔤</span> Semantic Text Search (TBIR)
-                </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">❖</span> System Architecture
                 </button>
               </div>
 
               <figure class="project-figure showcase-main-figure">
                 <div class="showcase-image-wrapper">
                   <img class="showcase-main-img zoomable-media"
-                       src="assets/nlir-cbir-ui.webp"
-                       data-full-src="assets/nlir-cbir-ui.webp"
-                       alt="Content-Based Image Retrieval (CBIR) Visual Similarity Search Results"
+                       src="assets/nlir-architecture.webp"
+                       data-full-src="assets/nlir-architecture.webp"
+                       alt="Natural Landscape Image Retrieval CLIP ViT-B/32 and Faiss Architecture"
                        loading="lazy">
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Content-Based Image Retrieval — CBIR):</strong> Uploading a coastal beach query image extracts a 512-D CLIP visual vector and retrieves the Top-8 visually similar Pexels landscapes ranked by exact Faiss cosine similarity (0.94 to 0.80 in 0.8 ms).
+                  <strong>Figure 1 (System Architecture):</strong> Four-stage pipeline linking the Pexels REST API crawler, OpenAI CLIP ViT-B/32 dual vision-text encoders, HDF5 + Faiss IndexFlatIP storage, and the Flask CBIR/TBIR web gateway.
                 </figcaption>
               </figure>
 
               <div class="showcase-thumbs">
                 <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/nlir-architecture.webp"
+                        data-alt="Natural Landscape Image Retrieval CLIP ViT-B/32 and Faiss Architecture"
+                        data-caption="&lt;strong&gt;Figure 1 (System Architecture):&lt;/strong&gt; Four-stage pipeline linking the Pexels REST API crawler, OpenAI CLIP ViT-B/32 dual vision-text encoders, HDF5 + Faiss IndexFlatIP storage, and the Flask CBIR/TBIR web gateway."
+                        title="System Architecture">
+                  <img src="assets/nlir-architecture.webp" alt="NLIR Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
                         data-src="assets/nlir-cbir-ui.webp"
                         data-alt="Content-Based Image Retrieval (CBIR) Visual Similarity Search Results"
-                        data-caption="&lt;strong&gt;Figure 1 (Content-Based Image Retrieval — CBIR):&lt;/strong&gt; Uploading a coastal beach query image extracts a 512-D CLIP visual vector and retrieves the Top-8 visually similar Pexels landscapes ranked by exact Faiss cosine similarity (0.94 to 0.80 in 0.8 ms)."
+                        data-caption="&lt;strong&gt;Figure 2 (Content-Based Image Retrieval — CBIR):&lt;/strong&gt; Uploading a coastal beach query image extracts a 512-D CLIP visual vector and retrieves the Top-8 visually similar Pexels landscapes ranked by exact Faiss cosine similarity (0.94 to 0.80 in 0.8 ms)."
                         title="Visual Image Search (CBIR)">
                   <img src="assets/nlir-cbir-ui.webp" alt="CBIR Visual Search thumbnail">
                   <span class="thumb-label">CBIR Image Search</span>
@@ -923,18 +986,10 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/nlir-tbir-ui.webp"
                         data-alt="Text-Based Image Retrieval (TBIR) Zero-Shot Semantic Search Results"
-                        data-caption="&lt;strong&gt;Figure 2 (Text-Based Image Retrieval — TBIR):&lt;/strong&gt; Entering a natural-language scene query (&lt;code&gt;&quot;desert&quot;&lt;/code&gt;) projects the prompt via CLIP's text transformer to retrieve the Top-8 matching sand-dune landscapes in 0.6 ms."
+                        data-caption="&lt;strong&gt;Figure 3 (Text-Based Image Retrieval — TBIR):&lt;/strong&gt; Entering a natural-language scene query (&lt;code&gt;&quot;desert&quot;&lt;/code&gt;) projects the prompt via CLIP's text transformer to retrieve the Top-8 matching sand-dune landscapes in 0.6 ms."
                         title="Semantic Text Search (TBIR)">
                   <img src="assets/nlir-tbir-ui.webp" alt="TBIR Text Search thumbnail">
                   <span class="thumb-label">TBIR Text Search</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/nlir-architecture.webp"
-                        data-alt="Natural Landscape Image Retrieval CLIP ViT-B/32 and Faiss Architecture"
-                        data-caption="&lt;strong&gt;Figure 3 (System Architecture):&lt;/strong&gt; Four-stage pipeline linking the Pexels REST API crawler, OpenAI CLIP ViT-B/32 dual vision-text encoders, HDF5 + Faiss IndexFlatIP storage, and the Flask CBIR/TBIR web gateway."
-                        title="System Architecture">
-                  <img src="assets/nlir-architecture.webp" alt="NLIR Architecture thumbnail">
-                  <span class="thumb-label">Architecture</span>
                 </button>
               </div>
             </div>
