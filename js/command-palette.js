@@ -26,7 +26,7 @@ export function initCommandPalette() {
     { title: "Natural Landscape Image Search: Multimodal CLIP + Faiss (CBIR + TBIR)", group: "Engineering Projects", icon: "🌄", action: () => jumpTo("project-nlir") },
     
     // Quick Actions
-    { title: "Download Full Curriculum Vitae (PDF)", group: "Quick Actions", icon: "📄", action: () => window.open("VoThanhNguyen_CV.pdf?v=20261107", "_blank") },
+    { title: "Download Full Curriculum Vitae (PDF)", group: "Quick Actions", icon: "📄", action: () => window.open("VoThanhNguyen_CV.pdf?v=20261107b", "_blank") },
     { title: "Toggle Color Theme (Dark / Light)", group: "Quick Actions", icon: "🌓", action: () => toggleTheme() },
     { title: "Open Google Scholar Citations", group: "External Links", icon: "🎓", action: () => window.open("https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1", "_blank") },
     { title: "Open OpenReview Profile", group: "External Links", icon: "📝", action: () => window.open("https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1", "_blank") },
