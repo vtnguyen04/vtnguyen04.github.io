@@ -14,8 +14,7 @@ export function initCommandPalette() {
     // Research Papers & Projects
     { title: "Sim-to-Real Traffic-JEPA (ECCV Oral, 1st Worldwide)", group: "Publications & Research", icon: "🏆", action: () => jumpTo("project-traffic-jepa") },
     { title: "JEPA Guided Diffusion (ECCV Poster, Rank 3)", group: "Publications & Research", icon: "🥉", action: () => jumpTo("project-traffic-forecast") },
-    { title: "UniQuery: Cross-Domain Pedestrian Attribute (WACV)", group: "Publications & Research", icon: "❖", action: () => jumpTo("project-uniquery") },
-    { title: "LENS: Attribute-Based Person Retrieval (WACV)", group: "Publications & Research", icon: "🎯", action: () => jumpTo("project-lens") },
+    { title: "LENS: Attribute-Based Person Retrieval (WACV 2027)", group: "Publications & Research", icon: "🎯", action: () => jumpTo("project-lens") },
     { title: "Perception-to-Planning YOLOv11 + Frenet (IEEE GTSD)", group: "Publications & Research", icon: "🚗", action: () => jumpTo("project-gtsd-2026") },
     { title: "Bosch Future Mobility Challenge (BFMC 2025 & 2026)", group: "Engineering Projects", icon: "🏎️", action: () => jumpTo("project-bfmc") },
     { title: "Insight Hunter: Real Estate RecSys (Datathon 2026 Top 5)", group: "Engineering Projects", icon: "🏠", action: () => jumpTo("project-recsys") },
@@ -23,6 +22,7 @@ export function initCommandPalette() {
     { title: "Zero-Copy IPC Driver Distraction Detection (50 FPS)", group: "Engineering Projects", icon: "👁️", action: () => jumpTo("project-distraction") },
     { title: "Revenue & COGS Forecasting (VinUniversity Datathon 2026)", group: "Engineering Projects", icon: "📈", action: () => jumpTo("project-forecasting") },
     { title: "Phoenix ML Platform: Real-Time Inference & Self-Healing", group: "Engineering Projects", icon: "🔥", action: () => jumpTo("project-phoenix") },
+    { title: "UniQuery: Cross-Domain Pedestrian Attribute Recognition (DINOv3 + CLIP)", group: "Engineering Projects", icon: "❖", action: () => jumpTo("project-uniquery") },
     { title: "Natural Landscape Image Search: Multimodal CLIP + Faiss (CBIR + TBIR)", group: "Engineering Projects", icon: "🌄", action: () => jumpTo("project-nlir") },
     
     // Quick Actions
@@ -56,7 +56,7 @@ export function initCommandPalette() {
     } else {
       const engineeringIds = [
         "project-bfmc", "project-recsys", "project-knowledgeforge",
-        "project-distraction", "project-forecasting", "project-phoenix", "project-nlir"
+        "project-distraction", "project-forecasting", "project-phoenix", "project-uniquery", "project-nlir"
       ];
       if (engineeringIds.includes(elementId)) {
         window.location.href = `projects.html#${elementId}`;

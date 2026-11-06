@@ -1129,10 +1129,168 @@
         </article>
 
         <!-- ================================================================
-             07 · NATURAL LANDSCAPE IMAGE RETRIEVAL — MULTIMODAL CLIP + FAISS
+             07 · UNIQUERY — CROSS-DOMAIN PEDESTRIAN ATTRIBUTE RECOGNITION
+             ================================================================ -->
+        <article class="project" id="project-uniquery">
+          <div class="project-number">07</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="showcase-timeline-pill">Jun 2026 – Oct 2026</span>
+                <span class="showcase-domain-pill">Multimodal Vision · DINOv3 + CLIP Token Routing</span>
+                <span class="pill-badge">0.8001 UPAR Challenge Avg · 228 Multimodal Tokens</span>
+              </div>
+              <h3>UniQuery: Unifying Vision Models with a Joint Query Head for Cross-Domain Pedestrian Attribute Recognition</h3>
+              <p class="showcase-desc">Dual-backbone pedestrian attribute recognition system co-adapting DINOv3 (ViT-H+/16) and CLIP (ViT-L/14) with an attribute-specific cross-attention query head over 228 multimodal patch tokens across unseen surveillance camera domains.</p>
+
+              <div class="showcase-arch-strip">
+                <div class="showcase-kpi-bar">
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">0.8001</span>
+                    <span class="kpi-label">UPAR 2027 Hidden Test Avg</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">228 Tokens</span>
+                    <span class="kpi-label">99 DINOv3 + 129 CLIP Patches</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">40 Queries</span>
+                    <span class="kpi-label">Attribute-Specific Routing</span>
+                  </div>
+                  <div class="showcase-kpi-cell">
+                    <span class="kpi-val">3 Datasets</span>
+                    <span class="kpi-label">Zero-Shot Cross-Camera Transfer</span>
+                  </div>
+                </div>
+                <div class="showcase-flow-stages">
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">01</span>
+                        <h4 class="flow-stage-title">Dual Foundation Encoders</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Extracts 99 spatial patch tokens from DINOv3 ViT-H+/16 (24 fine-tuned blocks) and 129 semantic tokens from CLIP ViT-L/14.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">DINOv3 ViT-H+/16</span>
+                      <span class="flow-tag">CLIP ViT-L/14</span>
+                      <span class="flow-tag">228×1024 Tokens</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">02</span>
+                        <h4 class="flow-stage-title">Dynamic Cross-Attention Routing</h4>
+                      </div>
+                      <span class="flow-stage-arrow">→</span>
+                    </div>
+                    <p class="flow-stage-desc">Routes 40 learnable attribute queries via Pre-LN cross-attention: color attributes specialize to CLIP and structural/clothing to DINOv3.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">Pre-LN Cross-Attn</span>
+                      <span class="flow-tag">40 Attribute Queries</span>
+                      <span class="flow-tag">Token Specialization</span>
+                    </div>
+                  </div>
+                  <div class="showcase-flow-stage">
+                    <div class="flow-stage-head">
+                      <div class="flow-stage-title-group">
+                        <span class="flow-step-num">03</span>
+                        <h4 class="flow-stage-title">Tri-Head Logit Fusion</h4>
+                      </div>
+                    </div>
+                    <p class="flow-stage-desc">Averages logits across two single-encoder query heads and the joint multimodal query head for cross-domain generalization.</p>
+                    <div class="flow-stage-tags">
+                      <span class="flow-tag">3-Head Logit Avg</span>
+                      <span class="flow-tag">PA100k / PETA / Market</span>
+                      <span class="flow-tag">0.8001 Challenge Avg</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="uniquery">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> System Architecture
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">✦</span> Attention Routing
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📊</span> Attribute Gains
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔬</span> Query Head
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/uniquery-architecture.webp"
+                       data-full-src="assets/uniquery-architecture.webp"
+                       alt="UniQuery dual foundation encoder architecture with joint and single-encoder query heads"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (System Architecture):</strong> Joint fine-tuning of DINOv3 (ViT-H+/16) and CLIP (ViT-L/14) with three query heads: two single-encoder heads and a joint cross-attention query head over 228 tokens.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/uniquery-architecture.webp"
+                        data-alt="UniQuery dual foundation encoder architecture with joint and single-encoder query heads"
+                        data-caption="&lt;strong&gt;Figure 1 (System Architecture):&lt;/strong&gt; Joint fine-tuning of DINOv3 (ViT-H+/16) and CLIP (ViT-L/14) with three query heads: two single-encoder heads and a joint cross-attention query head over 228 tokens."
+                        title="System Architecture">
+                  <img src="assets/uniquery-architecture.webp" alt="Architecture thumbnail">
+                  <span class="thumb-label">Architecture</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/uniquery-routing.webp"
+                        data-alt="Cross-attention dynamic routing between DINOv3 and CLIP tokens across attributes"
+                        data-caption="&lt;strong&gt;Figure 2 (Attention Routing):&lt;/strong&gt; Attention heads dynamically specialize: color attributes route to CLIP; spatial/clothing features specialize to DINOv3."
+                        title="Attention Routing">
+                  <img src="assets/uniquery-routing.webp" alt="Routing thumbnail">
+                  <span class="thumb-label">Routing</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/uniquery-pick.webp"
+                        data-alt="Per-attribute balanced accuracy comparison against independent ensembles"
+                        data-caption="&lt;strong&gt;Figure 3 (Attribute Gains):&lt;/strong&gt; Balanced accuracy comparison across all 40 attributes against independent ensembles on held-out domains."
+                        title="Attribute Gains">
+                  <img src="assets/uniquery-pick.webp" alt="Gains thumbnail">
+                  <span class="thumb-label">Attribute Gains</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/uniquery-queryhead.webp"
+                        data-alt="Detailed token interaction mechanism inside the cross-attention query head"
+                        data-caption="&lt;strong&gt;Figure 4 (Query Head):&lt;/strong&gt; Pre-LN cross-attention token interaction mechanism fusing multimodal patch tokens into attribute predictions."
+                        title="Query Head">
+                  <img src="assets/uniquery-queryhead.webp" alt="Query Head thumbnail">
+                  <span class="thumb-label">Query Head</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <div class="project-links">
+                <a class="button" href="https://arxiv.org/abs/2610.33639" target="_blank" rel="noopener">arXiv Technical Report ↗</a>
+                <a class="button button-subtle" href="papers/UniQuery%20-%20Unifying%20Vision%20Models%20with%20a%20Joint%20Query%20Head%20for%20Cross-Domain%20Pedestrian%20Attribute%20Recognition.pdf" target="_blank" rel="noopener">Technical Report (PDF) ↗</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================================================================
+             08 · NATURAL LANDSCAPE IMAGE RETRIEVAL — MULTIMODAL CLIP + FAISS
              ================================================================ -->
         <article class="project" id="project-nlir">
-          <div class="project-number">07</div>
+          <div class="project-number">08</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
@@ -1333,7 +1491,7 @@
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>Last update: October 2026 · Hosted on GitHub Pages</p>
+      <p>Last update: November 2026 · Hosted on GitHub Pages</p>
       <div class="footer-links">
         <a href="index.html">Research</a>
         <a href="projects.html">Projects</a>

@@ -147,8 +147,8 @@
         <a class="spotlight-card" href="#research">
           <div class="spotlight-inner">
             <span class="metric-tag">📄 Peer-Reviewed</span>
-            <span class="metric-val">3+ Papers</span>
-            <span class="metric-desc">ECCV 2026 Workshop (Oral &amp; Poster) &amp; IEEE GTSD</span>
+            <span class="metric-val">4 Papers</span>
+            <span class="metric-desc">ECCV 2026 Workshop, IEEE/CVF WACV 2027 &amp; IEEE GTSD</span>
           </div>
         </a>
         <a class="spotlight-card" href="awards.html">
@@ -172,7 +172,7 @@
       <div class="research-filter-bar">
         <button class="filter-btn is-active" type="button" data-filter="all">
           <span>All Research</span>
-          <span class="filter-count">5</span>
+          <span class="filter-count">4</span>
         </button>
         <button class="filter-btn" type="button" data-filter="world-models">
           <span>World Models &amp; Diffusion</span>
@@ -184,144 +184,24 @@
         </button>
         <button class="filter-btn" type="button" data-filter="foundation-encoders">
           <span>Foundation Encoders</span>
-          <span class="filter-count">2</span>
+          <span class="filter-count">1</span>
         </button>
       </div>
 
       <div class="projects">
-        <article class="project" id="project-uniquery" data-category="foundation-encoders">
+        <article class="project" id="project-lens" data-category="foundation-encoders">
           <div class="project-number">01</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
-                <span class="project-meta">Foundation Models · Attribute Recognition · 2026–2027</span>
-                <span class="pill-badge">WACV 2027 Workshop (In Review)</span>
-              </div>
-              <h3>UniQuery: Unifying Vision Models with a Joint Query Head for Cross-Domain Pedestrian Attribute Recognition</h3>
-              <p class="project-authors">
-                Nguyen Dang Duy Tan, Linh T. T. Tran, Huynh Nguyen Phat, <strong class="author-self">Vo Thanh Nguyen</strong>
-              </p>
-              <p class="project-venue">Under Review at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2027 · arXiv:2610.33639</p>
-              <p class="showcase-desc">Co-adapts self-supervised DINOv3 (ViT-H+/16) and vision-language CLIP (ViT-L/14) with an attribute-specific joint query head for cross-domain pedestrian attribute recognition:</p>
-              <ul class="eng-card-list">
-                <li><strong>Dual Foundation Encoders:</strong> Unites spatial patch representations from DINOv3 (ViT-H+/16) with semantic vision-language tokens from CLIP (ViT-L/14).</li>
-                <li><strong>Dynamic Token Routing:</strong> Pre-LN cross-attention query head over 228 multimodal tokens routes color attributes to CLIP and structural/clothing attributes to DINOv3.</li>
-                <li><strong>Cross-Domain Generalization:</strong> Outperforms static single-encoder and late-fusion ensembles across 40 pedestrian attributes on unseen surveillance camera domains.</li>
-              </ul>
-            </div>
-
-            <div class="showcase-media-hub" data-showcase="uniquery">
-              <div class="showcase-tabs" role="tablist">
-                <button class="showcase-tab is-active" type="button">
-                  <span class="tab-icon">❖</span> Architecture
-                </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">✦</span> Attention Routing
-                </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">📊</span> Attribute Gains
-                </button>
-                <button class="showcase-tab" type="button">
-                  <span class="tab-icon">🔬</span> Query Head
-                </button>
-              </div>
-
-              <figure class="project-figure showcase-main-figure">
-                <div class="showcase-image-wrapper">
-                  <img class="showcase-main-img zoomable-media"
-                       src="assets/uniquery-architecture.webp"
-                       data-full-src="assets/uniquery-architecture.webp"
-                       alt="UniQuery dual foundation encoder architecture with joint and single-encoder query heads"
-                       loading="lazy">
-                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
-                </div>
-                <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Architecture):</strong> Joint fine-tuning of DINOv3 and CLIP with three query heads: two single-encoder heads and a joint query head over 228 tokens.
-                </figcaption>
-              </figure>
-
-              <div class="showcase-thumbs">
-                <button class="showcase-thumb is-active" type="button"
-                        data-src="assets/uniquery-architecture.webp"
-                        data-alt="UniQuery dual foundation encoder architecture with joint and single-encoder query heads"
-                        data-caption="&lt;strong&gt;Figure 1 (Architecture):&lt;/strong&gt; Joint fine-tuning of DINOv3 and CLIP with three query heads: two single-encoder heads and a joint query head over 228 tokens."
-                        title="Architecture">
-                  <img src="assets/uniquery-architecture.webp" alt="Architecture thumbnail">
-                  <span class="thumb-label">Architecture</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/uniquery-routing.webp"
-                        data-alt="Cross-attention dynamic routing between DINOv3 and CLIP tokens across attributes"
-                        data-caption="&lt;strong&gt;Figure 2 (Attention Routing):&lt;/strong&gt; Attention heads dynamically specialize: color attributes route to CLIP; spatial/clothing features specialize to DINOv3."
-                        title="Attention Routing">
-                  <img src="assets/uniquery-routing.webp" alt="Routing thumbnail">
-                  <span class="thumb-label">Routing</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/uniquery-pick.webp"
-                        data-alt="Per-attribute balanced accuracy comparison against independent ensembles"
-                        data-caption="&lt;strong&gt;Figure 3 (Attribute Gains):&lt;/strong&gt; Balanced accuracy comparison across all 40 attributes against independent ensembles on held-out domains."
-                        title="Attribute Gains">
-                  <img src="assets/uniquery-pick.webp" alt="Gains thumbnail">
-                  <span class="thumb-label">Attribute Gains</span>
-                </button>
-                <button class="showcase-thumb" type="button"
-                        data-src="assets/uniquery-queryhead.webp"
-                        data-alt="Detailed token interaction mechanism inside the cross-attention query head"
-                        data-caption="&lt;strong&gt;Figure 4 (Query Head):&lt;/strong&gt; Pre-LN cross-attention token interaction mechanism fusing multimodal patch tokens into attribute predictions."
-                        title="Query Head">
-                  <img src="assets/uniquery-queryhead.webp" alt="Query Head thumbnail">
-                  <span class="thumb-label">Query Head</span>
-                </button>
-              </div>
-            </div>
-
-            <div class="showcase-footer">
-              <ul>
-                <li>Dual foundation encoder uniting DINOv3 (ViT-H+/16) &amp; CLIP (ViT-L/14)</li>
-                <li>Dynamic cross-attention token routing across 40 surveillance attributes</li>
-                <li>Paper under review at IEEE/CVF WACV 2027 Workshop</li>
-              </ul>
-              <div class="project-links">
-                <a class="pub-btn pub-btn-accent" href="https://arxiv.org/abs/2610.33639" target="_blank" rel="noopener">arXiv ↗</a>
-                <a class="pub-btn" href="papers/UniQuery%20-%20Unifying%20Vision%20Models%20with%20a%20Joint%20Query%20Head%20for%20Cross-Domain%20Pedestrian%20Attribute%20Recognition.pdf" target="_blank" rel="noopener">Manuscript PDF</a>
-                <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-uniquery" aria-expanded="false">BibTeX</button>
-              </div>
-              <div class="pub-bibtex-box" id="bib-uniquery" hidden>
-                <div class="pub-bibtex-header">
-                  <div class="pub-bibtex-window-controls">
-                    <span class="window-dot dot-red"></span>
-                    <span class="window-dot dot-yellow"></span>
-                    <span class="window-dot dot-green"></span>
-                    <span class="pub-bibtex-header-title">uniquery-wacv2027.bib</span>
-                  </div>
-                  <button class="pub-bibtex-copy-btn" type="button" data-code="bib-uniquery-code">Copy BibTeX</button>
-                </div>
-                <pre id="bib-uniquery-code"><code>@article{tan2026uniquery,
-  title={UniQuery: Unifying Vision Models with a Joint Query Head for Cross-Domain Pedestrian Attribute Recognition},
-  author={Tan, Nguyen Dang Duy and Tran, Linh T. T. and Phat, Huynh Nguyen and Nguyen, Vo Thanh},
-  journal={arXiv preprint arXiv:2610.33639},
-  year={2026},
-  url={https://arxiv.org/abs/2610.33639}
-}</code></pre>
-              </div>
-            </div>
-          </div>
-        </article>
-
-        <article class="project" id="project-lens" data-category="foundation-encoders">
-          <div class="project-number">02</div>
-          <div class="project-content project-showcase">
-            <div class="showcase-header">
-              <div class="showcase-badges">
                 <span class="project-meta">Surveillance Retrieval · Metric Learning · Calibration · 2026–2027</span>
-                <span class="pill-badge">WACV 2027 Workshop (In Review)</span>
+                <span class="pill-badge pill-badge-gold">★ IEEE/CVF WACV 2027 Workshop · Accepted</span>
               </div>
               <h3>LENS: Likelihood Evaluation and Neighbor Smoothing for Attribute-Based Person Retrieval on Unseen Cameras</h3>
               <p class="project-authors">
                 Nguyen Dang Duy Tan, <strong class="author-self">Vo Thanh Nguyen</strong>, Linh T. T. Tran, Huynh Nguyen Phat
               </p>
-              <p class="project-venue">Under Review at IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) Workshops, 2027 · arXiv:2610.33641</p>
+              <p class="project-venue">Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision Workshops (WACVW), 2027 · arXiv:2610.33641</p>
               <p class="showcase-desc">Formulates attribute-based person retrieval on unseen surveillance cameras through likelihood scoring and zero-cost transductive neighbor smoothing:</p>
               <ul class="eng-card-list">
                 <li><strong>Exact-Query Log-Likelihood Scoring:</strong> Replaces heuristic L1 distance ranking with calibrated probabilistic log-likelihood evaluation over multi-teacher attribute predictions.</li>
@@ -400,11 +280,11 @@
               <ul>
                 <li>Exact-query log-likelihood scoring over traditional L1 metric formulation</li>
                 <li>Zero-cost test-time transductive kNN logit smoothing via DINOv3 patch tokens</li>
-                <li>Paper under review at IEEE/CVF WACV 2027 Workshop</li>
+                <li>Paper accepted at IEEE/CVF WACV 2027 Workshop (68.17 mADM on UPAR 2027)</li>
               </ul>
               <div class="project-links">
                 <a class="pub-btn pub-btn-accent" href="https://arxiv.org/abs/2610.33641" target="_blank" rel="noopener">arXiv ↗</a>
-                <a class="pub-btn" href="papers/LENS%20-%20Likelihood%20Evaluation%20and%20Neighbor%20Smoothing%20for%20Attribute-Based%20Person%20Retrieval%20on%20Unseen%20Cameras.pdf" target="_blank" rel="noopener">Manuscript PDF</a>
+                <a class="pub-btn" href="papers/LENS%20-%20Likelihood%20Evaluation%20and%20Neighbor%20Smoothing%20for%20Attribute-Based%20Person%20Retrieval%20on%20Unseen%20Cameras.pdf" target="_blank" rel="noopener">Accepted PDF</a>
                 <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-lens" aria-expanded="false">BibTeX</button>
               </div>
               <div class="pub-bibtex-box" id="bib-lens" hidden>
@@ -417,11 +297,11 @@
                   </div>
                   <button class="pub-bibtex-copy-btn" type="button" data-code="bib-lens-code">Copy BibTeX</button>
                 </div>
-                <pre id="bib-lens-code"><code>@article{tan2026lens,
+                <pre id="bib-lens-code"><code>@inproceedings{tan2027lens,
   title={LENS: Likelihood Evaluation and Neighbor Smoothing for Attribute-Based Person Retrieval on Unseen Cameras},
   author={Tan, Nguyen Dang Duy and Nguyen, Vo Thanh and Tran, Linh T. T. and Phat, Huynh Nguyen},
-  journal={arXiv preprint arXiv:2610.33641},
-  year={2026},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision Workshops (WACVW)},
+  year={2027},
   url={https://arxiv.org/abs/2610.33641}
 }</code></pre>
               </div>
@@ -430,7 +310,7 @@
         </article>
 
         <article class="project" id="project-traffic-forecast" data-category="world-models">
-          <div class="project-number">03</div>
+          <div class="project-number">02</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
@@ -552,7 +432,7 @@
         </article>
 
         <article class="project" id="project-traffic-jepa" data-category="world-models autonomous-driving">
-          <div class="project-number">04</div>
+          <div class="project-number">03</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
@@ -674,7 +554,7 @@
         </article>
 
         <article class="project" id="project-gtsd-2026" data-category="autonomous-driving">
-          <div class="project-number">05</div>
+          <div class="project-number">04</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
@@ -967,11 +847,35 @@
             <a href="projects.html#project-forecasting">View Interactive Showcase &amp; Architecture →</a>
           </div>
         </div>
+
+        <!-- Card 7: UniQuery Multimodal PAR -->
+        <div class="eng-card">
+          <div class="eng-card-header">
+            <div class="eng-card-topline">
+              <span class="eng-card-domain">Jun 2026 – Oct 2026 · Multimodal Vision</span>
+              <span class="pill-badge">★ 0.8001 UPAR Challenge Avg</span>
+            </div>
+            <h3 class="eng-card-title">UniQuery: Cross-Domain Pedestrian Attribute Recognition</h3>
+            <ul class="eng-card-list">
+              <li><strong>Dual Foundation Encoders:</strong> Co-adapts DINOv3 (ViT-H+/16) spatial tokens and CLIP (ViT-L/14) semantic patches.</li>
+              <li><strong>Dynamic Token Routing:</strong> Pre-LN cross-attention over 228 tokens routes color to CLIP and clothing/geometry to DINOv3.</li>
+              <li><strong>Cross-Camera Generalization:</strong> Outperforms static ensembles across 40 attributes on PA100k, PETA, and Market-1501.</li>
+            </ul>
+          </div>
+          <div class="eng-metrics-row">
+            <span class="eng-metric-chip">DINOv3 + CLIP</span>
+            <span class="eng-metric-chip">228 Patch Tokens</span>
+            <span class="eng-metric-chip">0.8001 Challenge Avg</span>
+          </div>
+          <div class="eng-card-links">
+            <a href="projects.html#project-uniquery">View Interactive Showcase &amp; Architecture →</a>
+          </div>
+        </div>
       </div>
 
       <div style="margin-top: 36px; text-align: center;">
         <a class="button" href="projects.html" style="font-size: .95rem; padding: 12px 28px;">
-          Explore All 7 Engineering Projects →
+          Explore All 8 Engineering Projects →
         </a>
       </div>
     </section>
@@ -1002,7 +906,7 @@
                   Researched non-generative world models (V-JEPA 2.1) and diffusion trajectory synthesis for end-to-end autonomous driving and cross-domain surveillance.
                 </li>
                 <li>
-                  Authored and co-authored 5 papers across ECCV 2026 Workshop (Oral &amp; Poster), IEEE GTSD 2026 (Published), and WACV 2027 Workshop (In Review).
+                  Authored and co-authored 4 peer-reviewed papers accepted across ECCV 2026 Workshop (Oral &amp; Poster), IEEE/CVF WACV 2027 Workshop, and IEEE GTSD 2026.
                 </li>
                 <li>
                   Software lead for Bosch Future Mobility Challenge (BFMC 2025 Global Top 9 in Romania &amp; BFMC 2026 Rank 1 Nationally); awarded 150M VND Bosch Research Sponsorship.
@@ -1089,7 +993,7 @@
 
   <footer class="site-footer">
     <div class="container footer-content">
-      <p>Last update: October 2026 · Hosted on GitHub Pages</p>
+      <p>Last update: November 2026 · Hosted on GitHub Pages</p>
       <div class="footer-links">
         <a href="mailto:nguyenvothanh04@gmail.com">Email</a>
         <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Google Scholar ↗</a>
