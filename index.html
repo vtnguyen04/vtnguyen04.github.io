@@ -31,7 +31,7 @@
           <span>Search</span>
           <kbd class="nav-cmd-kbd">⌘K</kbd>
         </button>
-        <a class="nav-cv-btn" href="VoThanhNguyen_CV.pdf?v=20261107p" target="_blank" rel="noopener">CV (PDF) ↗</a>
+        <a class="nav-cv-btn" href="VoThanhNguyen_CV.pdf?v=20261120" target="_blank" rel="noopener">CV (PDF) ↗</a>
         <button class="theme-toggle" type="button" aria-label="Toggle color theme" aria-pressed="false">
           <span class="icon-sun" aria-hidden="true">&#9728;</span>
           <span class="icon-moon" aria-hidden="true">&#9790;</span>
@@ -49,7 +49,7 @@
       <a href="#experience" class="drawer-link">💼 Experience &amp; Background</a>
       <a href="awards.html" class="drawer-link">🏆 Awards &amp; Honors</a>
       <div class="drawer-divider"></div>
-      <a href="VoThanhNguyen_CV.pdf?v=20261107p" target="_blank" rel="noopener" class="drawer-link drawer-cv-link">📄 Full CV (PDF) ↗</a>
+      <a href="VoThanhNguyen_CV.pdf?v=20261120" target="_blank" rel="noopener" class="drawer-link drawer-cv-link">📄 Full CV (PDF) ↗</a>
       <div class="drawer-secondary-links">
         <a href="https://scholar.google.com/citations?user=WgjDCU4AAAAJ&hl=vi&authuser=1" target="_blank" rel="noopener">Scholar</a>
         <a href="https://openreview.net/profile?id=%7EThanh_Nguyen_Vo1" target="_blank" rel="noopener">OpenReview</a>
@@ -73,7 +73,7 @@
 
         <div class="hero-actions-group">
           <div class="hero-primary-btns">
-            <a class="btn-island-primary" href="VoThanhNguyen_CV.pdf?v=20261107p" target="_blank" rel="noopener">
+            <a class="btn-island-primary" href="VoThanhNguyen_CV.pdf?v=20261120" target="_blank" rel="noopener">
               <span>Download CV (PDF)</span>
               <span class="btn-icon-bubble">↗</span>
             </a>
@@ -146,9 +146,9 @@
         </a>
         <a class="spotlight-card" href="#research">
           <div class="spotlight-inner">
-            <span class="metric-tag">📄 Peer-Reviewed</span>
-            <span class="metric-val">4 Papers</span>
-            <span class="metric-desc">ECCV-W 2026, IEEE/CVF WACV 2027 &amp; IEEE GTSD</span>
+            <span class="metric-tag">📄 Peer-Reviewed &amp; Preprints</span>
+            <span class="metric-val">5 Papers</span>
+            <span class="metric-desc">CVPR 2027, ECCV-W 2026, WACV-W 2027 &amp; IEEE GTSD</span>
           </div>
         </a>
         <a class="spotlight-card" href="awards.html">
@@ -172,7 +172,7 @@
       <div class="research-filter-bar">
         <button class="filter-btn is-active" type="button" data-filter="all">
           <span>All Research</span>
-          <span class="filter-count">4</span>
+          <span class="filter-count">5</span>
         </button>
         <button class="filter-btn" type="button" data-filter="world-models">
           <span>World Models &amp; Diffusion</span>
@@ -180,7 +180,7 @@
         </button>
         <button class="filter-btn" type="button" data-filter="autonomous-driving">
           <span>Autonomous Systems</span>
-          <span class="filter-count">2</span>
+          <span class="filter-count">3</span>
         </button>
         <button class="filter-btn" type="button" data-filter="foundation-encoders">
           <span>Foundation Encoders</span>
@@ -189,8 +189,129 @@
       </div>
 
       <div class="projects">
-        <article class="project" id="project-lens" data-category="foundation-encoders">
+        <article class="project" id="project-aeromot" data-category="autonomous-driving">
           <div class="project-number">01</div>
+          <div class="project-content project-showcase">
+            <div class="showcase-header">
+              <div class="showcase-badges">
+                <span class="project-meta">Aerial Tracking · Evidential Association · JDE Detection · 2026–2027</span>
+                <span class="pill-badge pill-badge-gold">★ IEEE/CVF CVPR 2027 · Under Review</span>
+              </div>
+              <h3>AERO-MOT: Self-Calibrating Evidential Association and Visual-Kinematic Recovery for Aerial Multi-Object Tracking</h3>
+              <p class="project-authors">
+                Vo Nguyen An Tin*, <strong class="author-self">Thanh Nguyen Vo</strong>*, Mai Tien Dung*, Thanh-Phuc Nguyen, Xuan Binh Dinh Thi, Ha Duc Bui, Kien Do
+              </p>
+              <p class="project-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2027 Submission · OpenReview: M1yjV6cI0W</p>
+              <p class="showcase-desc">Resolves rapid platform motion, tiny target scales, and visual corruption in UAV video tracking via dynamic probabilistic association and feature querying:</p>
+              <ul class="eng-card-list">
+                <li><strong>SPEAR Dynamic Association:</strong> Replaces rigid linear motion-appearance weighting with an online adaptive score using Student-t motion likelihood and von Mises-Fisher (vMF) appearance concentration.</li>
+                <li><strong>QAM Visual-Kinematic Recovery:</strong> Directly queries shared JDE feature maps within Kalman search windows to recover brief missed detections without false distractor matches.</li>
+                <li><strong>SOTA Aerial Tracking:</strong> Achieves 70.6% IDF1 on VisDrone2019-MOT at 55.8 FPS (28.0 FPS on Jetson Orin NX) without camera motion compensation, and 79.3% zero-shot IDF1 on UAVDT.</li>
+              </ul>
+            </div>
+
+            <div class="showcase-media-hub" data-showcase="aeromot">
+              <div class="showcase-tabs" role="tablist">
+                <button class="showcase-tab is-active" type="button">
+                  <span class="tab-icon">❖</span> Pipeline Overview
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">📊</span> SOTA Frontier
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🎯</span> JDE Detector
+                </button>
+                <button class="showcase-tab" type="button">
+                  <span class="tab-icon">🔬</span> Visual Comparison
+                </button>
+              </div>
+
+              <figure class="project-figure showcase-main-figure">
+                <div class="showcase-image-wrapper">
+                  <img class="showcase-main-img zoomable-media"
+                       src="assets/aeromot-pipeline.webp"
+                       data-full-src="assets/aeromot-pipeline.webp"
+                       alt="AERO-MOT aerial tracking pipeline overview showing YOLO11s-P2 JDE, SPEAR evidential association, and QAM recovery"
+                       loading="lazy">
+                  <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
+                </div>
+                <figcaption class="showcase-caption">
+                  <strong>Figure 1 (Pipeline Overview):</strong> Stride-4 YOLO11s-P2 extracts joint detections and 128d ReID embeddings; SPEAR dynamically recalibrates motion-appearance affinity while QAM recovers dropouts.
+                </figcaption>
+              </figure>
+
+              <div class="showcase-thumbs">
+                <button class="showcase-thumb is-active" type="button"
+                        data-src="assets/aeromot-pipeline.webp"
+                        data-alt="AERO-MOT aerial tracking pipeline overview showing YOLO11s-P2 JDE, SPEAR evidential association, and QAM recovery"
+                        data-caption="&lt;strong&gt;Figure 1 (Pipeline Overview):&lt;/strong&gt; Stride-4 YOLO11s-P2 extracts joint detections and 128d ReID embeddings; SPEAR dynamically recalibrates motion-appearance affinity while QAM recovers dropouts."
+                        title="Pipeline Overview">
+                  <img src="assets/aeromot-pipeline.webp" alt="Pipeline thumbnail">
+                  <span class="thumb-label">Pipeline</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/aeromot-benchmark.webp"
+                        data-alt="VisDrone2019-MOT accuracy vs speed frontier comparison"
+                        data-caption="&lt;strong&gt;Figure 2 (SOTA Frontier):&lt;/strong&gt; AERO-MOT establishes a new Pareto frontier on VisDrone2019-MOT with 70.6% IDF1 and 56.6% MOTA at 55.8 FPS without CMC."
+                        title="SOTA Frontier">
+                  <img src="assets/aeromot-benchmark.webp" alt="Benchmark frontier thumbnail">
+                  <span class="thumb-label">Benchmarks</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/aeromot-detector.webp"
+                        data-alt="Compact stride-4 YOLO11s-P2 joint detection and embedding architecture"
+                        data-caption="&lt;strong&gt;Figure 3 (JDE Detector):&lt;/strong&gt; Single-pass stride-4 architecture designed for tiny aerial objects (&lt;16x16 px) with lightweight decoupling."
+                        title="JDE Detector">
+                  <img src="assets/aeromot-detector.webp" alt="Detector thumbnail">
+                  <span class="thumb-label">JDE Detector</span>
+                </button>
+                <button class="showcase-thumb" type="button"
+                        data-src="assets/aeromot-comparison.webp"
+                        data-alt="Visual ablation and tracking comparison under camera pans, motion blur, and target occlusions"
+                        data-caption="&lt;strong&gt;Figure 4 (Visual Comparison):&lt;/strong&gt; Qualitative tracking comparison under sudden UAV rotation and glare, proving SPEAR prevents ID switches."
+                        title="Visual Comparison">
+                  <img src="assets/aeromot-comparison.webp" alt="Comparison thumbnail">
+                  <span class="thumb-label">Comparison</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="showcase-footer">
+              <ul>
+                <li>Self-Calibrating Probabilistic Evidence Association Rule (SPEAR) with Student-t &amp; vMF likelihood</li>
+                <li>Feature-map Query Appearance-Motion (QAM) for dropout recovery without false distractor matching</li>
+                <li>70.6% IDF1 on VisDrone2019-MOT at 55.8 FPS desktop / 28.0 FPS Jetson Orin NX without CMC</li>
+              </ul>
+              <div class="project-links">
+                <a class="pub-btn pub-btn-accent" href="https://openreview.net/forum?id=M1yjV6cI0W" target="_blank" rel="noopener">OpenReview ↗</a>
+                <a class="pub-btn" href="papers/AERO-MOT%20-%20Self-Calibrating%20Evidential%20Association%20and%20Visual-Kinematic%20Recovery%20for%20Aerial%20Multi-Object%20Tracking.pdf" target="_blank" rel="noopener">Paper PDF</a>
+                <a class="pub-btn" href="https://github.com/aihacker111/Falcon-MOT" target="_blank" rel="noopener">GitHub ↗</a>
+                <button class="pub-btn pub-bibtex-toggle" type="button" data-target="bib-aeromot" aria-expanded="false">BibTeX</button>
+              </div>
+              <div class="pub-bibtex-box" id="bib-aeromot" hidden>
+                <div class="pub-bibtex-header">
+                  <div class="pub-bibtex-window-controls">
+                    <span class="window-dot dot-red"></span>
+                    <span class="window-dot dot-yellow"></span>
+                    <span class="window-dot dot-green"></span>
+                    <span class="pub-bibtex-header-title">aeromot-cvpr2027.bib</span>
+                  </div>
+                  <button class="pub-bibtex-copy-btn" type="button" data-code="bib-aeromot-code">Copy BibTeX</button>
+                </div>
+                <pre id="bib-aeromot-code"><code>@article{tin2026aeromot,
+  title={AERO-MOT: Self-Calibrating Evidential Association and Visual-Kinematic Recovery for Aerial Multi-Object Tracking},
+  author={Tin, Vo Nguyen An and Vo, Thanh Nguyen and Dung, Mai Tien and Nguyen, Thanh-Phuc and Thi, Xuan Binh Dinh and Bui, Ha Duc and Do, Kien},
+  journal={IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Submission},
+  year={2026},
+  url={https://openreview.net/forum?id=M1yjV6cI0W}
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" id="project-lens" data-category="foundation-encoders">
+          <div class="project-number">02</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
@@ -310,7 +431,7 @@
         </article>
 
         <article class="project" id="project-traffic-forecast" data-category="world-models">
-          <div class="project-number">02</div>
+          <div class="project-number">03</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
@@ -432,7 +553,7 @@
         </article>
 
         <article class="project" id="project-traffic-jepa" data-category="world-models autonomous-driving">
-          <div class="project-number">03</div>
+          <div class="project-number">04</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
@@ -554,7 +675,7 @@
         </article>
 
         <article class="project" id="project-gtsd-2026" data-category="autonomous-driving">
-          <div class="project-number">04</div>
+          <div class="project-number">05</div>
           <div class="project-content project-showcase">
             <div class="showcase-header">
               <div class="showcase-badges">
@@ -909,7 +1030,7 @@
                   Researched non-generative world models (V-JEPA 2.1) and diffusion trajectory synthesis for end-to-end autonomous driving and cross-domain surveillance.
                 </li>
                 <li>
-                  Authored and co-authored 4 peer-reviewed papers accepted across ECCV-W 2026 (Oral &amp; Poster), IEEE/CVF WACV-W 2027, and IEEE GTSD 2026.
+                  Authored and co-authored 5 papers and preprints across IEEE/CVF CVPR 2027 (Under Review), ECCV-W 2026 (Oral &amp; Poster), IEEE/CVF WACV-W 2027, and IEEE GTSD 2026.
                 </li>
               </ul>
             </div>
