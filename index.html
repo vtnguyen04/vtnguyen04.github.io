@@ -199,7 +199,7 @@
               </div>
               <h3>AERO-MOT: Self-Calibrating Evidential Association and Visual-Kinematic Recovery for Aerial Multi-Object Tracking</h3>
               <p class="project-authors">
-                Vo Nguyen An Tin*, <strong class="author-self">Thanh Nguyen Vo</strong>*, Mai Tien Dung*, Thanh-Phuc Nguyen, Xuan Binh Dinh Thi, Ha Duc Bui, Kien Do
+                Vo Nguyen An Tin*, <strong class="author-self">Thanh Nguyen Vo</strong>*, Mai Tien Dung*, Thanh-Phuc Nguyen, Xuan Binh Dinh Thi, Ha Duc Bui&dagger;, Kien Do&dagger;
               </p>
               <p class="project-venue">IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) 2027 Submission · OpenReview: M1yjV6cI0W</p>
               <p class="showcase-desc">Resolves rapid platform motion, tiny target scales, and visual corruption in UAV video tracking via dynamic probabilistic association and feature querying:</p>
@@ -236,7 +236,7 @@
                   <span class="showcase-zoom-hint"><span class="zoom-icon">🔍</span> Click to expand (HD)</span>
                 </div>
                 <figcaption class="showcase-caption">
-                  <strong>Figure 1 (Pipeline Overview):</strong> Stride-4 YOLO11s-P2 extracts joint detections and 128d ReID embeddings; SPEAR dynamically recalibrates motion-appearance affinity while QAM recovers dropouts.
+                  <strong>Figure 1 (System Architecture):</strong> Overview of AERO-MOT. Single-pass stride-4 YOLO11s-P2 extracts joint detections and 128d ReID embeddings. SPEAR dynamically recalibrates motion-appearance affinity while QAM recovers dropouts.
                 </figcaption>
               </figure>
 
@@ -244,7 +244,7 @@
                 <button class="showcase-thumb is-active" type="button"
                         data-src="assets/aeromot-pipeline.webp"
                         data-alt="AERO-MOT aerial tracking pipeline overview showing YOLO11s-P2 JDE, SPEAR evidential association, and QAM recovery"
-                        data-caption="&lt;strong&gt;Figure 1 (Pipeline Overview):&lt;/strong&gt; Stride-4 YOLO11s-P2 extracts joint detections and 128d ReID embeddings; SPEAR dynamically recalibrates motion-appearance affinity while QAM recovers dropouts."
+                        data-caption="&lt;strong&gt;Figure 1 (System Architecture):&lt;/strong&gt; Overview of AERO-MOT. Single-pass stride-4 YOLO11s-P2 extracts joint detections and 128d ReID embeddings. SPEAR dynamically recalibrates motion-appearance affinity while QAM recovers dropouts."
                         title="Pipeline Overview">
                   <img src="assets/aeromot-pipeline.webp" alt="Pipeline thumbnail">
                   <span class="thumb-label">Pipeline</span>
@@ -252,7 +252,7 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/aeromot-benchmark.webp"
                         data-alt="VisDrone2019-MOT accuracy vs speed frontier comparison"
-                        data-caption="&lt;strong&gt;Figure 2 (SOTA Frontier):&lt;/strong&gt; AERO-MOT establishes a new Pareto frontier on VisDrone2019-MOT with 70.6% IDF1 and 56.6% MOTA at 55.8 FPS without CMC."
+                        data-caption="&lt;strong&gt;Figure 2 (VisDrone2019 Frontier):&lt;/strong&gt; IDF1–MOTA–FPS on VisDrone2019-MOT across published trackers. AERO-MOT reaches 70.6% IDF1 and 56.6% MOTA at 55.8 FPS without camera motion compensation."
                         title="SOTA Frontier">
                   <img src="assets/aeromot-benchmark.webp" alt="Benchmark frontier thumbnail">
                   <span class="thumb-label">Benchmarks</span>
@@ -260,15 +260,15 @@
                 <button class="showcase-thumb" type="button"
                         data-src="assets/aeromot-detector.webp"
                         data-alt="Compact stride-4 YOLO11s-P2 joint detection and embedding architecture"
-                        data-caption="&lt;strong&gt;Figure 3 (JDE Detector):&lt;/strong&gt; Single-pass stride-4 architecture designed for tiny aerial objects (&lt;16x16 px) with lightweight decoupling."
+                        data-caption="&lt;strong&gt;Figure 3 (YOLO11s-P2 JDE Architecture):&lt;/strong&gt; Stride-4 multi-scale feature pyramid with P2 head addition and P5 pruning, optimized for tiny aerial targets (&amp;lt;16x16 px) and real-time edge inference."
                         title="JDE Detector">
                   <img src="assets/aeromot-detector.webp" alt="Detector thumbnail">
                   <span class="thumb-label">JDE Detector</span>
                 </button>
                 <button class="showcase-thumb" type="button"
                         data-src="assets/aeromot-comparison.webp"
-                        data-alt="Visual ablation and tracking comparison under camera pans, motion blur, and target occlusions"
-                        data-caption="&lt;strong&gt;Figure 4 (Visual Comparison):&lt;/strong&gt; Qualitative tracking comparison under sudden UAV rotation and glare, proving SPEAR prevents ID switches."
+                        data-alt="Qualitative comparison under rapid UAV panning on VisDrone2019-MOT: Baseline C-BIoU vs AERO-MOT"
+                        data-caption="&lt;strong&gt;Figure 4 (Qualitative Tracking Comparison):&lt;/strong&gt; Robust tracking under rapid UAV camera panning on VisDrone2019-MOT. (a) C-BIoU fragments trajectories and swaps IDs (#140 &amp;rarr; #293), whereas (b) AERO-MOT maintains consistent identity (#9)."
                         title="Visual Comparison">
                   <img src="assets/aeromot-comparison.webp" alt="Comparison thumbnail">
                   <span class="thumb-label">Comparison</span>
